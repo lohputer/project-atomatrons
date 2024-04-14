@@ -6,7 +6,7 @@ func _physics_process(delta):
 	player_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = player_direction * move_Speed
 	if player_direction[0] > 0: #right
-		pass
+		$Untitled.flip_h = true
 	elif player_direction[0] < 0: 
-		pass
+		$Untitled.flip_h = false
 	move_and_slide()
