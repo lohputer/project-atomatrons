@@ -1,6 +1,7 @@
 extends CharacterBody2D
 @export var speed = 50
 var wandering = false
+
 func _physics_process(delta):
 	if not wandering:
 		wander()
@@ -17,3 +18,7 @@ func wander():
 	velocity = Vector2.ZERO
 	await get_tree().create_timer(randi_range(3, 5)).timeout
 	wandering = false
+
+
+func _on_timer_timeout():
+	print("athan has big forehead")

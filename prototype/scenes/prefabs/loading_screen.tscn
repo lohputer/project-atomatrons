@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxeo546pmtwcy"]
+
+[ext_resource type="Texture2D" uid="uid://c778pguyhadvs" path="res://assets/backgrounds/menu_screen.png" id="1_3ah2n"]
+
+[sub_resource type="GDScript" id="GDScript_7u6mw"]
+script/source = "extends CanvasLayer
+
+@export_file(\"*.tscn\") var next_scene_path: String
+func _ready():
+	ResourceLoader.load_threaded_request(next_scene_path)
+func _process(delta):
+	if ResourceLoader.load_threaded_get_status(next_scene_path) == ResourceLoader.THREAD_LOAD_LOADED:
+		set_process(false)
+		await get_tree().create_timer(1).timeout
+		var new_Scene: PackedScene = ResourceLoader.load_threaded_get(next_scene_path)
+		get_tree().change_scene_to_packed(new_Scene)
+"
+
+[sub_resource type="Theme" id="Theme_skoul"]
+
+[node name="loading_Screen" type="CanvasLayer"]
+script = SubResource("GDScript_7u6mw")
+next_scene_path = "res://node_2d.tscn"
+
+[node name="MenuScreen" type="Sprite2D" parent="."]
+position = Vector2(326, 242)
+scale = Vector2(1.01563, 1.01042)
+texture = ExtResource("1_3ah2n")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 284.0
+offset_top = 245.0
+offset_right = 460.0
+offset_bottom = 271.0
+theme = SubResource("Theme_skoul")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "loading"

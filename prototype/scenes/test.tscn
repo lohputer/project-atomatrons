@@ -1,14 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://djw0ospxtu8fp"]
+[gd_scene load_steps=7 format=3 uid="uid://djw0ospxtu8fp"]
 
+[ext_resource type="Script" path="res://scenes/test.gd" id="1_ert88"]
 [ext_resource type="PackedScene" uid="uid://b4e4sgg517n2q" path="res://scenes/prefabs/player.tscn" id="1_x6fa1"]
 [ext_resource type="PackedScene" uid="uid://b00as3emp7t3n" path="res://scenes/prefabs/nitrogen.tscn" id="2_v2l7q"]
 [ext_resource type="PackedScene" uid="uid://dfvi6ulnko7e" path="res://scenes/prefabs/hydrochloricacid.tscn" id="3_fuh2x"]
 [ext_resource type="PackedScene" uid="uid://cr1c7kx8ejyg2" path="res://scenes/prefabs/hydrogen.tscn" id="4_ajest"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vp0bv"]
-size = Vector2(1212, 13)
+size = Vector2(1182, 15)
 
 [node name="test" type="Node2D"]
+script = ExtResource("1_ert88")
 
 [node name="player" parent="." instance=ExtResource("1_x6fa1")]
 position = Vector2(442, 170)
@@ -19,7 +21,7 @@ position = Vector2(635, 190)
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(575, -3.5)
+position = Vector2(590, -2.5)
 shape = SubResource("RectangleShape2D_vp0bv")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
@@ -53,3 +55,9 @@ position = Vector2(144, 466)
 
 [node name="nitrogen4" parent="." instance=ExtResource("3_fuh2x")]
 position = Vector2(839, 98)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
