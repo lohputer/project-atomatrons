@@ -6,7 +6,6 @@ func _physics_process(delta):
 	if not wandering:
 		wander()
 	if randi_range(0, 5) == 1:
-
 		pass
 	move_and_slide()
 func wander():
