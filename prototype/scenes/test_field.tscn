@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://drsi47e5tlrtf"]
+[gd_scene load_steps=4 format=3 uid="uid://drsi47e5tlrtf"]
+
+[ext_resource type="PackedScene" uid="uid://b4e4sgg517n2q" path="res://prefabs/player/player.tscn" id="1_2drqm"]
+[ext_resource type="PackedScene" uid="uid://c1802fn8akd7s" path="res://prefabs/hydrogen.tscn" id="2_5l2mw"]
+[ext_resource type="PackedScene" uid="uid://cbncldbluvxkb" path="res://prefabs/berries/berries.tscn" id="3_ta0wq"]
 
 [node name="TestField" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_2drqm")]
+position = Vector2(145, 150)
+
+[node name="nitrogen" parent="." instance=ExtResource("2_5l2mw")]
+position = Vector2(518, 247)
+
+[node name="berries" parent="." instance=ExtResource("3_ta0wq")]
+position = Vector2(288, 179)
