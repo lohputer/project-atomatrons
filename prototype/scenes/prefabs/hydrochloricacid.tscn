@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnnpg1plv7owt"]
+
+[ext_resource type="Script" path="res://scenes/prefabs/nitrogen/field/nitrogen_field.gd" id="1_qdd8r"]
+[ext_resource type="Texture2D" uid="uid://bw1y01mrfi2u8" path="res://assets/HydrochloricAcid1AtomatronImage.png" id="2_hup51"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xr3jn"]
+size = Vector2(107, 73)
+
+[node name="nitrogen" type="CharacterBody2D"]
+script = ExtResource("1_qdd8r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.5, 9.5)
+shape = SubResource("RectangleShape2D_xr3jn")
+
+[node name="HydrochloricAcid1AtomatronImage" type="Sprite2D" parent="."]
+position = Vector2(3, -32)
+scale = Vector2(3, 3)
+texture = ExtResource("2_hup51")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
