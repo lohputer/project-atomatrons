@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b4e4sgg517n2q"]
 
-[ext_resource type="Script" path="res://scenes/prefabs/player/player.gd" id="1_tix4a"]
+[ext_resource type="Script" path="res://prefabs/player/player.gd" id="1_tix4a"]
 [ext_resource type="Texture2D" uid="uid://b2tubxgw5rbf1" path="res://assets/player/Untitled.png" id="2_ui84x"]
 
 [node name="player" type="CharacterBody2D"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c1802fn8akd7s"]
 
-[ext_resource type="Script" path="res://scenes/prefabs/nitrogen/field/nitrogen_field.gd" id="1_m7m23"]
+[ext_resource type="Script" path="res://prefabs/nitrogen/field/nitrogen_field.gd" id="1_m7m23"]
 [ext_resource type="Texture2D" uid="uid://bg4wwyefyqk0n" path="res://assets/hydorgenAtomatronsImage.png" id="2_8jyxp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3u4ap"]
