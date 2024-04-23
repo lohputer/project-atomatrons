@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://b4e4sgg517n2q"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_wrotg"]
-[ext_resource type="Texture2D" uid="uid://b2tubxgw5rbf1" path="res://assets/player/Untitled.png" id="2_wrg4c"]
+[ext_resource type="Script" path="res://scenes/prefabs/player/player.gd" id="1_tix4a"]
+[ext_resource type="Texture2D" uid="uid://b2tubxgw5rbf1" path="res://assets/player/Untitled.png" id="2_ui84x"]
 
 [node name="player" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
-script = ExtResource("1_wrotg")
+script = ExtResource("1_tix4a")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-1, 4.00001)
@@ -15,4 +15,4 @@ polygon = PackedVector2Array(64, -59.6, 64, 59, 59.6, 64, -59, 64, -64, 59.6, -6
 [node name="Untitled" type="Sprite2D" parent="."]
 position = Vector2(-1, -5)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_wrg4c")
+texture = ExtResource("2_ui84x")

@@ -1,0 +1,46 @@
+[gd_scene load_steps=9 format=3 uid="uid://b00as3emp7t3n"]
+
+[ext_resource type="Script" path="res://scenes/prefabs/nitrogen/field/nitrogen_field.gd" id="1_ody2s"]
+[ext_resource type="Texture2D" uid="uid://d2d6ycx1g8cod" path="res://assets/atomatrons/nitrogen/blink/left/frame0000.png" id="2_fq3t5"]
+[ext_resource type="Texture2D" uid="uid://c3yhibn7bj2kq" path="res://assets/atomatrons/nitrogen/blink/left/frame0001.png" id="3_oa8da"]
+[ext_resource type="Texture2D" uid="uid://b18h0i3sdpmmq" path="res://assets/atomatrons/nitrogen/blink/left/frame0002.png" id="4_m2u6u"]
+[ext_resource type="Texture2D" uid="uid://yf4hqwwj5dmr" path="res://assets/atomatrons/nitrogen/blink/left/frame0003.png" id="5_yfryy"]
+[ext_resource type="Texture2D" uid="uid://bbi682jah3lw7" path="res://assets/atomatrons/nitrogen/blink/left/frame0004.png" id="6_sphab"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_njuvu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fq3t5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_oa8da")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_m2u6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yfryy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sphab")
+}],
+"loop": false,
+"name": &"blink",
+"speed": 12.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3u4ap"]
+radius = 36.0
+height = 90.0
+
+[node name="nitrogen" type="CharacterBody2D"]
+script = ExtResource("1_ody2s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_njuvu")
+animation = &"blink"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_3u4ap")

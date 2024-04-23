@@ -1,4 +1,4 @@
-extends Node
+extends CharacterBody2D
 class_name atomatron_field
 @export var max_health: int #max health
 var health: int 
@@ -7,5 +7,6 @@ var health: int
 func _process(delta):
 	if health > max_health:
 		health = max_health
+	
 
 

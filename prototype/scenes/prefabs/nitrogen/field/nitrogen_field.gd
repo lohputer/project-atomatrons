@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends atomatron_field
 @export var speed = 50
 var wandering = false
 
