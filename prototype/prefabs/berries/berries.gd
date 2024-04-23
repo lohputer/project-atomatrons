@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends food
 
 var playerInRange = false
 
