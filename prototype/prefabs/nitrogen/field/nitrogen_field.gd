@@ -47,5 +47,4 @@ func _on_area_2d_body_entered(body):
 		print("I chasing... *kneels down*   Oh its you Ding Hong!")
 		foundPlayer = true
 		await get_tree().create_timer(10).timeout
-		print("Ding Hong's willy timer ended")
 		foundPlayer = false

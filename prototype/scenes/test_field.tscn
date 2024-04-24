@@ -16,3 +16,10 @@ position = Vector2(1026, 228)
 
 [node name="food" parent="." instance=ExtResource("3_ta0wq")]
 position = Vector2(288, 179)
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "load to deez"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

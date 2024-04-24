@@ -9,8 +9,15 @@ extends CharacterBody2D
 @export var calcium = 50
 @export var iron = 50
 
+
+
+
 var id = "player"
 var player_direction: Vector2
+
+
+func _ready():
+	PlayerInfo.player_node = self
 func _physics_process(delta):
 	player_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = player_direction * move_Speed

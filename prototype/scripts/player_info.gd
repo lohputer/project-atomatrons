@@ -7,3 +7,4 @@ var vitD : int
 var calcium : int
 var iron : int
 var player_pos: Vector2
+var player_node: CharacterBody2D
