@@ -1,10 +1,13 @@
 extends food
 
 var playerInRange = false
-var id = "berries";
+var ids = ["berries", "spinach"]
+var id = ids[randi_range(0, len(ids)-1)]
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var foodInfo = food.new()
+	foodInfo.name = id
+	print(foodInfo.name, foodInfo.iron, foodInfo.carbs, foodInfo.iron == 0)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -21,7 +24,7 @@ func _on_area_2d_body_exited(body):
 		playerInRange = false
 
 func _on_area_2d_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("click"):
-		print("I do love berries! Yum! Hi Mr Zhou")
+	if Input.is_action_just_pressed("click") and playerInRange:
+		print("I do love " + id + "! Yum! Hi Mr Zhou")
 		var foodStats = food.new()
 		foodStats.carbs = 10

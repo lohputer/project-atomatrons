@@ -10,9 +10,14 @@ var calcium : int
 var iron : int
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if foodName == "berries":
+		carbs = 10
+		vitC = 10
+	elif foodName == "spinach":
+		iron = 10
+		calcium = 10
