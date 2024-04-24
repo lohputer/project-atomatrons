@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scenes/test_field.gd" id="1_y5uf0"]
 [ext_resource type="PackedScene" uid="uid://c1802fn8akd7s" path="res://prefabs/hydrogen.tscn" id="2_5l2mw"]
 [ext_resource type="Texture2D" uid="uid://077q3f4wx8sb" path="res://scenes/UI_backgroundFloor.png" id="2_28opk"]
-[ext_resource type="PackedScene" uid="uid://buuy3ira0joqa" path="res://prefabs/food/berries.tscn" id="5_1jgiq"]
+[ext_resource type="PackedScene" uid="uid://dy8nn7clfugoj" path="res://prefabs/food/berries.tscn" id="5_1jgiq"]
 
 [node name="TestField" type="Node2D"]
 script = ExtResource("1_y5uf0")
