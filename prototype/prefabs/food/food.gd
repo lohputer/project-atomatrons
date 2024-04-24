@@ -7,7 +7,6 @@ var id = ids[randi_range(0, len(ids)-1)]
 func _ready():
 	var foodInfo = food.new()
 	foodInfo.name = id
-	print(foodInfo.name, foodInfo.iron, foodInfo.carbs, foodInfo.iron == 0)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

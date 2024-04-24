@@ -1,12 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://drsi47e5tlrtf"]
+[gd_scene load_steps=6 format=3 uid="uid://drsi47e5tlrtf"]
 
 [ext_resource type="PackedScene" uid="uid://b4e4sgg517n2q" path="res://prefabs/player/player.tscn" id="1_2drqm"]
 [ext_resource type="Script" path="res://scenes/test_field.gd" id="1_y5uf0"]
 [ext_resource type="PackedScene" uid="uid://c1802fn8akd7s" path="res://prefabs/hydrogen.tscn" id="2_5l2mw"]
+[ext_resource type="Texture2D" uid="uid://077q3f4wx8sb" path="res://scenes/UI_backgroundFloor.png" id="2_28opk"]
 [ext_resource type="PackedScene" uid="uid://cbncldbluvxkb" path="res://prefabs/food/food.tscn" id="3_ta0wq"]
 
 [node name="TestField" type="Node2D"]
 script = ExtResource("1_y5uf0")
+
+[node name="UiBackgroundFloor" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 3
+position = Vector2(331, 263)
+scale = Vector2(100000, 100000)
+texture = ExtResource("2_28opk")
 
 [node name="player" parent="." instance=ExtResource("1_2drqm")]
 position = Vector2(145, 150)
