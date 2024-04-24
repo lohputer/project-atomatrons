@@ -11,5 +11,5 @@ func _process(delta):
 	pass
 
 
-func _on_button_pressed():
-	GlobalFunctions.load_to("res://scenes/test_combat.tscn")
+
+	

@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scenes/test_field.gd" id="1_y5uf0"]
 [ext_resource type="PackedScene" uid="uid://c1802fn8akd7s" path="res://prefabs/hydrogen.tscn" id="2_5l2mw"]
 [ext_resource type="Texture2D" uid="uid://077q3f4wx8sb" path="res://scenes/UI_backgroundFloor.png" id="2_28opk"]
-[ext_resource type="PackedScene" uid="uid://cbncldbluvxkb" path="res://prefabs/food/food.tscn" id="3_ta0wq"]
+[ext_resource type="PackedScene" uid="uid://buuy3ira0joqa" path="res://prefabs/food/berries.tscn" id="5_1jgiq"]
 
 [node name="TestField" type="Node2D"]
 script = ExtResource("1_y5uf0")
@@ -19,15 +19,15 @@ texture = ExtResource("2_28opk")
 [node name="player" parent="." instance=ExtResource("1_2drqm")]
 position = Vector2(145, 150)
 
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(0, 2)
+scale = Vector2(2, 2)
+
 [node name="nitrogen" parent="." instance=ExtResource("2_5l2mw")]
-position = Vector2(1026, 228)
+position = Vector2(-288, 352)
 
-[node name="food" parent="." instance=ExtResource("3_ta0wq")]
-position = Vector2(288, 179)
-
-[node name="Button" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
-text = "load to deez"
-
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Berries" parent="." instance=ExtResource("5_1jgiq")]
+offset_left = 323.0
+offset_top = 62.0
+offset_right = 873.0
+offset_bottom = 428.0
