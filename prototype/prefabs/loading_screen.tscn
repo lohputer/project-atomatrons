@@ -22,8 +22,8 @@ func _process(delta):
 script = SubResource("GDScript_7u6mw")
 
 [node name="MenuScreen" type="Sprite2D" parent="."]
-position = Vector2(144, 124)
-scale = Vector2(1.01563, 1.01042)
+position = Vector2(436.5, 202.5)
+scale = Vector2(24.0703, 15.6016)
 texture = ExtResource("1_3ah2n")
 
 [node name="Label" type="Label" parent="."]

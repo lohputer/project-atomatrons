@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbojxxr0vs8w"]
+[gd_scene load_steps=4 format=3 uid="uid://bbojxxr0vs8w"]
 
 [ext_resource type="Texture2D" uid="uid://077q3f4wx8sb" path="res://scenes/UI_backgroundFloor.png" id="1_gisrh"]
+[ext_resource type="Script" path="res://scenes/combat_scene.gd" id="1_kq76q"]
 [ext_resource type="Texture2D" uid="uid://byy16lygw3cj6" path="res://scenes/pixil-frame-0 (1).png" id="2_qynya"]
 
 [node name="TestCombat" type="Node2D"]
+script = ExtResource("1_kq76q")
 
 [node name="UiBackgroundFloor" type="Sprite2D" parent="."]
 position = Vector2(580.5, 326.5)
@@ -12,6 +14,15 @@ texture = ExtResource("1_gisrh")
 
 [node name="Pixil-frame-0(1)" type="Sprite2D" parent="."]
 z_index = 3
-position = Vector2(583, 329)
-scale = Vector2(4.48438, 4.58333)
+position = Vector2(579, 329)
+scale = Vector2(4.51563, 4.58333)
 texture = ExtResource("2_qynya")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 373.0
+offset_top = 261.0
+offset_right = 472.0
+offset_bottom = 292.0
+text = "back to test"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
