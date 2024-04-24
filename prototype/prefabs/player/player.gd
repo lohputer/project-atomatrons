@@ -8,6 +8,8 @@ extends CharacterBody2D
 @export var vitD = 50
 @export var calcium = 50
 @export var iron = 50
+
+var id = "player"
 var player_direction: Vector2
 func _physics_process(delta):
 	player_direction = Input.get_vector("left", "right", "up", "down")
@@ -17,3 +19,5 @@ func _physics_process(delta):
 	elif player_direction[0] < 0: 
 		$Untitled.flip_h = false
 	move_and_slide()
+	PlayerInfo.player_pos = global_position
+	

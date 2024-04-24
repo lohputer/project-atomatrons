@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1802fn8akd7s"]
+[gd_scene load_steps=5 format=3 uid="uid://c1802fn8akd7s"]
 
 [ext_resource type="Script" path="res://prefabs/nitrogen/field/nitrogen_field.gd" id="1_m7m23"]
 [ext_resource type="Texture2D" uid="uid://bg4wwyefyqk0n" path="res://assets/hydorgenAtomatronsImage.png" id="2_8jyxp"]
@@ -7,13 +7,24 @@
 radius = 28.0
 height = 56.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_wjpy2"]
+radius = 297.321
+
 [node name="nitrogen" type="CharacterBody2D"]
 script = ExtResource("1_m7m23")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CapsuleShape2D_3u4ap")
 
 [node name="HydorgenAtomatronsImage" type="Sprite2D" parent="."]
 position = Vector2(-1, -1)
 scale = Vector2(2, 2)
 texture = ExtResource("2_8jyxp")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_wjpy2")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
