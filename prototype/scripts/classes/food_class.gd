@@ -15,9 +15,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if foodName == "berries":
-		carbs = 10
-		vitC = 10
-	elif foodName == "spinach":
-		iron = 10
-		calcium = 10
+	pass
