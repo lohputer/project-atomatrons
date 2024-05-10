@@ -14,7 +14,7 @@ extends CharacterBody2D
 
 var id = "player"
 var player_direction: Vector2
-
+var openInventory = false
 
 func _ready():
 	PlayerInfo.player_node = self
@@ -27,17 +27,34 @@ func _ready():
 	PlayerInfo.vitC = 30
 	
 func _physics_process(delta):
-	player_direction = Input.get_vector("left", "right", "up", "down")
-	velocity = player_direction * PlayerInfo.player_speed
+	if not openInventory:
+		player_direction = Input.get_vector("left", "right", "up", "down")
+		velocity = player_direction * PlayerInfo.player_speed
+		
 	if player_direction[0] > 0: #right
 		$Untitled.flip_h = true
 	elif player_direction[0] < 0: 
 		$Untitled.flip_h = false
 	move_and_slide()
+	
+	if Input.is_action_just_pressed("open_inventory"):
+		var inventoryNode = find_child("Inventory")
+		openInventory = not openInventory
+		inventoryNode.visible = openInventory
+		velocity = Vector2.ZERO
+			
+			
+	
+	
+
+	
+	
 	PlayerInfo.player_pos = global_position
 	await get_tree().create_timer(10).timeout
 	digest()
 	await get_tree().create_timer(10).timeout #fix timer send help
+	
+	
 	
 func digest():
 	print(PlayerInfo.carbs, PlayerInfo.proteins, PlayerInfo.fats, PlayerInfo.vitC, PlayerInfo.vitD, PlayerInfo.iron, PlayerInfo.calcium)
