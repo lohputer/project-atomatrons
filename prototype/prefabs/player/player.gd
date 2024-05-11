@@ -42,6 +42,9 @@ func _physics_process(delta):
 		openInventory = not openInventory
 		inventoryNode.visible = openInventory
 		velocity = Vector2.ZERO
+		
+		if openInventory:
+			inventoryNode.addItem("TOMATO")
 			
 			
 	
