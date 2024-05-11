@@ -63,4 +63,12 @@ func addItem(itemName):
 		rearrangeInventory()
 		
 	
+<<<<<<< Updated upstream
 		
+=======
+	add_child(instanceOfItem)
+
+
+func _on_texture_button_button_down():
+	visible = false
+>>>>>>> Stashed changes
