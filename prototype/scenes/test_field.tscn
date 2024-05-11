@@ -1,4 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://drsi47e5tlrtf"]
+<<<<<<< Updated upstream
+[gd_scene load_steps=9 format=3 uid="uid://drsi47e5tlrtf"]
+=======
+[gd_scene load_steps=11 format=3 uid="uid://drsi47e5tlrtf"]
+>>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://b4e4sgg517n2q" path="res://prefabs/player/player.tscn" id="1_2drqm"]
 [ext_resource type="Script" path="res://scenes/test_field.gd" id="1_y5uf0"]
@@ -7,8 +11,9 @@
 [ext_resource type="Script" path="res://scenes/Inventory.gd" id="4_1eyyg"]
 [ext_resource type="PackedScene" uid="uid://dy8nn7clfugoj" path="res://prefabs/food/berries.tscn" id="5_1jgiq"]
 [ext_resource type="Texture2D" uid="uid://7j668dinx0m1" path="res://assets/InventoryUIScaled.png" id="5_sjvtg"]
-[ext_resource type="PackedScene" uid="uid://bi3k38eylcja0" path="res://prefabs/inventory_item.tscn" id="6_7af15"]
 [ext_resource type="Texture2D" uid="uid://dcd7qjkvaxmj4" path="res://scenes/UI_foreground.png" id="6_sc185"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_x05yr"]
 
 [node name="TestField" type="Node2D"]
 script = ExtResource("1_y5uf0")
@@ -28,6 +33,7 @@ position = Vector2(0, 2)
 scale = Vector2(2, 2)
 
 [node name="Inventory" type="Node2D" parent="player"]
+visible = false
 script = ExtResource("4_1eyyg")
 
 [node name="InventoryUiScaled" type="Sprite2D" parent="player/Inventory"]
@@ -36,17 +42,32 @@ position = Vector2(-1576, 2700)
 scale = Vector2(2.49, 2.49)
 texture = ExtResource("5_sjvtg")
 
-[node name="inventoryItem" parent="player/Inventory" instance=ExtResource("6_7af15")]
-position = Vector2(134, 6)
+[node name="inventoryItems" type="Node2D" parent="player/Inventory"]
+
+[node name="Button" type="Button" parent="player/Inventory"]
+z_index = 10
+offset_left = 910.0
+offset_top = 236.0
+offset_right = 1274.0
+offset_bottom = 520.0
+text = "Close"
+icon = SubResource("CanvasTexture_x05yr")
 
 [node name="nitrogen" parent="." instance=ExtResource("2_5l2mw")]
 position = Vector2(-526, 469)
 
 [node name="Berries" parent="." instance=ExtResource("5_1jgiq")]
+<<<<<<< HEAD
 offset_left = 563.0
 offset_top = 512.0
 offset_right = 1113.0
 offset_bottom = 878.0
+=======
+offset_left = 1938.0
+offset_top = -122.0
+offset_right = 2488.0
+offset_bottom = 244.0
+>>>>>>> 3d2fb9bb3632bc36c90fc7771a1d83d689c9c23d
 
 [node name="UiForeground" type="Sprite2D" parent="."]
 position = Vector2(121, 392)
