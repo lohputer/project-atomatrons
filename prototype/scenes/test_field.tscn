@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://drsi47e5tlrtf"]
+[gd_scene load_steps=9 format=3 uid="uid://drsi47e5tlrtf"]
 
 [ext_resource type="PackedScene" uid="uid://b4e4sgg517n2q" path="res://prefabs/player/player.tscn" id="1_2drqm"]
 [ext_resource type="Script" path="res://scenes/test_field.gd" id="1_y5uf0"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" path="res://scenes/Inventory.gd" id="4_1eyyg"]
 [ext_resource type="PackedScene" uid="uid://dy8nn7clfugoj" path="res://prefabs/food/berries.tscn" id="5_1jgiq"]
 [ext_resource type="Texture2D" uid="uid://7j668dinx0m1" path="res://assets/InventoryUIScaled.png" id="5_sjvtg"]
-[ext_resource type="PackedScene" uid="uid://bi3k38eylcja0" path="res://prefabs/inventory_item.tscn" id="6_7af15"]
 [ext_resource type="Texture2D" uid="uid://dcd7qjkvaxmj4" path="res://scenes/UI_foreground.png" id="6_sc185"]
 
 [node name="TestField" type="Node2D"]
@@ -35,17 +34,16 @@ z_index = 10
 scale = Vector2(2.49, 2.49)
 texture = ExtResource("5_sjvtg")
 
-[node name="inventoryItem" parent="player/Inventory" instance=ExtResource("6_7af15")]
-position = Vector2(134, 6)
+[node name="inventoryItems" type="Node2D" parent="player/Inventory"]
 
 [node name="nitrogen" parent="." instance=ExtResource("2_5l2mw")]
 position = Vector2(-526, 469)
 
 [node name="Berries" parent="." instance=ExtResource("5_1jgiq")]
-offset_left = 323.0
-offset_top = 62.0
-offset_right = 873.0
-offset_bottom = 428.0
+offset_left = 1938.0
+offset_top = -122.0
+offset_right = 2488.0
+offset_bottom = 244.0
 
 [node name="UiForeground" type="Sprite2D" parent="."]
 position = Vector2(121, 392)
