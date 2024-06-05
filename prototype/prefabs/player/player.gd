@@ -43,20 +43,14 @@ func _physics_process(delta):
 		inventoryNode.visible = openInventory
 		velocity = Vector2.ZERO
 			
-			
-	
-	
-
-	
-	
 	PlayerInfo.player_pos = global_position
-	await get_tree().create_timer(10).timeout
-	digest()
-	await get_tree().create_timer(10).timeout #fix timer send help
-	
-	
-	
-func digest():
+
+func _on_area_2d_body_entered(body):
+	if body is atomatron_field:
+		GlobalFunctions.load_to("res://scenes/test_combat.tscn")
+
+
+func _on_timer_timeout():
 	print(PlayerInfo.carbs, PlayerInfo.proteins, PlayerInfo.fats, PlayerInfo.vitC, PlayerInfo.vitD, PlayerInfo.iron, PlayerInfo.calcium)
 	PlayerInfo.carbs -= 3
 	PlayerInfo.proteins -= 3
@@ -65,7 +59,3 @@ func digest():
 	PlayerInfo.vitD -= 1
 	PlayerInfo.calcium -= 1
 	PlayerInfo.iron -= 1
-
-func _on_area_2d_body_entered(body):
-	if body is atomatron_field:
-		GlobalFunctions.load_to("res://scenes/test_combat.tscn")

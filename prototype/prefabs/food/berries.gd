@@ -9,6 +9,5 @@ func _on_pressed():
 	PlayerInfo.carbs += 10
 	PlayerInfo.vitC += 20
 	visible = false
-	await get_tree().create_timer(10).timeout
 	PlayerInfo.player_speed_modifier = 1
 	queue_free()

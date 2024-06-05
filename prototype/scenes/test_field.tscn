@@ -55,3 +55,7 @@ texture = ExtResource("6_sc185")
 [node name="UiForeground2" type="Sprite2D" parent="."]
 position = Vector2(-298, -34)
 texture = ExtResource("6_sc185")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="player" method="_on_timer_timeout"]
