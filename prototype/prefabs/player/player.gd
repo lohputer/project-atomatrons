@@ -42,7 +42,18 @@ func _physics_process(delta):
 		openInventory = not openInventory
 		inventoryNode.visible = openInventory
 		velocity = Vector2.ZERO
-			
+	
+	%Stats.text = """
+	Player Name: %s
+	Carbs: %s
+	Proteins: %s
+	Fats: %s
+	Vitamin C: %s
+	Vitamin D: %s
+	Calcium: %s
+	Iron: %s
+	""" % [PlayerInfo.player_name, PlayerInfo.carbs, PlayerInfo.proteins, PlayerInfo.fats, PlayerInfo.vitC, PlayerInfo.vitD, PlayerInfo.calcium, PlayerInfo.iron]
+	
 	PlayerInfo.player_pos = global_position
 
 func _on_area_2d_body_entered(body):

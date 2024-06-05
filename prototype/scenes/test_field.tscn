@@ -16,7 +16,7 @@ script = ExtResource("1_y5uf0")
 [node name="UiBackgroundFloor" type="Sprite2D" parent="."]
 texture_filter = 1
 texture_repeat = 3
-position = Vector2(475, 279)
+position = Vector2(-2327, -13872)
 scale = Vector2(100000, 100000)
 texture = ExtResource("2_28opk")
 
@@ -28,16 +28,24 @@ position = Vector2(0, 2)
 scale = Vector2(2, 2)
 
 [node name="Inventory" type="Node2D" parent="player"]
+position = Vector2(360, 246)
 script = ExtResource("4_1eyyg")
 
 [node name="InventoryUiScaled" type="Sprite2D" parent="player/Inventory"]
 z_index = 10
-position = Vector2(-1576, 2700)
-scale = Vector2(2.49, 2.49)
+position = Vector2(-242, -154)
+scale = Vector2(1.98719, 2.06522)
 texture = ExtResource("5_sjvtg")
 
 [node name="inventoryItem" parent="player/Inventory" instance=ExtResource("6_7af15")]
 position = Vector2(134, 6)
+
+[node name="Stats" type="Label" parent="player"]
+unique_name_in_owner = true
+offset_left = -1144.0
+offset_top = -630.0
+offset_right = -562.0
+offset_bottom = 2.0
 
 [node name="nitrogen" parent="." instance=ExtResource("2_5l2mw")]
 position = Vector2(-526, 469)
@@ -57,5 +65,7 @@ position = Vector2(-298, -34)
 texture = ExtResource("6_sc185")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
 
 [connection signal="timeout" from="Timer" to="player" method="_on_timer_timeout"]

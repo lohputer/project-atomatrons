@@ -8,6 +8,7 @@ var calcium : int
 var iron : int
 var player_pos: Vector2
 var player_node: CharacterBody2D
+var player_name: String
 
 var player_base_speed = 200
 var player_speed_modifier = 1.0
