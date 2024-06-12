@@ -4,6 +4,8 @@ var itemNameId = "TOMATO"; # this is an id for an item
 
 const ItemsDict = {
 	"TOMATO" : preload("res://assets/itemImages/ItemTomato.png"),
+	"BERRIES": preload("res://assets/food/berries.png"),
+	"SPINACH": preload("res://assets/food/spinach.png"),
 }
 # Called when the node enters the scene tree for the first time.
 func _ready():

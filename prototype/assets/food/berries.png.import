@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1xad7xty1iqx"
-path="res://.godot/imported/spinach.png-ae4786a4aaed5d34ef20b47bee84f69e.ctex"
+uid="uid://dngpky4rd31p1"
+path="res://.godot/imported/berries.png-3fa0583bcd8a85fe876f70871c3c78c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/food/spinach/spinach.png"
-dest_files=["res://.godot/imported/spinach.png-ae4786a4aaed5d34ef20b47bee84f69e.ctex"]
+source_file="res://assets/food/berries.png"
+dest_files=["res://.godot/imported/berries.png-3fa0583bcd8a85fe876f70871c3c78c0.ctex"]
 
 [params]
 

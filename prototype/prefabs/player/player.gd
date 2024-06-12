@@ -1,16 +1,6 @@
 extends CharacterBody2D
 
 @export var move_Speed = 200
-@export var carbs = 50
-@export var proteins = 50
-@export var fats = 50
-@export var vitC = 50
-@export var vitD = 50
-@export var calcium = 50
-@export var iron = 50
-
-
-
 
 var id = "player"
 var player_direction: Vector2
@@ -18,13 +8,6 @@ var openInventory = false
 
 func _ready():
 	PlayerInfo.player_node = self
-	PlayerInfo.carbs = 100
-	PlayerInfo.fats = 60
-	PlayerInfo.proteins = 80
-	PlayerInfo.iron = 20
-	PlayerInfo.calcium = 20
-	PlayerInfo.vitD = 15
-	PlayerInfo.vitC = 30
 	
 func _physics_process(delta):
 	if not openInventory:
@@ -55,6 +38,7 @@ func _physics_process(delta):
 	""" % [PlayerInfo.player_name, PlayerInfo.carbs, PlayerInfo.proteins, PlayerInfo.fats, PlayerInfo.vitC, PlayerInfo.vitD, PlayerInfo.calcium, PlayerInfo.iron]
 	
 	PlayerInfo.player_pos = global_position
+	
 
 func _on_area_2d_body_entered(body):
 	if body is atomatron_field:
@@ -62,7 +46,6 @@ func _on_area_2d_body_entered(body):
 
 
 func _on_timer_timeout():
-	print(PlayerInfo.carbs, PlayerInfo.proteins, PlayerInfo.fats, PlayerInfo.vitC, PlayerInfo.vitD, PlayerInfo.iron, PlayerInfo.calcium)
 	PlayerInfo.carbs -= 3
 	PlayerInfo.proteins -= 3
 	PlayerInfo.fats -= 2

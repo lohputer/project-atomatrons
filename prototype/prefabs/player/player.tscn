@@ -6,14 +6,6 @@
 [node name="player" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_tix4a")
-move_Speed = null
-carbs = null
-proteins = null
-fats = null
-vitC = null
-vitD = null
-calcium = null
-iron = null
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-1, 4.00001)
