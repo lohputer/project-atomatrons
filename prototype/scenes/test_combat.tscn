@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbojxxr0vs8w"]
+[gd_scene load_steps=5 format=3 uid="uid://bbojxxr0vs8w"]
 
 [ext_resource type="Texture2D" uid="uid://077q3f4wx8sb" path="res://scenes/UI_backgroundFloor.png" id="1_gisrh"]
 [ext_resource type="Script" path="res://scenes/combat_scene.gd" id="1_kq76q"]
 [ext_resource type="Texture2D" uid="uid://byy16lygw3cj6" path="res://scenes/pixil-frame-0 (1).png" id="2_qynya"]
+[ext_resource type="Script" path="res://prefabs/atomatron_battles/atomatron_battle_class.gd" id="4_0jydb"]
 
 [node name="TestCombat" type="Node2D"]
 script = ExtResource("1_kq76q")
@@ -24,5 +25,10 @@ offset_top = 261.0
 offset_right = 472.0
 offset_bottom = 292.0
 text = "back to test"
+
+[node name="enemy" type="Node2D" parent="."]
+
+[node name="atomatron_battle" type="CharacterBody2D" parent="enemy"]
+script = ExtResource("4_0jydb")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
