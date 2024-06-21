@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://dy8nn7clfugoj"]
 
-[ext_resource type="Texture2D" uid="uid://dngpky4rd31p1" path="res://assets/food/berries/berries.png" id="1_0mtoo"]
+[ext_resource type="Texture2D" uid="uid://dngpky4rd31p1" path="res://assets/food/berries.png" id="1_f52nr"]
 [ext_resource type="Script" path="res://prefabs/food/berries.gd" id="2_cb5yg"]
 
 [node name="Berries" type="TextureButton"]
 offset_right = 550.0
 offset_bottom = 366.0
 scale = Vector2(0.377053, 0.529776)
-texture_normal = ExtResource("1_0mtoo")
+texture_normal = ExtResource("1_f52nr")
 script = ExtResource("2_cb5yg")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

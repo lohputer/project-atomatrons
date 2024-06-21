@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://drsi47e5tlrtf"]
+[gd_scene load_steps=13 format=3 uid="uid://drsi47e5tlrtf"]
 
 [ext_resource type="PackedScene" uid="uid://b4e4sgg517n2q" path="res://prefabs/player/player.tscn" id="1_2drqm"]
 [ext_resource type="Script" path="res://scenes/test_field.gd" id="1_y5uf0"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://7j668dinx0m1" path="res://assets/InventoryUIScaled.png" id="5_sjvtg"]
 [ext_resource type="PackedScene" uid="uid://bi3k38eylcja0" path="res://prefabs/inventory_item.tscn" id="6_7af15"]
 [ext_resource type="Texture2D" uid="uid://dcd7qjkvaxmj4" path="res://scenes/UI_foreground.png" id="6_sc185"]
+[ext_resource type="Texture2D" uid="uid://d1xad7xty1iqx" path="res://assets/food/spinach.png" id="10_m08jk"]
+[ext_resource type="Script" path="res://spinach.gd" id="11_7ily4"]
+[ext_resource type="Texture2D" uid="uid://8wd3x8ffbuk6" path="res://assets/itemImages/ItemTomato.png" id="11_afeux"]
 
 [node name="TestField" type="Node2D"]
 script = ExtResource("1_y5uf0")
@@ -16,7 +19,7 @@ script = ExtResource("1_y5uf0")
 [node name="UiBackgroundFloor" type="Sprite2D" parent="."]
 texture_filter = 1
 texture_repeat = 3
-position = Vector2(-2327, -13872)
+position = Vector2(-1128, -35008)
 scale = Vector2(100000, 100000)
 texture = ExtResource("2_28opk")
 
@@ -33,12 +36,16 @@ script = ExtResource("4_1eyyg")
 
 [node name="InventoryUiScaled" type="Sprite2D" parent="player/Inventory"]
 z_index = 10
-position = Vector2(-242, -154)
+position = Vector2(-226, -138)
 scale = Vector2(1.98719, 2.06522)
 texture = ExtResource("5_sjvtg")
 
 [node name="inventoryItem" parent="player/Inventory" instance=ExtResource("6_7af15")]
-position = Vector2(134, 6)
+position = Vector2(-924, -520)
+
+[node name="amount" type="Label" parent="player/Inventory/inventoryItem"]
+offset_right = 40.0
+offset_bottom = 23.0
 
 [node name="Stats" type="Label" parent="player"]
 unique_name_in_owner = true
@@ -49,12 +56,6 @@ offset_bottom = 2.0
 
 [node name="nitrogen" parent="." instance=ExtResource("2_5l2mw")]
 position = Vector2(-526, 469)
-
-[node name="Berries" parent="." instance=ExtResource("5_1jgiq")]
-offset_left = 563.0
-offset_top = 512.0
-offset_right = 1113.0
-offset_bottom = 878.0
 
 [node name="UiForeground" type="Sprite2D" parent="."]
 position = Vector2(121, 392)
@@ -67,5 +68,27 @@ texture = ExtResource("6_sc185")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0
 autostart = true
+
+[node name="berries" parent="." instance=ExtResource("5_1jgiq")]
+offset_left = 2019.0
+offset_top = -1052.0
+offset_right = 2569.0
+offset_bottom = -686.0
+
+[node name="spinach" parent="." instance=ExtResource("5_1jgiq")]
+offset_left = 2780.0
+offset_top = -1609.0
+offset_right = 3204.0
+offset_bottom = -1343.0
+texture_normal = ExtResource("10_m08jk")
+script = ExtResource("11_7ily4")
+
+[node name="tomato" parent="." instance=ExtResource("5_1jgiq")]
+offset_left = 1258.0
+offset_top = -1501.0
+offset_right = 1308.0
+offset_bottom = -1451.0
+scale = Vector2(3.92797, 3.61713)
+texture_normal = ExtResource("11_afeux")
 
 [connection signal="timeout" from="Timer" to="player" method="_on_timer_timeout"]

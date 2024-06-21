@@ -1,11 +1,12 @@
 extends Node
-var carbs : int
-var proteins : int
-var fats : int
-var vitC : int
-var vitD : int
-var calcium : int
-var iron : int
+var inventory = {}
+var carbs = 100
+var proteins = 80
+var fats = 60
+var vitC = 30
+var vitD = 15
+var calcium = 20
+var iron = 20
 var player_pos: Vector2
 var player_node: CharacterBody2D
 var player_name: String
