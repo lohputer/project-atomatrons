@@ -32,6 +32,7 @@ func _update():
 	food_instances = get_tree().get_nodes_in_group("berries") + get_tree().get_nodes_in_group("tomato") +  get_tree().get_nodes_in_group("spinach")
 	
 func start_spawn_timer():
+	print(nitrogen_instances)
 	if nitrogen_instances.size() < max_nitrogen_instances:
 		var spawn_interval = randf_range(2, 5)
 		spawn_timer.set_wait_time(spawn_interval)
