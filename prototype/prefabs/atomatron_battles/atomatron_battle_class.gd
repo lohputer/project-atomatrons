@@ -4,6 +4,7 @@ class_name atomatron_battle
 var health: int
 @export var speed: int
 @export var target: atomatron_battle
+@export var turn_finished = false
 
 func get_hit(damage: move_info):
 	health -= damage.move_damage
