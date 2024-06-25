@@ -3,7 +3,7 @@ extends Node2D
 var itemNameId = "TOMATO"; # this is an id for an item 
 
 const ItemsDict = {
-	"TOMATO" : preload("res://assets/itemImages/ItemTomato.png"),
+	"TOMATO" : preload("res://assets/food/tomato.png"),
 	"BERRIES": preload("res://assets/food/berries.png"),
 	"SPINACH": preload("res://assets/food/spinach.png"),
 }
