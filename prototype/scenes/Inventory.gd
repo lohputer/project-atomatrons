@@ -4,7 +4,6 @@ var inventoryItemNode = preload("res://prefabs/inventory_item.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	addItem("SPINACH")
-	
 	pass # Replace with function body.
 
 
