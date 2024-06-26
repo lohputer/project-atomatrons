@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbojxxr0vs8w"]
+[gd_scene load_steps=7 format=3 uid="uid://bbojxxr0vs8w"]
 
 [ext_resource type="Texture2D" uid="uid://077q3f4wx8sb" path="res://scenes/UI_backgroundFloor.png" id="1_gisrh"]
 [ext_resource type="Script" path="res://scenes/combat_scene.gd" id="1_kq76q"]
 [ext_resource type="Texture2D" uid="uid://byy16lygw3cj6" path="res://scenes/pixil-frame-0 (1).png" id="2_qynya"]
-[ext_resource type="Script" path="res://prefabs/atomatron_battles/atomatron_battle_class.gd" id="4_0jydb"]
+[ext_resource type="Script" path="res://scenes/enemy.gd" id="4_1sobf"]
+[ext_resource type="Script" path="res://scenes/player.gd" id="5_fhki0"]
+[ext_resource type="Texture2D" uid="uid://d1uw2xcarw71" path="res://icon.svg" id="6_f5gr1"]
 
 [node name="TestCombat" type="Node2D"]
 script = ExtResource("1_kq76q")
@@ -14,7 +16,6 @@ scale = Vector2(4.50391, 4.52083)
 texture = ExtResource("1_gisrh")
 
 [node name="Pixil-frame-0(1)" type="Sprite2D" parent="."]
-z_index = 3
 position = Vector2(579, 329)
 scale = Vector2(4.51563, 4.58333)
 texture = ExtResource("2_qynya")
@@ -28,7 +29,43 @@ text = "back to test"
 
 [node name="entities" type="Node2D" parent="."]
 
-[node name="atomatron_battle" type="CharacterBody2D" parent="entities"]
-script = ExtResource("4_0jydb")
+[node name="enemy" type="CharacterBody2D" parent="entities"]
+script = ExtResource("4_1sobf")
+
+[node name="player" type="CharacterBody2D" parent="entities" node_paths=PackedStringArray("target")]
+script = ExtResource("5_fhki0")
+target = NodePath("../enemy")
+
+[node name="Icon" type="Sprite2D" parent="entities/player"]
+position = Vector2(310, 449)
+texture = ExtResource("6_f5gr1")
+
+[node name="player choices" type="Node2D" parent="."]
+visible = false
+position = Vector2(211, 245)
+
+[node name="attack" type="Button" parent="player choices"]
+offset_left = 722.0
+offset_top = 207.0
+offset_right = 807.0
+offset_bottom = 249.0
+text = "attack"
+
+[node name="speed up" type="Button" parent="player choices"]
+offset_left = 723.0
+offset_top = 266.0
+offset_right = 808.0
+offset_bottom = 308.0
+text = "speed up"
+
+[node name="defence up" type="Button" parent="player choices"]
+offset_left = 723.0
+offset_top = 320.0
+offset_right = 808.0
+offset_bottom = 362.0
+text = "defence up"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="player choices/attack" to="entities/player" method="_on_attack_pressed"]
+[connection signal="pressed" from="player choices/speed up" to="entities/player" method="_on_speed_up_pressed"]
+[connection signal="pressed" from="player choices/defence up" to="entities/player" method="_on_defence_up_pressed"]

@@ -1,0 +1,2 @@
+extends atomatron_battle
+
