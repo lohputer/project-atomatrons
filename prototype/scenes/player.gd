@@ -11,7 +11,7 @@ func _on_attack_pressed():
 	newdamage.move_name = "strike"
 	newdamage.move_effect = "non"
 	target.get_hit(newdamage)
-	turn_finished = true
+	get_parent().get_parent().turn_finished = true
 
 
 func _on_speed_up_pressed():

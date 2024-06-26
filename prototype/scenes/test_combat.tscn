@@ -31,15 +31,19 @@ text = "back to test"
 
 [node name="player" type="CharacterBody2D" parent="entities" node_paths=PackedStringArray("target")]
 script = ExtResource("5_fhki0")
+max_health = 10
+speed = 5
 target = NodePath("../enemy")
 
 [node name="Icon" type="Sprite2D" parent="entities/player"]
 position = Vector2(310, 449)
 texture = ExtResource("6_f5gr1")
 
-[node name="enemy" type="CharacterBody2D" parent="entities"]
+[node name="enemy" type="CharacterBody2D" parent="entities" node_paths=PackedStringArray("target")]
 script = ExtResource("4_1sobf")
 max_health = 10
+speed = 6
+target = NodePath("../player")
 
 [node name="player choices" type="Node2D" parent="."]
 visible = false
@@ -60,7 +64,6 @@ offset_bottom = 308.0
 text = "speed up"
 
 [node name="defence up" type="Button" parent="player choices"]
-visible = false
 offset_left = 723.0
 offset_top = 320.0
 offset_right = 808.0
