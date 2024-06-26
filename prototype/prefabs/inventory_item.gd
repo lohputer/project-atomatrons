@@ -1,6 +1,6 @@
 extends Node2D
 
-var itemNameId = "TOMATO"; # this is an id for an item 
+ # this is an id for an item 
 
 const ItemsDict = {
 	"TOMATO" : preload("res://assets/food/tomato.png"),
@@ -9,7 +9,6 @@ const ItemsDict = {
 }
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	initialiseItem(itemNameId)
 	pass # Replace with function body.
 
 
@@ -21,9 +20,8 @@ func initialiseItem(itemType):
 	
 	if itemType in ItemsDict:
 		
-		itemNameId = itemType
 		var sprite2d = Sprite2D.new()
-		sprite2d.texture = ItemsDict[itemNameId]
+		sprite2d.texture = ItemsDict[itemType]
 		
 		add_child(sprite2d)
 	
