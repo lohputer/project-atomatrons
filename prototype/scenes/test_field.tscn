@@ -67,9 +67,9 @@ wait_time = 10.0
 autostart = true
 
 [node name="food" parent="." instance=ExtResource("5_1jgiq")]
-offset_left = 2019.0
-offset_top = -1052.0
-offset_right = 2569.0
-offset_bottom = -686.0
+offset_left = 2741.0
+offset_top = -480.0
+offset_right = 3291.0
+offset_bottom = -114.0
 
 [connection signal="timeout" from="Timer" to="player" method="_on_timer_timeout"]

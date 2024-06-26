@@ -26,8 +26,6 @@ func initialiseItem(itemType):
 		sprite2d.texture = ItemsDict[itemNameId]
 		
 		add_child(sprite2d)
-		
-		
 	
 	else:
 		print("OI BOZO THAT ISNT A VALID ITEM:", itemType)

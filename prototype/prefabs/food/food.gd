@@ -11,6 +11,8 @@ func _on_pressed():
 	if foodType == "BERRIES":
 		PlayerInfo.carbs += 10
 		PlayerInfo.vitC += 20
+	elif foodType == "SPINACH":
+		pass
 	visible = false
 	PlayerInfo.player_speed_modifier = 1
 	queue_free()
