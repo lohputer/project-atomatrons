@@ -1,0 +1,75 @@
+[gd_scene load_steps=10 format=3 uid="uid://drsi47e5tlrtf"]
+
+[ext_resource type="PackedScene" uid="uid://b4e4sgg517n2q" path="res://prefabs/player/player.tscn" id="1_2drqm"]
+[ext_resource type="Script" path="res://scenes/test_field.gd" id="1_y5uf0"]
+[ext_resource type="PackedScene" uid="uid://c1802fn8akd7s" path="res://prefabs/hydrogen.tscn" id="2_5l2mw"]
+[ext_resource type="Texture2D" uid="uid://077q3f4wx8sb" path="res://scenes/UI_backgroundFloor.png" id="2_28opk"]
+[ext_resource type="Script" path="res://scenes/Inventory.gd" id="4_1eyyg"]
+[ext_resource type="PackedScene" uid="uid://dy8nn7clfugoj" path="res://prefabs/food/food.tscn" id="5_1jgiq"]
+[ext_resource type="Texture2D" uid="uid://7j668dinx0m1" path="res://assets/InventoryUIScaled.png" id="5_sjvtg"]
+[ext_resource type="PackedScene" uid="uid://bi3k38eylcja0" path="res://prefabs/inventory_item.tscn" id="6_7af15"]
+[ext_resource type="Texture2D" uid="uid://dcd7qjkvaxmj4" path="res://scenes/UI_foreground.png" id="6_sc185"]
+
+[node name="TestField" type="Node2D"]
+script = ExtResource("1_y5uf0")
+
+[node name="UiBackgroundFloor" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 3
+position = Vector2(-1128, -35008)
+scale = Vector2(100000, 100000)
+texture = ExtResource("2_28opk")
+
+[node name="player" parent="." instance=ExtResource("1_2drqm")]
+position = Vector2(126, 86)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(0, 2)
+scale = Vector2(2, 2)
+
+[node name="Inventory" type="Node2D" parent="player"]
+position = Vector2(360, 246)
+script = ExtResource("4_1eyyg")
+
+[node name="InventoryUiScaled" type="Sprite2D" parent="player/Inventory"]
+z_index = 10
+position = Vector2(-226, -138)
+scale = Vector2(1.98719, 2.06522)
+texture = ExtResource("5_sjvtg")
+
+[node name="inventoryItem" parent="player/Inventory" instance=ExtResource("6_7af15")]
+position = Vector2(-924, -520)
+
+[node name="amount" type="Label" parent="player/Inventory/inventoryItem"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Stats" type="Label" parent="player"]
+unique_name_in_owner = true
+offset_left = -1144.0
+offset_top = -630.0
+offset_right = -562.0
+offset_bottom = 2.0
+
+[node name="nitrogen" parent="." instance=ExtResource("2_5l2mw")]
+position = Vector2(-526, 469)
+
+[node name="UiForeground" type="Sprite2D" parent="."]
+position = Vector2(121, 392)
+texture = ExtResource("6_sc185")
+
+[node name="UiForeground2" type="Sprite2D" parent="."]
+position = Vector2(-298, -34)
+texture = ExtResource("6_sc185")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="food" parent="." instance=ExtResource("5_1jgiq")]
+offset_left = 2741.0
+offset_top = -480.0
+offset_right = 3291.0
+offset_bottom = -114.0
+
+[connection signal="timeout" from="Timer" to="player" method="_on_timer_timeout"]

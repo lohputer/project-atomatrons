@@ -22,7 +22,6 @@ func initialiseItem(itemType):
 		
 		var sprite2d = Sprite2D.new()
 		sprite2d.texture = ItemsDict[itemType]
-		
 		add_child(sprite2d)
 	
 	else:
