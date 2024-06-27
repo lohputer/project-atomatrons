@@ -16,7 +16,7 @@ script = ExtResource("1_y5uf0")
 [node name="UiBackgroundFloor" type="Sprite2D" parent="."]
 texture_filter = 1
 texture_repeat = 3
-position = Vector2(-1128, -35008)
+position = Vector2(-1457, -35223)
 scale = Vector2(100000, 100000)
 texture = ExtResource("2_28opk")
 
@@ -67,9 +67,9 @@ wait_time = 10.0
 autostart = true
 
 [node name="food" parent="." instance=ExtResource("5_1jgiq")]
-offset_left = 2741.0
-offset_top = -480.0
-offset_right = 3291.0
-offset_bottom = -114.0
+offset_left = 3014.0
+offset_top = -540.0
+offset_right = 3564.0
+offset_bottom = -174.0
 
 [connection signal="timeout" from="Timer" to="player" method="_on_timer_timeout"]

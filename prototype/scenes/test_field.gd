@@ -83,7 +83,6 @@ func _on_despawn_timer_timeout():
 			start_spawn_timer()
 	else:
 		spawn_timer.stop()
-		
 
 func _on_food_spawn_timer_timeout():
 	if food_instances.size() < max_food_instances:
@@ -91,7 +90,7 @@ func _on_food_spawn_timer_timeout():
 		var food_instance = food_scene.instantiate()
 		food_instance.position = spawn_position
 		food_instance.texture_normal = textures.pick_random()
-		food_instance.foodType = food_names[textures.find(food_instance.texture_normal)]
+		food_instance.foodType = food_names[textures.find(food_instance.texture_normal)].to_upper()
 		add_child(food_instance)
 
 		var despawn_time = randf_range(10, 15)
