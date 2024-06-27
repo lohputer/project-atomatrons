@@ -29,16 +29,21 @@ text = "back to test"
 
 [node name="entities" type="Node2D" parent="."]
 
-[node name="enemy" type="CharacterBody2D" parent="entities"]
-script = ExtResource("4_1sobf")
-
 [node name="player" type="CharacterBody2D" parent="entities" node_paths=PackedStringArray("target")]
 script = ExtResource("5_fhki0")
+max_health = 10
+speed = 5
 target = NodePath("../enemy")
 
 [node name="Icon" type="Sprite2D" parent="entities/player"]
 position = Vector2(310, 449)
 texture = ExtResource("6_f5gr1")
+
+[node name="enemy" type="CharacterBody2D" parent="entities" node_paths=PackedStringArray("target")]
+script = ExtResource("4_1sobf")
+max_health = 10
+speed = 6
+target = NodePath("../player")
 
 [node name="player choices" type="Node2D" parent="."]
 visible = false
@@ -64,6 +69,10 @@ offset_top = 320.0
 offset_right = 808.0
 offset_bottom = 362.0
 text = "defence up"
+
+[node name="enemy health" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="player choices/attack" to="entities/player" method="_on_attack_pressed"]
