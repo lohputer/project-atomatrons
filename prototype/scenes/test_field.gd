@@ -115,7 +115,7 @@ func _on_food_despawn_timer_timeout():
 			start_spawn_timer()
 	else:
 		food_spawn_timer.stop()
-		
+
 func calculate_spawn_position():
 	var spawn_angle = randf_range(0, 2 * PI)
 	var spawn_distance = randf_range(min_spawn_distance, max_spawn_distance)
