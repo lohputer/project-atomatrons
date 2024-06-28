@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c1802fn8akd7s" path="res://prefabs/hydrogen.tscn" id="2_5l2mw"]
 [ext_resource type="Texture2D" uid="uid://077q3f4wx8sb" path="res://scenes/UI_backgroundFloor.png" id="2_28opk"]
 [ext_resource type="Script" path="res://scenes/Inventory.gd" id="4_1eyyg"]
-[ext_resource type="PackedScene" uid="uid://dy8nn7clfugoj" path="res://prefabs/food/food.tscn" id="5_1jgiq"]
+[ext_resource type="PackedScene" uid="uid://dy8nn7clfugoj" path="res://prefabs/item/item.tscn" id="5_1jgiq"]
 [ext_resource type="Texture2D" uid="uid://7j668dinx0m1" path="res://assets/InventoryUIScaled.png" id="5_sjvtg"]
 [ext_resource type="PackedScene" uid="uid://bi3k38eylcja0" path="res://prefabs/inventory_item.tscn" id="6_7af15"]
 [ext_resource type="Texture2D" uid="uid://dcd7qjkvaxmj4" path="res://scenes/UI_foreground.png" id="6_sc185"]
@@ -66,7 +66,7 @@ texture = ExtResource("6_sc185")
 wait_time = 10.0
 autostart = true
 
-[node name="food" parent="." instance=ExtResource("5_1jgiq")]
+[node name="item" parent="." instance=ExtResource("5_1jgiq")]
 offset_left = 3014.0
 offset_top = -540.0
 offset_right = 3564.0

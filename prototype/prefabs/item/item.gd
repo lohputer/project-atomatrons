@@ -1,7 +1,8 @@
 extends TextureButton
 
+var inventoryItemNode = preload("res://prefabs/inventory_item.tscn")
 # Called when the node enters the scene tree for the first time.
-@export var foodType = "BERRIES"
+@export var itemType = "BERRIES"
 
 func _ready():
 	pass # Replace with function body.
@@ -17,16 +18,19 @@ var calcium = 20
 var iron = 20
 """
 func _on_pressed():
-	print(foodType)
+	print(itemType)
+	addItem(itemType)
 	PlayerInfo.player_speed_modifier = 1.5
-	if foodType == "BERRIES":
+	if itemType == "BERRIES":
 		PlayerInfo.carbs += 10
 		PlayerInfo.vitC += 15
-	elif foodType == "SPINACH":
+	elif itemType == "SPINACH":
 		PlayerInfo.calcium += 5
 		PlayerInfo.iron += 10
-	elif foodType == "TOMATO":
+	elif itemType == "TOMATO":
 		pass
+	elif itemType == "PETRI":
+		addItem(itemType)
 	visible = false
 	PlayerInfo.player_speed_modifier = 1
 	queue_free()
@@ -36,3 +40,13 @@ func _on_area_2d_body_entered(body):
 		print('its the end of you')
 	else:
 		print("womp womp")
+
+
+func addItem(itemName):
+	var instanceOfItem = inventoryItemNode.instantiate()
+	if PlayerInfo.inventory.size() < 10:
+		instanceOfItem.initialiseItem(itemName)
+		instanceOfItem.position = Vector2(1000, 0)
+		add_child(instanceOfItem)
+	else:
+		print("Ruh roh too many items")

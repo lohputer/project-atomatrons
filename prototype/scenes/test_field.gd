@@ -1,7 +1,7 @@
 extends Node2D
 
 var nitrogen_scene = preload("res://prefabs/nitrogen/field/nitrogen_field.tscn")
-var food_scene = preload("res://prefabs/food/food.tscn")
+var food_scene = preload("res://prefabs/item/item.tscn")
 var spawn_timer = Timer.new()
 var despawn_timer = Timer.new()
 var food_spawn_timer = Timer.new()
@@ -90,7 +90,7 @@ func _on_food_spawn_timer_timeout():
 		var food_instance = food_scene.instantiate()
 		food_instance.position = spawn_position
 		food_instance.texture_normal = textures.pick_random()
-		food_instance.foodType = food_names[textures.find(food_instance.texture_normal)].to_upper()
+		food_instance.itemType = food_names[textures.find(food_instance.texture_normal)].to_upper()
 		add_child(food_instance)
 
 		var despawn_time = randf_range(10, 15)

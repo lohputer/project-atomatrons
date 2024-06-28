@@ -6,6 +6,7 @@ const ItemsDict = {
 	"TOMATO" : preload("res://assets/food/tomato.png"),
 	"BERRIES": preload("res://assets/food/berries.png"),
 	"SPINACH": preload("res://assets/food/spinach.png"),
+	"PETRI": preload("res://assets/itemImages/petri.jpg")
 }
 # Called when the node enters the scene tree for the first time.
 func _ready():

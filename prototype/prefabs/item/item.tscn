@@ -1,18 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://dy8nn7clfugoj"]
 
-[ext_resource type="Texture2D" uid="uid://dngpky4rd31p1" path="res://assets/food/berries.png" id="1_f52nr"]
-[ext_resource type="Script" path="res://prefabs/food/food.gd" id="2_kbkn1"]
+[ext_resource type="Texture2D" uid="uid://dngpky4rd31p1" path="res://assets/food/berries.png" id="1_o5eqe"]
+[ext_resource type="Script" path="res://prefabs/item/item.gd" id="2_6b7fi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wju4p"]
 size = Vector2(835.426, 613.467)
 
-[node name="Food" type="TextureButton"]
+[node name="Item" type="TextureButton"]
 offset_right = 550.0
 offset_bottom = 366.0
 scale = Vector2(0.377053, 0.529776)
-texture_normal = ExtResource("1_f52nr")
+texture_normal = ExtResource("1_o5eqe")
 stretch_mode = 0
-script = ExtResource("2_kbkn1")
+script = ExtResource("2_6b7fi")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(270.519, 181.209)
