@@ -14,7 +14,7 @@ script = ExtResource("1_y5uf0")
 [node name="UiBackgroundFloor" type="Sprite2D" parent="."]
 texture_filter = 1
 texture_repeat = 3
-position = Vector2(-1457, -35222)
+position = Vector2(-1457, -35223)
 scale = Vector2(100000, 100000)
 texture = ExtResource("2_28opk")
 

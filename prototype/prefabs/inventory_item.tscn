@@ -1,6 +1,29 @@
 [gd_scene load_steps=3 format=3 uid="uid://bi3k38eylcja0"]
 
-[ext_resource type="Script" path="res://prefabs/inventory_item.gd" id="1_4t2o3"]
+[sub_resource type="GDScript" id="GDScript_dmqjc"]
+script/source = "extends Node2D
+
+ # this is an id for an item 
+
+const ItemsDict = {
+	\"TOMATO\" : preload(\"res://assets/food/tomato.png\"),
+	\"BERRIES\": preload(\"res://assets/food/berries.png\"),
+	\"SPINACH\": preload(\"res://assets/food/spinach.png\"),
+	\"PETRI\": preload(\"res://assets/itemImages/petri.jpg\")
+}
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+	
+func initialiseItem(itemNode):
+	var sprite2d = itemNode.new()
+	add_child(sprite2d)
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aeyet"]
 size = Vector2(35, 33)
@@ -9,7 +32,7 @@ size = Vector2(35, 33)
 z_index = 11
 z_as_relative = false
 scale = Vector2(6.655, 6.655)
-script = ExtResource("1_4t2o3")
+script = SubResource("GDScript_dmqjc")
 
 [node name="Area2D" type="Area2D" parent="."]
 

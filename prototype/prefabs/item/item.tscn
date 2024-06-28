@@ -9,16 +9,18 @@ size = Vector2(835.426, 613.467)
 [node name="Item" type="TextureButton"]
 offset_right = 550.0
 offset_bottom = 366.0
-scale = Vector2(0.377053, 0.529776)
+scale = Vector2(0.1, 0.15)
 texture_normal = ExtResource("1_o5eqe")
 stretch_mode = 0
 script = ExtResource("2_6b7fi")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(270.519, 181.209)
+scale = Vector2(0.1, 0.15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(5.30428, 1.52588e-05)
+position = Vector2(5.30429, 1.52588e-05)
+scale = Vector2(0.1, 0.15)
 shape = SubResource("RectangleShape2D_wju4p")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
