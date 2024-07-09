@@ -36,7 +36,6 @@ func turn_manage():
 			slow_child.turn()
 			for t in 7200:
 				if turn_finished:
-					turn_finished = false
 					turn_manage()
 					return
 				await get_tree().create_timer(0.03).timeout
