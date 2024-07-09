@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://drsi47e5tlrtf"]
+[gd_scene load_steps=9 format=3 uid="uid://drsi47e5tlrtf"]
 
 [ext_resource type="PackedScene" uid="uid://b4e4sgg517n2q" path="res://prefabs/player/player.tscn" id="1_2drqm"]
 [ext_resource type="Script" path="res://scenes/test_field.gd" id="1_y5uf0"]
-[ext_resource type="PackedScene" uid="uid://c1802fn8akd7s" path="res://prefabs/hydrogen.tscn" id="2_5l2mw"]
 [ext_resource type="Texture2D" uid="uid://077q3f4wx8sb" path="res://scenes/UI_backgroundFloor.png" id="2_28opk"]
-[ext_resource type="PackedScene" uid="uid://b26h0j6bsl7rc" path="res://scenes/inventory.tscn" id="4_5vhsl"]
+[ext_resource type="PackedScene" uid="uid://dvk5vj2yqkhm7" path="res://prefabs/player/inventory/inventory.tscn" id="4_3ajo7"]
 [ext_resource type="PackedScene" uid="uid://dy8nn7clfugoj" path="res://prefabs/item/item.tscn" id="5_1jgiq"]
 [ext_resource type="Texture2D" uid="uid://dcd7qjkvaxmj4" path="res://scenes/UI_foreground.png" id="6_sc185"]
+[ext_resource type="PackedScene" uid="uid://b6ixs0isb01qu" path="res://prefabs/atomatrons/atomic/hydrogen/hydrogen.tscn" id="7_0s8t0"]
+[ext_resource type="PackedScene" uid="uid://bnnpg1plv7owt" path="res://prefabs/atomatrons/compounds/hydrochloricAcid/hydrochloricacid.tscn" id="8_44sbb"]
 
 [node name="TestField" type="Node2D"]
 script = ExtResource("1_y5uf0")
@@ -24,18 +25,13 @@ texture = ExtResource("2_28opk")
 position = Vector2(0, 2)
 scale = Vector2(2, 2)
 
-[node name="Inventory" parent="player" instance=ExtResource("4_5vhsl")]
-position = Vector2(212, 136)
-scale = Vector2(0.909049, 0.891565)
-
 [node name="Stats" type="Label" parent="player"]
 offset_right = 40.0
 offset_bottom = 23.0
 text = "test"
 metadata/_edit_use_anchors_ = true
 
-[node name="nitrogen" parent="." instance=ExtResource("2_5l2mw")]
-position = Vector2(-526, 469)
+[node name="Inventory" parent="player" instance=ExtResource("4_3ajo7")]
 
 [node name="UiForeground" type="Sprite2D" parent="."]
 position = Vector2(121, 392)
@@ -54,5 +50,11 @@ offset_left = 3014.0
 offset_top = -540.0
 offset_right = 3564.0
 offset_bottom = -174.0
+
+[node name="hydrogen" parent="." instance=ExtResource("7_0s8t0")]
+position = Vector2(607, 764)
+
+[node name="hydrochloricAcid" parent="." instance=ExtResource("8_44sbb")]
+position = Vector2(-885, 678)
 
 [connection signal="timeout" from="Timer" to="player" method="_on_timer_timeout"]

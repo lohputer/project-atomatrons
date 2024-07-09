@@ -1,12 +1,18 @@
-extends Node2D
+[gd_scene load_steps=4 format=3 uid="uid://dvk5vj2yqkhm7"]
 
-var inventoryItemNode = preload("res://prefabs/inventory_item.tscn")
-var itemNode = preload("res://prefabs/item/item.tscn")
+[ext_resource type="Texture2D" uid="uid://7j668dinx0m1" path="res://assets/InventoryUIScaled.png" id="2_fcpjt"]
+[ext_resource type="PackedScene" uid="uid://bi3k38eylcja0" path="res://prefabs/player/inventory/inventory_item.tscn" id="3_3dyaj"]
+
+[sub_resource type="GDScript" id="GDScript_gh2k0"]
+script/source = "extends Node2D
+
+var inventoryItemNode = preload(\"res://prefabs/player/inventory/inventory_item.tscn\")
+var itemNode = preload(\"res://prefabs/item/item.tscn\")
 const itemDict = {
-	"TOMATO" : preload("res://assets/food/tomato.png"),
-	"BERRIES": preload("res://assets/food/berries.png"),
-	"SPINACH": preload("res://assets/food/spinach.png"),
-	"PETRI": preload("res://assets/itemImages/petri.jpg")
+	\"TOMATO\" : preload(\"res://assets/food/tomato.png\"),
+	\"BERRIES\": preload(\"res://assets/food/berries.png\"),
+	\"SPINACH\": preload(\"res://assets/food/spinach.png\"),
+	\"PETRI\": preload(\"res://assets/itemImages/petri.jpg\")
 }
 const positions = [Vector2(-1050, -645),  Vector2(-660, -645), Vector2(-270, -645), Vector2(120, -645), Vector2(510, -645), Vector2(-1050, -255),  Vector2(-660, -255), Vector2(-270, -255), Vector2(120, -255), Vector2(510, -255)]
 # Called when the node enters the scene tree for the first time.
@@ -34,4 +40,16 @@ func addItem(itemName):
 	elif itemName in PlayerInfo.inventory:
 		PlayerInfo.inventory[itemName] += 1
 	else:
-		print("Ruh roh too many items")
+		print(\"Ruh roh too many items\")
+"
+
+[node name="Inventory" type="Node2D"]
+script = SubResource("GDScript_gh2k0")
+
+[node name="InventoryUiScaled" type="Sprite2D" parent="."]
+z_index = 10
+position = Vector2(-226, -138)
+scale = Vector2(1.98719, 2.06522)
+texture = ExtResource("2_fcpjt")
+
+[node name="inventoryItem" parent="." instance=ExtResource("3_3dyaj")]

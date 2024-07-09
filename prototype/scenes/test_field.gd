@@ -1,6 +1,6 @@
 extends Node2D
 
-var nitrogen_scene = preload("res://prefabs/nitrogen/field/nitrogen_field.tscn")
+var nitrogen_scene = preload("res://prefabs/atomatrons/atomic/nitrogen/nitrogen_field.tscn")
 var food_scene = preload("res://prefabs/item/item.tscn")
 var spawn_timer = Timer.new()
 var despawn_timer = Timer.new()

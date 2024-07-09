@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://b00as3emp7t3n"]
+[gd_scene load_steps=10 format=3 uid="uid://c228i2sj660lp"]
 
-[ext_resource type="Script" path="res://prefabs/nitrogen/field/nitrogen_field.gd" id="1_ody2s"]
+[ext_resource type="Script" path="res://prefabs/atomatrons/atomic/nitrogen/nitrogen_field.gd" id="1_lqhli"]
 [ext_resource type="Texture2D" uid="uid://d2d6ycx1g8cod" path="res://assets/atomatrons/nitrogen/blink/left/frame0000.png" id="2_fq3t5"]
 [ext_resource type="Texture2D" uid="uid://c3yhibn7bj2kq" path="res://assets/atomatrons/nitrogen/blink/left/frame0001.png" id="3_oa8da"]
 [ext_resource type="Texture2D" uid="uid://b18h0i3sdpmmq" path="res://assets/atomatrons/nitrogen/blink/left/frame0002.png" id="4_m2u6u"]
@@ -34,8 +34,11 @@ animations = [{
 radius = 36.0
 height = 90.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_sdcyt"]
+radius = 700.825
+
 [node name="nitrogen" type="CharacterBody2D"]
-script = ExtResource("1_ody2s")
+script = ExtResource("1_lqhli")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2.5, 2.5)
@@ -44,3 +47,11 @@ animation = &"blink"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_3u4ap")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(4, 2)
+shape = SubResource("CircleShape2D_sdcyt")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
