@@ -14,25 +14,25 @@ script = ExtResource("1_y5uf0")
 [node name="UiBackgroundFloor" type="Sprite2D" parent="."]
 texture_filter = 1
 texture_repeat = 3
-position = Vector2(-1457, -35222)
+position = Vector2(-460, -35388)
 scale = Vector2(100000, 100000)
 texture = ExtResource("2_28opk")
 
 [node name="player" parent="." instance=ExtResource("1_2drqm")]
-position = Vector2(126, 86)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(0, 2)
 scale = Vector2(2, 2)
 
 [node name="Inventory" parent="player" instance=ExtResource("4_5vhsl")]
+position = Vector2(212, 136)
+scale = Vector2(0.909049, 0.891565)
 
 [node name="Stats" type="Label" parent="player"]
-unique_name_in_owner = true
-offset_left = -1144.0
-offset_top = -630.0
-offset_right = -562.0
-offset_bottom = 2.0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "test"
+metadata/_edit_use_anchors_ = true
 
 [node name="nitrogen" parent="." instance=ExtResource("2_5l2mw")]
 position = Vector2(-526, 469)

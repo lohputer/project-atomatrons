@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://bi3k38eylcja0" path="res://prefabs/inventory_item.tscn" id="3_3dyaj"]
 
 [node name="Inventory" type="Node2D"]
-position = Vector2(360, 246)
 script = ExtResource("1_spf5i")
 
 [node name="InventoryUiScaled" type="Sprite2D" parent="."]
@@ -15,11 +14,5 @@ scale = Vector2(1.98719, 2.06522)
 texture = ExtResource("2_fcpjt")
 
 [node name="inventoryItem" parent="." instance=ExtResource("3_3dyaj")]
-position = Vector2(-924, -520)
+position = Vector2(-958, -560)
 script = null
-
-[node name="amount" type="Label" parent="inventoryItem"]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "test"
-metadata/_edit_use_anchors_ = true

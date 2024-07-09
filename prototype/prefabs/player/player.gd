@@ -26,7 +26,7 @@ func _physics_process(delta):
 		inventoryNode.visible = openInventory
 		velocity = Vector2.ZERO
 	
-	%Stats.text = """
+	$Stats.text = """
 	Player Name: %s
 	Carbs: %s
 	Proteins: %s
