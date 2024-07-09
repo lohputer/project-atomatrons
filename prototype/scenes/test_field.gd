@@ -1,7 +1,7 @@
 extends Node2D
 
-var nitrogen_scene = preload("res://prefabs/nitrogen/field/nitrogen_field.tscn")
-var food_scene = preload("res://prefabs/food/food.tscn")
+var nitrogen_scene = preload("res://prefabs/atomatrons/atomic/nitrogen/nitrogen_field.tscn")
+var food_scene = preload("res://prefabs/item/item.tscn")
 var spawn_timer = Timer.new()
 var despawn_timer = Timer.new()
 var food_spawn_timer = Timer.new()
@@ -83,7 +83,6 @@ func _on_despawn_timer_timeout():
 			start_spawn_timer()
 	else:
 		spawn_timer.stop()
-		
 
 func _on_food_spawn_timer_timeout():
 	if food_instances.size() < max_food_instances:
@@ -91,7 +90,7 @@ func _on_food_spawn_timer_timeout():
 		var food_instance = food_scene.instantiate()
 		food_instance.position = spawn_position
 		food_instance.texture_normal = textures.pick_random()
-		food_instance.foodType = food_names[textures.find(food_instance.texture_normal)]
+		food_instance.itemType = food_names[textures.find(food_instance.texture_normal)].to_upper()
 		add_child(food_instance)
 
 		var despawn_time = randf_range(10, 15)
@@ -116,7 +115,7 @@ func _on_food_despawn_timer_timeout():
 			start_spawn_timer()
 	else:
 		food_spawn_timer.stop()
-		
+
 func calculate_spawn_position():
 	var spawn_angle = randf_range(0, 2 * PI)
 	var spawn_distance = randf_range(min_spawn_distance, max_spawn_distance)

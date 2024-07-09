@@ -2,7 +2,7 @@ extends atomatron_field
 @export var speed = 50
 var wandering = false
 var foundPlayer = false
-var id = "hydrogen"
+var id = "nitrogen"
 
 func _ready():
 	pass
@@ -43,6 +43,7 @@ func _on_timer_timeout():
 
 
 func _on_area_2d_body_entered(body):
+
 	if body.id == "player":
 		print("I chasing... *kneels down*   Oh its you Ding Hong!")
 		foundPlayer = true

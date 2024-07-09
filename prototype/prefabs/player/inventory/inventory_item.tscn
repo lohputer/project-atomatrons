@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi3k38eylcja0"]
+
+[sub_resource type="GDScript" id="GDScript_dmqjc"]
+script/source = "extends Node2D
+
+ # this is an id for an item 
+
+const ItemsDict = {
+	\"TOMATO\" : preload(\"res://assets/food/tomato.png\"),
+	\"BERRIES\": preload(\"res://assets/food/berries.png\"),
+	\"SPINACH\": preload(\"res://assets/food/spinach.png\"),
+	\"PETRI\": preload(\"res://assets/itemImages/petri.jpg\")
+}
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+	
+func initialiseItem(itemNode):
+	var sprite2d = itemNode.new()
+	add_child(sprite2d)
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aeyet"]
+size = Vector2(35, 33)
+
+[node name="inventoryItem" type="Node2D"]
+z_index = 11
+z_as_relative = false
+scale = Vector2(6.655, 6.655)
+script = SubResource("GDScript_dmqjc")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_aeyet")
+
+[node name="amount" type="Label" parent="."]
+visibility_layer = 512
+offset_left = -15.7776
+offset_top = -2.25394
+offset_right = 24.2224
+offset_bottom = 20.7461
+scale = Vector2(0.775773, 0.785238)
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true

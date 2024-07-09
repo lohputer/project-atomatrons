@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dy8nn7clfugoj"]
+
+[ext_resource type="Texture2D" uid="uid://dngpky4rd31p1" path="res://assets/food/berries.png" id="1_o5eqe"]
+[ext_resource type="Script" path="res://prefabs/item/item.gd" id="2_6b7fi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wju4p"]
+size = Vector2(835.426, 613.467)
+
+[node name="Item" type="TextureButton"]
+offset_right = 550.0
+offset_bottom = 366.0
+scale = Vector2(0.1, 0.15)
+texture_normal = ExtResource("1_o5eqe")
+stretch_mode = 0
+script = ExtResource("2_6b7fi")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(270.519, 181.209)
+scale = Vector2(0.1, 0.15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(5.30429, 1.52588e-05)
+scale = Vector2(0.1, 0.15)
+shape = SubResource("RectangleShape2D_wju4p")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]
