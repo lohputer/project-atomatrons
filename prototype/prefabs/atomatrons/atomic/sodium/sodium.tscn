@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://b35y8yl1spqqp"]
+
+[ext_resource type="Script" path="res://prefabs/atomatrons/atomic/sodium/sodium.gd" id="1_rcpvh"]
+[ext_resource type="Texture2D" uid="uid://b8lkj1mjbassc" path="res://assets/atomatrons/sodium/sodium.png" id="2_vunc0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mxbex"]
+radius = 38.2099
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1p73r"]
+radius = 308.015
+
+[node name="sodium" type="CharacterBody2D"]
+scale = Vector2(1.85, 1.85)
+script = ExtResource("1_rcpvh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mxbex")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_vunc0")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_1p73r")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

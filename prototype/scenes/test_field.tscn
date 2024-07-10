@@ -1,14 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://drsi47e5tlrtf"]
+[gd_scene load_steps=7 format=3 uid="uid://drsi47e5tlrtf"]
 
 [ext_resource type="PackedScene" uid="uid://b4e4sgg517n2q" path="res://prefabs/player/player.tscn" id="1_2drqm"]
 [ext_resource type="Script" path="res://scenes/test_field.gd" id="1_y5uf0"]
 [ext_resource type="Texture2D" uid="uid://077q3f4wx8sb" path="res://scenes/UI_backgroundFloor.png" id="2_28opk"]
 [ext_resource type="PackedScene" uid="uid://dvk5vj2yqkhm7" path="res://prefabs/player/inventory/inventory.tscn" id="4_3ajo7"]
 [ext_resource type="PackedScene" uid="uid://dy8nn7clfugoj" path="res://prefabs/item/item.tscn" id="5_1jgiq"]
-[ext_resource type="PackedScene" uid="uid://6bmhfncrxj7c" path="res://prefabs/atomatrons/atomic/lithium/lithium.tscn" id="6_be164"]
-[ext_resource type="PackedScene" uid="uid://cvro0at5d4hwx" path="res://prefabs/atomatrons/atomic/chlorine/chlorine.tscn" id="7_xcusk"]
-[ext_resource type="PackedScene" uid="uid://c228i2sj660lp" path="res://prefabs/atomatrons/atomic/nitrogen/nitrogen_field.tscn" id="8_lawqd"]
-[ext_resource type="PackedScene" uid="uid://bpxli0u8xar6s" path="res://prefabs/atomatrons/atomic/magnesium/magnesium.tscn" id="9_fnj22"]
+[ext_resource type="PackedScene" uid="uid://bkgcx6gi03ec4" path="res://prefabs/atomatrons/atomic/aluminium/aluminium.tscn" id="6_08oat"]
 
 [node name="TestField" type="Node2D"]
 script = ExtResource("1_y5uf0")
@@ -45,16 +42,7 @@ offset_top = -540.0
 offset_right = 3564.0
 offset_bottom = -174.0
 
-[node name="lithium" parent="." instance=ExtResource("6_be164")]
-position = Vector2(259, 197)
-
-[node name="chlorine" parent="." instance=ExtResource("7_xcusk")]
-position = Vector2(-437, 256)
-
-[node name="nitrogen" parent="." instance=ExtResource("8_lawqd")]
-position = Vector2(751, 101)
-
-[node name="magnesium" parent="." instance=ExtResource("9_fnj22")]
-position = Vector2(-391, -292)
+[node name="aluminium" parent="." instance=ExtResource("6_08oat")]
+position = Vector2(351, 256)
 
 [connection signal="timeout" from="Timer" to="player" method="_on_timer_timeout"]

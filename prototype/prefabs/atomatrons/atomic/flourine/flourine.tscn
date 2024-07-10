@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://2e7du5llpqxq"]
+
+[ext_resource type="Script" path="res://prefabs/atomatrons/atomic/flourine/flourine.gd" id="1_8lcvi"]
+[ext_resource type="Texture2D" uid="uid://drn17ovcavknk" path="res://assets/atomatrons/flourine/flourine.png" id="2_drjjw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7srud"]
+radius = 39.8121
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s7xqk"]
+radius = 271.266
+
+[node name="flourine" type="CharacterBody2D"]
+scale = Vector2(1.6, 1.6)
+script = ExtResource("1_8lcvi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7srud")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_drjjw")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_s7xqk")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

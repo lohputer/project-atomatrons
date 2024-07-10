@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkgcx6gi03ec4"]
+
+[ext_resource type="Texture2D" uid="uid://c4eef7q223gv" path="res://assets/atomatrons/aluminium/aluminium.png" id="1_66rbj"]
+[ext_resource type="Script" path="res://prefabs/atomatrons/atomic/aluminium/aluminium.gd" id="1_muqg1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c5ilp"]
+radius = 38.833
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s5n3l"]
+radius = 260.377
+
+[node name="aluminium" type="CharacterBody2D"]
+scale = Vector2(2.12, 2.12)
+script = ExtResource("1_muqg1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_66rbj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_c5ilp")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_s5n3l")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
