@@ -36,7 +36,4 @@ func _on_pressed():
 
 func _on_area_2d_body_entered(body):
 	if body.id == "player":
-		print('its the end of you')
-	else:
-		print("womp womp")
-		
+		print("i see..")
