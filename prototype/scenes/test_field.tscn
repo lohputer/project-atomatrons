@@ -27,9 +27,16 @@ position = Vector2(0, 2)
 scale = Vector2(2, 2)
 
 [node name="Stats" type="Label" parent="player"]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "test"
+offset_left = -196.0
+offset_top = -24.0
+offset_right = -65.0
+offset_bottom = 25.0
+scale = Vector2(3.06448, 5.66361)
+text = "womp womp"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+text_overrun_behavior = 4
 metadata/_edit_use_anchors_ = true
 
 [node name="Inventory" parent="player" instance=ExtResource("4_3ajo7")]
