@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpxli0u8xar6s"]
+
+[ext_resource type="Script" path="res://prefabs/atomatrons/atomic/magnesium/magnesium.gd" id="1_01nj5"]
+[ext_resource type="Texture2D" uid="uid://tr5ib1kmnt8b" path="res://assets/atomatrons/magnesium/magnesium.png" id="2_l5lq1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eeie1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vc0fb"]
+radius = 1049.86
+
+[node name="magnesium" type="CharacterBody2D"]
+scale = Vector2(0.615, 0.615)
+script = ExtResource("1_01nj5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3.14, 3.14)
+texture = ExtResource("2_l5lq1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(10.805, 10.805)
+shape = SubResource("CircleShape2D_eeie1")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-1, 7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(7, -8)
+shape = SubResource("CircleShape2D_vc0fb")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

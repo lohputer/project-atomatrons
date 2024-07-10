@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://drsi47e5tlrtf"]
+[gd_scene load_steps=10 format=3 uid="uid://drsi47e5tlrtf"]
 
 [ext_resource type="PackedScene" uid="uid://b4e4sgg517n2q" path="res://prefabs/player/player.tscn" id="1_2drqm"]
 [ext_resource type="Script" path="res://scenes/test_field.gd" id="1_y5uf0"]
 [ext_resource type="Texture2D" uid="uid://077q3f4wx8sb" path="res://scenes/UI_backgroundFloor.png" id="2_28opk"]
 [ext_resource type="PackedScene" uid="uid://dvk5vj2yqkhm7" path="res://prefabs/player/inventory/inventory.tscn" id="4_3ajo7"]
 [ext_resource type="PackedScene" uid="uid://dy8nn7clfugoj" path="res://prefabs/item/item.tscn" id="5_1jgiq"]
-[ext_resource type="Texture2D" uid="uid://dcd7qjkvaxmj4" path="res://scenes/UI_foreground.png" id="6_sc185"]
-[ext_resource type="PackedScene" uid="uid://b6ixs0isb01qu" path="res://prefabs/atomatrons/atomic/hydrogen/hydrogen.tscn" id="7_0s8t0"]
-[ext_resource type="PackedScene" uid="uid://bnnpg1plv7owt" path="res://prefabs/atomatrons/compounds/hydrochloricAcid/hydrochloricacid.tscn" id="8_44sbb"]
+[ext_resource type="PackedScene" uid="uid://6bmhfncrxj7c" path="res://prefabs/atomatrons/atomic/lithium/lithium.tscn" id="6_be164"]
+[ext_resource type="PackedScene" uid="uid://cvro0at5d4hwx" path="res://prefabs/atomatrons/atomic/chlorine/chlorine.tscn" id="7_xcusk"]
+[ext_resource type="PackedScene" uid="uid://c228i2sj660lp" path="res://prefabs/atomatrons/atomic/nitrogen/nitrogen_field.tscn" id="8_lawqd"]
+[ext_resource type="PackedScene" uid="uid://bpxli0u8xar6s" path="res://prefabs/atomatrons/atomic/magnesium/magnesium.tscn" id="9_fnj22"]
 
 [node name="TestField" type="Node2D"]
 script = ExtResource("1_y5uf0")
@@ -32,14 +33,7 @@ text = "test"
 metadata/_edit_use_anchors_ = true
 
 [node name="Inventory" parent="player" instance=ExtResource("4_3ajo7")]
-
-[node name="UiForeground" type="Sprite2D" parent="."]
-position = Vector2(121, 392)
-texture = ExtResource("6_sc185")
-
-[node name="UiForeground2" type="Sprite2D" parent="."]
-position = Vector2(-298, -34)
-texture = ExtResource("6_sc185")
+position = Vector2(22, 44)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0
@@ -51,10 +45,16 @@ offset_top = -540.0
 offset_right = 3564.0
 offset_bottom = -174.0
 
-[node name="hydrogen" parent="." instance=ExtResource("7_0s8t0")]
-position = Vector2(607, 764)
+[node name="lithium" parent="." instance=ExtResource("6_be164")]
+position = Vector2(259, 197)
 
-[node name="hydrochloricAcid" parent="." instance=ExtResource("8_44sbb")]
-position = Vector2(-885, 678)
+[node name="chlorine" parent="." instance=ExtResource("7_xcusk")]
+position = Vector2(-437, 256)
+
+[node name="nitrogen" parent="." instance=ExtResource("8_lawqd")]
+position = Vector2(751, 101)
+
+[node name="magnesium" parent="." instance=ExtResource("9_fnj22")]
+position = Vector2(-391, -292)
 
 [connection signal="timeout" from="Timer" to="player" method="_on_timer_timeout"]

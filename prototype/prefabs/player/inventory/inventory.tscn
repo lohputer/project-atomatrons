@@ -15,6 +15,7 @@ const itemDict = {
 	\"PETRI\": preload(\"res://assets/itemImages/petri.jpg\")
 }
 const positions = [Vector2(-1050, -645),  Vector2(-660, -645), Vector2(-270, -645), Vector2(120, -645), Vector2(510, -645), Vector2(-1050, -255),  Vector2(-660, -255), Vector2(-270, -255), Vector2(120, -255), Vector2(510, -255)]
+const offsetPosition = Vector2(240,150)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -34,7 +35,7 @@ func addItem(itemName):
 			instanceOfItemNode.scale /= Vector2(1.5, 1.5) #dont question, this scale somehow works :)
 			add_child(instanceOfItem)
 			PlayerInfo.inventory[itemName] = 1
-			instanceOfItem.position = positions[PlayerInfo.inventory.size()-1]
+			instanceOfItem.position = positions[PlayerInfo.inventory.size()-1]+offsetPosition
 		else:
 			PlayerInfo.inventory[itemName] += 1
 	elif itemName in PlayerInfo.inventory:
@@ -44,12 +45,14 @@ func addItem(itemName):
 "
 
 [node name="Inventory" type="Node2D"]
+visible = false
 script = SubResource("GDScript_gh2k0")
+
+[node name="inventoryItem" parent="." instance=ExtResource("3_3dyaj")]
+position = Vector2(-683, -377)
 
 [node name="InventoryUiScaled" type="Sprite2D" parent="."]
 z_index = 10
-position = Vector2(-226, -138)
+position = Vector2(16.0002, -3.05176e-05)
 scale = Vector2(1.98719, 2.06522)
 texture = ExtResource("2_fcpjt")
-
-[node name="inventoryItem" parent="." instance=ExtResource("3_3dyaj")]

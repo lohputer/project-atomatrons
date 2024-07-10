@@ -11,20 +11,20 @@
 script = ExtResource("1_kq76q")
 
 [node name="UiBackgroundFloor" type="Sprite2D" parent="."]
-position = Vector2(580.5, 326.5)
-scale = Vector2(4.50391, 4.52083)
+position = Vector2(1152.5, 615.5)
+scale = Vector2(8.97266, 8.53472)
 texture = ExtResource("1_gisrh")
 
 [node name="Pixil-frame-0(1)" type="Sprite2D" parent="."]
-position = Vector2(579, 329)
-scale = Vector2(4.51563, 4.58333)
+position = Vector2(1151, 604.5)
+scale = Vector2(8.98438, 8.40972)
 texture = ExtResource("2_qynya")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 373.0
-offset_top = 261.0
-offset_right = 472.0
-offset_bottom = 292.0
+offset_left = 90.0
+offset_top = 102.0
+offset_right = 189.0
+offset_bottom = 133.0
 text = "back to test"
 
 [node name="entities" type="Node2D" parent="."]
@@ -46,8 +46,7 @@ speed = 6
 target = NodePath("../player")
 
 [node name="player choices" type="Node2D" parent="."]
-visible = false
-position = Vector2(211, 245)
+position = Vector2(1427, 774)
 
 [node name="attack" type="Button" parent="player choices"]
 offset_left = 722.0

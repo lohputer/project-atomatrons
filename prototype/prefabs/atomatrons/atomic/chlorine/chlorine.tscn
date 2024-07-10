@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvro0at5d4hwx"]
+
+[ext_resource type="Script" path="res://prefabs/atomatrons/atomic/chlorine/chlorine.gd" id="1_4cko3"]
+[ext_resource type="Texture2D" uid="uid://byb662v7hno8s" path="res://assets/atomatrons/chlorine/chlorine.png" id="2_vocqi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vadwd"]
+radius = 41.4367
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dxvbp"]
+radius = 375.0
+
+[node name="chlorine" type="CharacterBody2D"]
+scale = Vector2(1.9, 1.9)
+script = ExtResource("1_4cko3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_vocqi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vadwd")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_dxvbp")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
