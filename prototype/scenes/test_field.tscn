@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://drsi47e5tlrtf"]
+[gd_scene load_steps=6 format=3 uid="uid://drsi47e5tlrtf"]
 
 [ext_resource type="PackedScene" uid="uid://b4e4sgg517n2q" path="res://prefabs/player/player.tscn" id="1_2drqm"]
 [ext_resource type="Script" path="res://scenes/test_field.gd" id="1_y5uf0"]
 [ext_resource type="Texture2D" uid="uid://077q3f4wx8sb" path="res://scenes/UI_backgroundFloor.png" id="2_28opk"]
 [ext_resource type="PackedScene" uid="uid://dvk5vj2yqkhm7" path="res://prefabs/player/inventory/inventory.tscn" id="4_3ajo7"]
 [ext_resource type="PackedScene" uid="uid://dy8nn7clfugoj" path="res://prefabs/item/item.tscn" id="5_1jgiq"]
-[ext_resource type="PackedScene" uid="uid://bneogs02pmknu" path="res://prefabs/spawnSpace/spawn_space.tscn" id="6_ahkou"]
 
 [node name="TestField" type="Node2D"]
 script = ExtResource("1_y5uf0")
@@ -13,7 +12,7 @@ script = ExtResource("1_y5uf0")
 [node name="UiBackgroundFloor" type="Sprite2D" parent="."]
 texture_filter = 1
 texture_repeat = 3
-position = Vector2(-460, -35388)
+position = Vector2(-731, -34982)
 scale = Vector2(100000, 100000)
 texture = ExtResource("2_28opk")
 
@@ -48,8 +47,5 @@ offset_left = 3014.0
 offset_top = -540.0
 offset_right = 3564.0
 offset_bottom = -174.0
-
-[node name="spawnSpace" parent="." instance=ExtResource("6_ahkou")]
-position = Vector2(-461, 126)
 
 [connection signal="timeout" from="Timer" to="player" method="_on_timer_timeout"]

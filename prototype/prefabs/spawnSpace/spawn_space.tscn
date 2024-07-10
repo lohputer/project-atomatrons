@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://bneogs02pmknu"]
+[gd_scene load_steps=4 format=3 uid="uid://bneogs02pmknu"]
 
 [ext_resource type="Script" path="res://prefabs/spawnSpace/spawn_space.gd" id="1_n12kw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p3qkx"]
-radius = 238.053
+radius = 50.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1t3jq"]
+radius = 150.0
 
 [node name="spawnSpace" type="Node2D"]
 script = ExtResource("1_n12kw")
@@ -16,4 +19,12 @@ shape = SubResource("CircleShape2D_p3qkx")
 [node name="spawnTimer" type="Timer" parent="."]
 autostart = true
 
+[node name="DetectRange" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectRange"]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("CircleShape2D_1t3jq")
+
 [connection signal="timeout" from="spawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="body_entered" from="DetectRange" to="." method="_on_detect_range_body_entered"]
+[connection signal="body_exited" from="DetectRange" to="." method="_on_detect_range_body_exited"]
