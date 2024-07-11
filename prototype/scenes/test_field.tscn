@@ -198,8 +198,10 @@ sources/2 = SubResource("TileSetAtlasSource_xlhmw")
 
 [sub_resource type="LabelSettings" id="LabelSettings_xuac2"]
 font_size = 11
+font_color = Color(1, 1, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_41xmy"]
+font_color = Color(1, 1, 0, 1)
 
 [node name="TestField" type="Node2D"]
 script = ExtResource("1_y5uf0")
@@ -248,7 +250,7 @@ offset_bottom = -593.0
 scale = Vector2(5.87158, 5.75576)
 text = "Press E to equip!"
 label_settings = SubResource("LabelSettings_41xmy")
-horizontal_alignment = 3
+horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 1
 metadata/_edit_use_anchors_ = true
