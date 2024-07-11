@@ -25,7 +25,7 @@ func _ready():
 	min_spawn_distance = spawn_radius / 2
 	max_spawn_distance = spawn_radius
 
-	spawn_timer.timeout.connect(_on_spawn_timer_timeout)
+	#spawn_timer.timeout.connect(_on_spawn_timer_timeout)
 	despawn_timer.timeout.connect(_on_despawn_timer_timeout)
 	food_spawn_timer.timeout.connect(_on_food_spawn_timer_timeout)
 	food_despawn_timer.timeout.connect(_on_food_despawn_timer_timeout)
@@ -55,20 +55,20 @@ func start_spawn_timer():
 		food_spawn_timer.set_wait_time(spawn_interval)
 		food_spawn_timer.start()
 
-func _on_spawn_timer_timeout():
-	if nitrogen_instances.size() < max_nitrogen_instances:
-		var spawn_position = calculate_spawn_position()
-		var nitrogen_instance = nitrogen_scene.instantiate()
-		nitrogen_instance.position = spawn_position
-		add_child(nitrogen_instance)
-
-		var despawn_time = randf_range(10, 15)
-		despawn_timer.set_wait_time(despawn_time)
-		despawn_timer.start()
-		if nitrogen_instances.size() + 1 >= max_nitrogen_instances:
-			spawn_timer.stop()
-	else:
-		spawn_timer.stop()	
+#func _on_spawn_timer_timeout():
+	#if nitrogen_instances.size() < max_nitrogen_instances:
+		#var spawn_position = calculate_spawn_position()
+		#var nitrogen_instance = nitrogen_scene.instantiate()
+		#nitrogen_instance.position = spawn_position
+		#add_child(nitrogen_instance)
+#
+		#var despawn_time = randf_range(10, 15)
+		#despawn_timer.set_wait_time(despawn_time)
+		#despawn_timer.start()
+		#if nitrogen_instances.size() + 1 >= max_nitrogen_instances:
+			#spawn_timer.stop()
+	#else:
+		#spawn_timer.stop()	
 
 func _on_despawn_timer_timeout():
 	if nitrogen_instances.size() > 0:
