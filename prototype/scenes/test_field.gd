@@ -36,6 +36,10 @@ func _ready():
 	add_child(food_despawn_timer)
 	
 	start_spawn_timer()
+	
+	var resource = preload("res://dialouge/dialouge.dialogue")
+	#DialogueManager.show_example_dialogue_balloon("this_is_a_node_title", resource)
+	DialogueManager.show_example_dialogue_balloon(resource, "this_is_a_node_title")
 
 func _update():
 	if get_tree().get_nodes_in_group("nitrogen"):
