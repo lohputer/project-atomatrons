@@ -10,6 +10,7 @@ var inTallGrass = false
 
 func _ready():
 	PlayerInfo.player_node = self
+	$Warning.text = ""
 	
 func _physics_process(delta):
 	if not openInventory:

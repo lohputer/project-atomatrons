@@ -36,3 +36,4 @@ func _on_area_2d_body_entered(body):
 			visible = false
 			PlayerInfo.player_speed_modifier = 1
 			queue_free()
+			$"../player/Warning".text = ""
