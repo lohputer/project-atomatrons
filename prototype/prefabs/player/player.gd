@@ -6,6 +6,8 @@ var id = "player"
 var player_direction: Vector2
 var openInventory = false
 
+var inTallGrass = false
+
 func _ready():
 	PlayerInfo.player_node = self
 	
@@ -15,9 +17,9 @@ func _physics_process(delta):
 		velocity = player_direction * PlayerInfo.player_speed
 		
 	if player_direction[0] > 0: #right
-		$Untitled.flip_h = true
+		$HidingMask/Untitled.flip_h = true
 	elif player_direction[0] < 0: 
-		$Untitled.flip_h = false
+		$HidingMask/Untitled.flip_h = false
 	move_and_slide()
 	
 	if Input.is_action_just_pressed("open_inventory"):
@@ -38,6 +40,13 @@ func _physics_process(delta):
 	""" % [PlayerInfo.player_name, PlayerInfo.carbs, PlayerInfo.proteins, PlayerInfo.fats, PlayerInfo.vitC, PlayerInfo.vitD, PlayerInfo.calcium, PlayerInfo.iron]
 	
 	PlayerInfo.player_pos = global_position
+	
+	if inTallGrass:
+		$HidingMask.clip_children = true
+		$HidingMask.self_modulate = "ffffff"
+	else:
+		$HidingMask.clip_children = false
+		$HidingMask.self_modulate = "ffffff00"
 	
 
 func _on_area_2d_body_entered(body):

@@ -44,8 +44,8 @@ func _process(delta):
 func _on_spawn_timer_timeout():
 	if numberAtomatronsSpawned >= SPAWN_CAP:
 		return 0 
-		
-	if not (SPAWN_WHEN_INSIDE and PlayerInDetectionRange):
+	
+	if SPAWN_WHEN_INSIDE and not PlayerInDetectionRange:
 		return 0
 	
 	var hydrogenThing = atomatron_scene.instantiate()

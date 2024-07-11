@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4e4sgg517n2q"]
+[gd_scene load_steps=4 format=3 uid="uid://b4e4sgg517n2q"]
 
 [ext_resource type="Script" path="res://prefabs/player/player.gd" id="1_tix4a"]
 [ext_resource type="Texture2D" uid="uid://b2tubxgw5rbf1" path="res://assets/player/Untitled.png" id="2_ui84x"]
+[ext_resource type="Texture2D" uid="uid://cpie34xn26ggd" path="res://assets/player/playerHideMask.png" id="3_qiyav"]
 
 [node name="player" type="CharacterBody2D"]
+light_mask = 33
+visibility_layer = 33
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_tix4a")
 
@@ -12,11 +15,6 @@ position = Vector2(-1, 4.00001)
 scale = Vector2(1, 2.30469)
 polygon = PackedVector2Array(64, -59.6, 64, 59, 59.6, 64, -59, 64, -64, 59.6, -64, -59.6, -59, -63.9, 59, -64)
 
-[node name="Untitled" type="Sprite2D" parent="."]
-position = Vector2(-1, -5)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_ui84x")
-
 [node name="Area2D" type="Area2D" parent="."]
 scale = Vector2(1.1, 1.1)
 
@@ -24,5 +22,18 @@ scale = Vector2(1.1, 1.1)
 position = Vector2(-1, 4.00001)
 scale = Vector2(1, 2.30469)
 polygon = PackedVector2Array(64, -59.6, 64, -0.946693, 64, 59, 59.6, 64, -59, 64, -64, 59.6, -64, -59.6, -59, -63.9, 59, -64)
+
+[node name="HidingMask" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(-6, 24)
+rotation = 3.14159
+scale = Vector2(6.32609, 9.25901)
+texture = ExtResource("3_qiyav")
+
+[node name="Untitled" type="Sprite2D" parent="HidingMask"]
+position = Vector2(-0.316151, 3.62358)
+rotation = 3.14159
+scale = Vector2(0.0790378, 0.0540014)
+texture = ExtResource("2_ui84x")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
