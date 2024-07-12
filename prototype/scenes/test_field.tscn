@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://drsi47e5tlrtf"]
+[gd_scene load_steps=16 format=3 uid="uid://drsi47e5tlrtf"]
 
 [ext_resource type="PackedScene" uid="uid://b4e4sgg517n2q" path="res://prefabs/player/player.tscn" id="1_2drqm"]
 [ext_resource type="Script" path="res://scenes/test_field.gd" id="1_y5uf0"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c8nxb4tyxrqww" path="res://prefabs/mapElements/hideSpace/hidearea.tscn" id="7_fvj4t"]
 [ext_resource type="PackedScene" uid="uid://bneogs02pmknu" path="res://prefabs/mapElements/spawnSpace/spawn_space.tscn" id="8_i3fsr"]
 [ext_resource type="PackedScene" uid="uid://ctnhp2a3nkx15" path="res://prefabs/mapElements/blocker/blocked_off_area.tscn" id="9_qt7cd"]
+[ext_resource type="PackedScene" uid="uid://be552xwfaxpf5" path="res://prefabs/mapElements/npc/npc.tscn" id="11_yovdo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xlhmw"]
 texture = ExtResource("3_l1j7m")
@@ -286,5 +287,8 @@ scale = Vector2(5.085, 7.23)
 position = Vector2(1156, -328)
 scale = Vector2(1.155, 0.615)
 SPAWN_CAP = 60
+
+[node name="NPC" parent="." instance=ExtResource("11_yovdo")]
+position = Vector2(119, 208)
 
 [connection signal="timeout" from="Timer" to="player" method="_on_timer_timeout"]
