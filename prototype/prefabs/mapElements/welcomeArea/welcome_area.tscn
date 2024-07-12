@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://i5rnwcneqe4p"]
+
+[ext_resource type="Script" path="res://prefabs/mapElements/welcomeArea/welcome_area.gd" id="1_60nla"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_baxct"]
+size = Vector2(20, 52.4927)
+
+[node name="welcomeArea" type="Area2D"]
+position = Vector2(1732, -956)
+scale = Vector2(5.63391, 13.4758)
+script = ExtResource("1_60nla")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.177503, -0.296828)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_baxct")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -42,13 +42,14 @@ func _physics_process(delta):
 	
 	PlayerInfo.player_pos = global_position
 	
+	#Time to add some code for checking deficiency/overconsumption
+	
 	if inTallGrass:
 		$HidingMask.clip_children = true
 		$HidingMask.self_modulate = "ffffff"
 	else:
 		$HidingMask.clip_children = false
 		$HidingMask.self_modulate = "ffffff00"
-	
 
 func _on_area_2d_body_entered(body):
 	if body is atomatron_field:
@@ -63,3 +64,4 @@ func _on_timer_timeout():
 	PlayerInfo.vitD -= 1
 	PlayerInfo.calcium -= 1
 	PlayerInfo.iron -= 1
+
