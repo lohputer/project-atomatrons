@@ -1,0 +1,117 @@
+TOPIC 1
+question: What is the primary function of a retort stand?
+options: heating substances, supporting other apparatus, measuring volume, filtering liquids
+correct: 2
+
+question: For precise measurement of a fixed volume of liquid, which instrument is employed?
+options: pipette, burette, graduated cylinder, beaker
+correct: 1
+
+question: When would you use a volumetric flask instead of a graduated cylinder?
+options: for rough estimations, for precise dilutions, for heating liquids, for filtering mixtures
+correct: 2
+
+question: Describe the ideal glassware for heating a liquid to its boiling point without excessive bumping.
+options: beaker, conical flask, test tube, Erlenmeyer flask
+correct: 2
+
+question: You need to collect a gas that is denser than air. Which apparatus would you use and why?
+options: beaker, conical flask, gas jar, test tube
+correct: 3
+
+question: What is the difference between a pipette and a burette? When would you use each?
+options: A pipette is for fixed volumes, a burette is for variable volumes; pipettes are for precise measurements, burettes are for titrations
+correct: 2
+
+question: Why is a wire gauze used with a tripod stand?
+options: to prevent the glassware from cracking, to distribute heat evenly, to increase the flame's temperature, to hold the glassware upright
+correct: 2
+
+question: A student needs to prepare 500 mL of a 0.1 M solution of sodium hydroxide. Which glassware would be most suitable for this task and why?
+options: beaker, graduated cylinder, volumetric flask, Erlenmeyer flask
+correct: 3
+
+question: What is the purpose of a thistle funnel? In which type of experiment would you use it?
+options: filtering liquids, adding liquids to a flask without spillage, supporting glassware, measuring volumes
+correct: 1
+
+question: You've got a super tiny amount of liquid to measure. What's your best bet?
+options: pipette, burette, thistle, beaker
+correct: 1
+
+TOPIC 2
+question: The basic structural and functional unit of life is:
+options: tissue, organ, cell, organ system
+correct: 3
+
+question: Which of the following is NOT a part of the cell theory?
+options: All living organisms are composed of one or more cells., Cells are the basic units of structure and function in living organisms., All cells come from pre-existing cells., Cells have a nucleus,cytoplasm,and cell membrane.
+correct: 4
+
+question: The powerhouse of the cell, responsible for energy production.
+options: mitochondria, chloroplasts, ribosomes, Golgi apparatus
+correct: 1
+
+question: The sites of protein synthesis within a cell.
+options: ribosomes, endoplasmic reticulum, Golgi apparatus, lysosomes
+correct: 1
+
+question: Plant cells differ from animal cells in having:
+options: cell membrane, mitochondria, cell wall, nucleus
+correct: 3
+
+question: The process by which water moves across a semi-permeable membrane from a region of higher water concentration to a region of lower water concentration is called:
+options: diffusion, osmosis, active transport, facilitated diffusion
+correct: 2
+
+question: The green pigment in plants that captures sunlight for photosynthesis is:
+options: chlorophyll, carotenoid, xanthophyll, phycocyanin
+correct: 1
+
+question: Which cell organelle contains digestive enzymes to break down waste materials?
+options: lysosome, ribosome, Golgi apparatus, endoplasmic reticulum
+correct: 1
+
+question: The process by which cells engulf large particles is called:
+options: phagocytosis, pinocytosis, exocytosis, endocytosis
+correct: 1
+
+question: Which type of cell division produces gametes (sex cells)?
+options: mitosis, meiosis, cytokinesis, binary fission
+correct: 2
+
+question: The jelly-like substance within a cell is called:
+options: cytoplasm, nucleus, cell membrane, cell wall
+correct: 1
+
+question: A network of membranes involved in protein synthesis and transport.
+options: endoplasmic reticulum, Golgi apparatus, lysosomes, mitochondria
+correct: 1
+
+question: The storage organelles in plant cells.
+options: vacuoles, lysosomes, mitochondria, chloroplasts
+correct: 1
+
+question: Name the two main types of cells based on the presence or absence of a nucleus.
+options: plant cells, animal cells, eukaryotic cells, prokaryotic cells
+correct: 4
+
+question: What is the function of the cell membrane?
+options: controls the passage of substances into and out of the cell, provides support, produces energy, stores genetic material
+correct: 1
+
+question: Describe the process of diffusion.
+options: movement of particles from high to low concentration, movement of water across a semi-permeable membrane, the engulfing of large particles by a cell, the release of substances from a cell
+correct: 1
+
+question: What is the role of mitochondria in a cell?
+options: photosynthesis, protein synthesis, energy production, storage of water
+correct: 3
+
+question: How do plant cells differ from animal cells in terms of their vacuoles?
+options: plant cells have multiple small vacuoles, animal cells have one large central vacuole, plant cells have no vacuoles, animal cells have no vacuoles
+correct: 1
+
+question: What is the function of the cell wall in plant cells?
+options: provides support and protection, controls the passage of substances, produces energy, stores genetic material
+correct: 1
