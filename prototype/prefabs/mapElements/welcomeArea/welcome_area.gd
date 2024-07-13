@@ -12,10 +12,10 @@ func _process(delta):
 func _on_body_entered(body):
 	if body.id == "player":
 		if nameOfArea:
-			$"../player/Warning".text = nameOfArea
+			$"../../player/Warning".text = nameOfArea
 		else:
 			print("ruh roh")
 
 func _on_body_exited(body):
 	if body.id == "player":
-		$"../player/Warning".text = ""
+		$"../../player/Warning".text = ""

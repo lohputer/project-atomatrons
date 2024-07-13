@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://drsi47e5tlrtf"]
+[gd_scene load_steps=18 format=3 uid="uid://drsi47e5tlrtf"]
 
 [ext_resource type="PackedScene" uid="uid://b4e4sgg517n2q" path="res://prefabs/player/player.tscn" id="1_2drqm"]
 [ext_resource type="Script" path="res://scenes/test_field.gd" id="1_y5uf0"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://ctnhp2a3nkx15" path="res://prefabs/mapElements/blocker/blocked_off_area.tscn" id="9_qt7cd"]
 [ext_resource type="PackedScene" uid="uid://be552xwfaxpf5" path="res://prefabs/mapElements/npc/npc.tscn" id="11_yovdo"]
 [ext_resource type="PackedScene" uid="uid://i5rnwcneqe4p" path="res://prefabs/mapElements/welcomeArea/welcome_area.tscn" id="12_3dx7p"]
+[ext_resource type="PackedScene" uid="uid://c6slj872dfil7" path="res://prefabs/mapElements/poster/poster.tscn" id="13_vekqd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xlhmw"]
 texture = ExtResource("3_l1j7m")
@@ -309,6 +310,15 @@ nameOfArea = "WOMP WOMP"
 
 [node name="NPC" parent="." instance=ExtResource("11_yovdo")]
 position = Vector2(119, 208)
+
+[node name="poster" parent="." instance=ExtResource("13_vekqd")]
+position = Vector2(4274, -1116)
+scale = Vector2(3, 3)
+
+[node name="diffusionPoster" parent="." instance=ExtResource("13_vekqd")]
+position = Vector2(40, -1116)
+scale = Vector2(3, 3)
+posterContent = "DIFFUSION"
 
 [connection signal="timeout" from="Timer" to="player" method="_on_timer_timeout"]
 [connection signal="body_exited" from="mapAreas/welcomeArea" to="mapAreas/welcomeArea" method="_on_body_exited"]

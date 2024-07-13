@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://rucxte36lib3"]
+
+[node name="posterContent" type="Node2D"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
