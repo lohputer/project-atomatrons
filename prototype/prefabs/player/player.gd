@@ -8,19 +8,50 @@ var openInventory = false
 
 var inTallGrass = false
 
+
+var animationNodeArray = ["runLeft", "runForward", "runBackward", "idle"]
+var animationType = 3
+var currentAnimationNode = animationNodeArray[animationType]
+
+
 func _ready():
 	PlayerInfo.player_node = self
 	$Warning.text = ""
 	
+	for animName in animationNodeArray:
+		var anim = get_node("HidingMask/"+animName)
+		anim.play("default")
+		anim.visible = false
+
+	
 func _physics_process(delta):
+	
 	if not openInventory:
 		player_direction = Input.get_vector("left", "right", "up", "down")
 		velocity = player_direction * PlayerInfo.player_speed
 		
+		if (player_direction.y) == 1:
+			animationType = 1
+		elif (player_direction.y) == -1:
+			animationType = 2
+		elif abs(player_direction.x) == 1:
+			animationType = 0
+		else:
+			animationType = 3
+	
+	for animName in animationNodeArray:
+		var anim = get_node("HidingMask/"+animName)
+		if animName == animationNodeArray[animationType]:
+			anim.visible = true
+			continue
+		anim.visible = false
+	
+	currentAnimationNode = get_node("HidingMask/"+animationNodeArray[animationType])
+		
 	if player_direction[0] > 0: #right
-		$HidingMask/Untitled.flip_h = true
+		currentAnimationNode.flip_h = true
 	elif player_direction[0] < 0: 
-		$HidingMask/Untitled.flip_h = false
+		currentAnimationNode.flip_h = false
 	move_and_slide()
 	
 	if Input.is_action_just_pressed("open_inventory"):
