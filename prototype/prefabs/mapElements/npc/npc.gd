@@ -5,6 +5,8 @@ extends Node2D
 var dialogueFile
 var questions = {}
 
+const id = "NPC"
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	dialogueFile = load(dialogueFileName)

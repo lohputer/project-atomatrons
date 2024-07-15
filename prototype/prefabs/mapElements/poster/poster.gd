@@ -11,7 +11,7 @@ var in_radius = false
 var instantiatedPosterNode = posterNode.instantiate()
 var isOpenned = false;
 var firstTimeOpenning = true;
-
+const id = "poster"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
