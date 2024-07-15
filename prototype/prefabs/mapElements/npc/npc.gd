@@ -17,7 +17,7 @@ func _ready():
 	for topic in content:
 		var lines = topic.split("\nquestion: ")
 		if lines[0]:
-			questions[int(lines[0])] = []
+			questions[lines[0]] = []
 		else:
 			continue
 		var unsplitted = lines.slice(1,)
@@ -27,8 +27,8 @@ func _ready():
 			var options = q.split("\noptions: ")[1].split("\ncorrect: ")[0]
 			options = options.split(", ")
 			var correct = q.split("\noptions: ")[1].split("\ncorrect: ")[1].split("\n")[0]
-			if len(correct) != 1:
-				correct = options.index(correct)
+			if options.find(correct,0) != -1:
+				correct = options.find(correct,0)
 			questions[lines[0]].append([question, options, correct])
 	if topic:
 		questions = questions[topic]
