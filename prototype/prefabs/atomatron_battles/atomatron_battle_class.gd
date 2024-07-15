@@ -4,6 +4,7 @@ class_name atomatron_battle
 var health: int
 @export var speed: int
 @export var target: atomatron_battle
+<<<<<<< Updated upstream
 
 func _start_turn() -> void:
 	pass
@@ -12,7 +13,14 @@ func _end_turn() -> void:
 	pass
 
 
+=======
+signal turn_finished
+func _start_turn() -> void:
+	pass
+func _end_turn() -> void:
+	pass
+>>>>>>> Stashed changes
 func get_hit(damage: move_info):
 	health -= damage.move_damage
-	await get_tree().create_timer(10).timeout
+
 	

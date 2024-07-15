@@ -4,7 +4,11 @@
 [ext_resource type="Script" path="res://scenes/combat_scene.gd" id="1_kq76q"]
 [ext_resource type="Texture2D" uid="uid://byy16lygw3cj6" path="res://scenes/pixil-frame-0 (1).png" id="2_qynya"]
 [ext_resource type="Script" path="res://scenes/enemy.gd" id="4_1sobf"]
+<<<<<<< Updated upstream
 [ext_resource type="Script" path="res://scenes/turn_manager.gd" id="4_cxw4c"]
+=======
+[ext_resource type="Script" path="res://scenes/turn_manager.gd" id="4_p4wro"]
+>>>>>>> Stashed changes
 [ext_resource type="Script" path="res://scenes/player.gd" id="5_fhki0"]
 [ext_resource type="Texture2D" uid="uid://d1uw2xcarw71" path="res://icon.svg" id="6_f5gr1"]
 
@@ -28,20 +32,25 @@ offset_right = 189.0
 offset_bottom = 133.0
 text = "back to test"
 
+<<<<<<< Updated upstream
 [node name="entities" type="Node2D" parent="."]
 script = ExtResource("4_cxw4c")
+=======
+[node name="turn_manager" type="Node2D" parent="."]
+script = ExtResource("4_p4wro")
+>>>>>>> Stashed changes
 
-[node name="player" type="CharacterBody2D" parent="entities" node_paths=PackedStringArray("target")]
+[node name="player" type="CharacterBody2D" parent="turn_manager" node_paths=PackedStringArray("target")]
 script = ExtResource("5_fhki0")
 max_health = 10
 speed = 5
 target = NodePath("../enemy")
 
-[node name="Icon" type="Sprite2D" parent="entities/player"]
+[node name="Icon" type="Sprite2D" parent="turn_manager/player"]
 position = Vector2(310, 449)
 texture = ExtResource("6_f5gr1")
 
-[node name="enemy" type="CharacterBody2D" parent="entities" node_paths=PackedStringArray("target")]
+[node name="enemy" type="CharacterBody2D" parent="turn_manager" node_paths=PackedStringArray("target")]
 script = ExtResource("4_1sobf")
 max_health = 10
 speed = 6
@@ -76,6 +85,6 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="player choices/attack" to="entities/player" method="_on_attack_pressed"]
-[connection signal="pressed" from="player choices/speed up" to="entities/player" method="_on_speed_up_pressed"]
-[connection signal="pressed" from="player choices/defence up" to="entities/player" method="_on_defence_up_pressed"]
+[connection signal="pressed" from="player choices/attack" to="turn_manager/player" method="_on_attack_pressed"]
+[connection signal="pressed" from="player choices/speed up" to="turn_manager/player" method="_on_speed_up_pressed"]
+[connection signal="pressed" from="player choices/defence up" to="turn_manager/player" method="_on_defence_up_pressed"]
