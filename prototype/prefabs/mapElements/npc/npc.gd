@@ -2,6 +2,7 @@ extends Node2D
 
 @export_file var dialogueFileName = "res://dialouge/baseDialogue.dialogue"
 @export_file var imageFileName = "res://icon.svg"
+@export var topic = 0 
 var dialogueFile
 var questions = {}
 
@@ -14,7 +15,7 @@ func _ready():
 	for topic in content:
 		var lines = topic.split("\nquestion: ")
 		if lines[0]:
-			questions[lines[0]] = []
+			questions[int(lines[0])] = []
 		else:
 			continue
 		var unsplitted = lines.slice(1,)
@@ -24,15 +25,17 @@ func _ready():
 			var options = q.split("\noptions: ")[1].split("\ncorrect: ")[0]
 			options = options.split(", ")
 			var correct = q.split("\noptions: ")[1].split("\ncorrect: ")[1].split("\n")[0]
+			if len(correct) != 1:
+				correct = options.index(correct)
 			questions[lines[0]].append([question, options, correct])
-	print(questions["1"])
+	if topic:
+		questions = questions[topic]
 	var texture = load(imageFileName)
 	$Sprite2D.texture = texture
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
 
 func _on_area_2d_body_entered(body):
 	DialogueManager.show_example_dialogue_balloon(dialogueFile, "starting_node")
