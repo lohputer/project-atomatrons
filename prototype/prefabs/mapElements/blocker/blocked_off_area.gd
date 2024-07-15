@@ -9,3 +9,10 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func _on_area_2d_area_entered(area):
+	var body = area.get_parent()
+	print(area, body)
+	if body.id == "item":
+		body.queue_free()

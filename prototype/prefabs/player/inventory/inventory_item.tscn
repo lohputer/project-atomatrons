@@ -4,6 +4,7 @@
 script/source = "extends Node2D
 
  # this is an id for an item 
+const id = \"inventoryItem\"
 
 const ItemsDict = {
 	\"TOMATO\" : preload(\"res://assets/food/tomato.png\"),

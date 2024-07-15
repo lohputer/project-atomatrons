@@ -4,6 +4,7 @@ var playerScene
 var inHideArea = false
 
 var EntitiesInArea = []
+const id = "hidearea"
 
 func int_to_hex(n):
 	const letterArray = "0123456789abcdef"
