@@ -5,6 +5,11 @@ var health: int
 @export var speed: int
 @export var target: atomatron_battle
 
+func _start_turn() -> void:
+	pass
+
+func _end_turn() -> void:
+	pass
 
 
 func get_hit(damage: move_info):

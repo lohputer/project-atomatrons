@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bbojxxr0vs8w"]
+[gd_scene load_steps=8 format=3 uid="uid://bbojxxr0vs8w"]
 
 [ext_resource type="Texture2D" uid="uid://077q3f4wx8sb" path="res://scenes/UI_backgroundFloor.png" id="1_gisrh"]
 [ext_resource type="Script" path="res://scenes/combat_scene.gd" id="1_kq76q"]
 [ext_resource type="Texture2D" uid="uid://byy16lygw3cj6" path="res://scenes/pixil-frame-0 (1).png" id="2_qynya"]
 [ext_resource type="Script" path="res://scenes/enemy.gd" id="4_1sobf"]
+[ext_resource type="Script" path="res://scenes/turn_manager.gd" id="4_cxw4c"]
 [ext_resource type="Script" path="res://scenes/player.gd" id="5_fhki0"]
 [ext_resource type="Texture2D" uid="uid://d1uw2xcarw71" path="res://icon.svg" id="6_f5gr1"]
 
@@ -28,6 +29,7 @@ offset_bottom = 133.0
 text = "back to test"
 
 [node name="entities" type="Node2D" parent="."]
+script = ExtResource("4_cxw4c")
 
 [node name="player" type="CharacterBody2D" parent="entities" node_paths=PackedStringArray("target")]
 script = ExtResource("5_fhki0")
