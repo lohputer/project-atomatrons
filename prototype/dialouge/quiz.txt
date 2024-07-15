@@ -48,14 +48,6 @@ question: Which of the following is NOT a part of the cell theory?
 options: All living organisms are composed of one or more cells., Cells are the basic units of structure and function in living organisms., All cells come from pre-existing cells., Cells have a nucleus,cytoplasm,and cell membrane.
 correct: 4
 
-question: The powerhouse of the cell, responsible for energy production.
-options: mitochondria, chloroplasts, ribosomes, Golgi apparatus
-correct: 1
-
-question: The sites of protein synthesis within a cell.
-options: ribosomes, endoplasmic reticulum, Golgi apparatus, lysosomes
-correct: 1
-
 question: Plant cells differ from animal cells in having:
 options: cell membrane, mitochondria, cell wall, nucleus
 correct: 3
@@ -68,33 +60,9 @@ question: The green pigment in plants that captures sunlight for photosynthesis 
 options: chlorophyll, carotenoid, xanthophyll, phycocyanin
 correct: 1
 
-question: Which cell organelle contains digestive enzymes to break down waste materials?
-options: lysosome, ribosome, Golgi apparatus, endoplasmic reticulum
-correct: 1
-
-question: The process by which cells engulf large particles is called:
-options: phagocytosis, pinocytosis, exocytosis, endocytosis
-correct: 1
-
-question: Which type of cell division produces gametes (sex cells)?
-options: mitosis, meiosis, cytokinesis, binary fission
-correct: 2
-
 question: The jelly-like substance within a cell is called:
 options: cytoplasm, nucleus, cell membrane, cell wall
 correct: 1
-
-question: A network of membranes involved in protein synthesis and transport.
-options: endoplasmic reticulum, Golgi apparatus, lysosomes, mitochondria
-correct: 1
-
-question: The storage organelles in plant cells.
-options: vacuoles, lysosomes, mitochondria, chloroplasts
-correct: 1
-
-question: Name the two main types of cells based on the presence or absence of a nucleus.
-options: plant cells, animal cells, eukaryotic cells, prokaryotic cells
-correct: 4
 
 question: What is the function of the cell membrane?
 options: controls the passage of substances into and out of the cell, provides support, produces energy, stores genetic material
@@ -104,10 +72,6 @@ question: Describe the process of diffusion.
 options: movement of particles from high to low concentration, movement of water across a semi-permeable membrane, the engulfing of large particles by a cell, the release of substances from a cell
 correct: 1
 
-question: What is the role of mitochondria in a cell?
-options: photosynthesis, protein synthesis, energy production, storage of water
-correct: 3
-
 question: How do plant cells differ from animal cells in terms of their vacuoles?
 options: plant cells have multiple small vacuoles, animal cells have one large central vacuole, plant cells have no vacuoles, animal cells have no vacuoles
 correct: 1
@@ -115,3 +79,71 @@ correct: 1
 question: What is the function of the cell wall in plant cells?
 options: provides support and protection, controls the passage of substances, produces energy, stores genetic material
 correct: 1
+
+TOPIC 3
+question: The first step in the scientific method is typically:
+options: forming a hypothesis, conducting an experiment, making observations, drawing a conclusion
+correct: 3
+
+question: A hypothesis is:
+options: a proven fact, a question, a possible explanation, a conclusion
+correct: 3
+
+question: The variable that is changed in an experiment is called:
+options: independent variable, dependent variable, controlled variable, constant variable
+correct: 1
+
+question: A controlled experiment is one in which:
+options: all variables are changed, only one variable is changed, no variables are changed, all variables are kept constant
+correct: 2
+
+question: Collecting and organizing data is part of which step in the scientific method?
+options: forming a hypothesis, conducting an experiment, analyzing results, drawing a conclusion
+correct: 3
+
+question: A well-tested explanation for a wide range of observations or experimental results is called a:
+options: hypothesis, theory, law, variable
+correct: 2
+
+question: Repeating an experiment multiple times is important for:
+options: saving time, increasing accuracy, making the experiment more complex, ensuring the results are correct
+correct: 2
+
+question: A scientist wants to investigate the effect of different types of fertilizer on plant growth. What is the independent variable in this experiment?
+options: type of fertilizer, plant growth, amount of water, amount of sunlight
+correct: 1
+
+TOPIC 4
+question: The organ responsible for absorbing most of the nutrients from food is:
+options: stomach, small intestine, large intestine, liver
+correct: 2
+
+question: Bile, which helps in the digestion of fats, is produced by the:
+options: liver, gallbladder, pancreas, stomach
+correct: 1
+
+question: The enzyme that breaks down starch into sugar is:
+options: pepsin, amylase, lipase, protease
+correct: 2
+
+question: The muscular contractions that move food through the digestive system are called:
+options: peristalsis, digestion, absorption, assimilation
+correct: 1
+
+question: The large intestine is primarily responsible for:
+options: absorbing nutrients, producing digestive enzymes, absorbing water, breaking down proteins
+correct: 3
+
+question: The organ that stores bile is:
+options: liver, gallbladder, pancreas, stomach
+correct: 2
+
+question: Which of the following is NOT a function of the liver?
+options: producing bile, filtering blood, storing glucose, producing digestive enzymes
+correct: 4
+
+question: The final stage of digestion, where nutrients enter the bloodstream, is called:
+options: ingestion, digestion, absorption, assimilation
+correct: 3
+
+TOPIC 5
