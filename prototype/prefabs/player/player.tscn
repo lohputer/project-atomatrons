@@ -1,40 +1,30 @@
-[gd_scene load_steps=20 format=3 uid="uid://b4e4sgg517n2q"]
+[gd_scene load_steps=33 format=3 uid="uid://b4e4sgg517n2q"]
 
 [ext_resource type="Script" path="res://prefabs/player/player.gd" id="1_tix4a"]
 [ext_resource type="Texture2D" uid="uid://b2tubxgw5rbf1" path="res://assets/player/Untitled.png" id="2_ui84x"]
 [ext_resource type="Texture2D" uid="uid://cpie34xn26ggd" path="res://assets/player/playerHideMask.png" id="3_qiyav"]
-[ext_resource type="Texture2D" uid="uid://1fjuew8sbps3" path="res://assets/player/animations/atomatronMan_run_left/frame1.png" id="4_i4nhm"]
-[ext_resource type="Texture2D" uid="uid://c0gb4obru5pmg" path="res://assets/player/animations/atomatronMan_run_left/frame2.png" id="5_phl1l"]
-[ext_resource type="Texture2D" uid="uid://db7kebeu7bx7j" path="res://assets/player/animations/atomatronMan_run_left/frame3.png" id="6_ndq1y"]
-[ext_resource type="Texture2D" uid="uid://u38mu30w0kk5" path="res://assets/player/animations/atomatronMan_run_left/frame4.png" id="7_xtfwo"]
 [ext_resource type="Texture2D" uid="uid://ifqu27nhlg7y" path="res://assets/player/animations/atomatronMan_run_forward/frame1.png" id="8_yui2d"]
 [ext_resource type="Texture2D" uid="uid://6wevhp1whkdt" path="res://assets/player/animations/atomatronMan_run_forward/frame2.png" id="9_uee0x"]
 [ext_resource type="Texture2D" uid="uid://d18tq0juoufss" path="res://assets/player/animations/atomatronMan_run_backward/frame1.png" id="10_v2jya"]
 [ext_resource type="Texture2D" uid="uid://c2j243b0xfq52" path="res://assets/player/animations/atomatronMan_run_backward/frame2.png" id="11_ap2g3"]
+[ext_resource type="Texture2D" uid="uid://5mmcgmkivwky" path="res://assets/player/animations/atomatron_man_run_left_new/frame1.png" id="12_8vgl3"]
 [ext_resource type="Texture2D" uid="uid://c185j3ll5acvs" path="res://assets/player/animations/atomatronMan_idle/frame1.png" id="12_wratl"]
+[ext_resource type="Texture2D" uid="uid://cfe5r5pecrgph" path="res://assets/player/animations/atomatron_man_run_left_new/frame3.png" id="13_bn8a1"]
+[ext_resource type="Texture2D" uid="uid://c38h8q1edmxjl" path="res://assets/player/animations/atomatron_man_run_left_new/frame2.png" id="13_sektu"]
 [ext_resource type="Texture2D" uid="uid://jvdrwchyvqj8" path="res://assets/player/animations/atomatronMan_idle/frame2.png" id="13_sgh4b"]
 [ext_resource type="Texture2D" uid="uid://bxupgrnggodj0" path="res://assets/player/animations/atomatronMan_idle/frame3.png" id="14_6ita3"]
+[ext_resource type="Texture2D" uid="uid://bqfqxhyf5g78u" path="res://assets/player/animations/atomatron_left_idle/frame1.png" id="15_15kn1"]
 [ext_resource type="Texture2D" uid="uid://boclw04f4rofh" path="res://assets/player/animations/atomatronMan_idle/frame4.png" id="15_qcx5d"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ahhn1"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_i4nhm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_phl1l")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_ndq1y")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_xtfwo")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[ext_resource type="Texture2D" uid="uid://bqpybawa1rww0" path="res://assets/player/animations/atomatron_left_idle/frame2.png" id="16_gioa4"]
+[ext_resource type="Texture2D" uid="uid://0tvrccfrjnkg" path="res://assets/player/animations/atomatron_left_idle/frame3.png" id="17_bdo3p"]
+[ext_resource type="Texture2D" uid="uid://b7p68g5hfe6s8" path="res://assets/player/animations/atomatron_left_idle/frame4.png" id="18_wrf3r"]
+[ext_resource type="Texture2D" uid="uid://cq6ux2ik6jkra" path="res://assets/player/animations/atomatron_man_forward_idle/frame1.png" id="19_2qhqu"]
+[ext_resource type="Texture2D" uid="uid://cneixdso2p0il" path="res://assets/player/animations/atomatron_man_forward_idle/frame2.png" id="20_2kv41"]
+[ext_resource type="Texture2D" uid="uid://b11s1r1mm5jv" path="res://assets/player/animations/atomatron_man_forward_idle/frame3.png" id="21_k61m3"]
+[ext_resource type="Texture2D" uid="uid://u36dvlf7nwir" path="res://assets/player/animations/atomatron_man_forward_idle/frame4.png" id="22_jppe1"]
+[ext_resource type="Texture2D" uid="uid://j2mq3eh0dynw" path="res://assets/player/animations/atomatron_man_backwards_idle/frame1.png" id="23_ry8np"]
+[ext_resource type="Texture2D" uid="uid://b0iyp587th8tq" path="res://assets/player/animations/atomatron_man_backwards_idle/frame4.png" id="24_m0y8j"]
+[ext_resource type="Texture2D" uid="uid://0kxxtjumj36h" path="res://assets/player/animations/atomatron_man_backwards_idle/frame3.png" id="25_o1nys"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hxhqf"]
 animations = [{
@@ -84,6 +74,86 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_u0wkd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_8vgl3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_bn8a1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_sektu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_bn8a1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5o4r0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_15kn1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_gioa4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_bdo3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_wrf3r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6860p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_2qhqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_2kv41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_k61m3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_jppe1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ud3r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_ry8np")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_m0y8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_o1nys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_m0y8j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="player" type="CharacterBody2D"]
 light_mask = 33
 visibility_layer = 33
@@ -117,16 +187,7 @@ rotation = 3.14159
 scale = Vector2(0.0790378, 0.0540014)
 texture = ExtResource("2_ui84x")
 
-[node name="runLeft" type="AnimatedSprite2D" parent="HidingMask"]
-visible = false
-position = Vector2(-0.316168, 4.53612)
-rotation = -3.14159
-scale = Vector2(0.0924742, 0.0631817)
-sprite_frames = SubResource("SpriteFrames_ahhn1")
-frame_progress = 0.712017
-
 [node name="runForward" type="AnimatedSprite2D" parent="HidingMask"]
-visible = false
 position = Vector2(-0.948463, 2.59207)
 rotation = -3.14159
 scale = Vector2(0.0924742, 0.0631817)
@@ -147,6 +208,39 @@ position = Vector2(-0.316166, 4.10411)
 rotation = -3.14159
 scale = Vector2(0.0924742, 0.0631817)
 sprite_frames = SubResource("SpriteFrames_v2w1l")
-frame_progress = 0.617613
+frame_progress = 0.415265
+
+[node name="runLeft" type="AnimatedSprite2D" parent="HidingMask"]
+visible = false
+position = Vector2(-1.87716, 2.70007)
+rotation = -3.14159
+scale = Vector2(0.088, 0.067)
+sprite_frames = SubResource("SpriteFrames_u0wkd")
+frame_progress = 0.422344
+
+[node name="left_idle" type="AnimatedSprite2D" parent="HidingMask"]
+visible = false
+position = Vector2(-0.316161, 2.59207)
+rotation = -3.14159
+scale = Vector2(0.0994378, 0.0696619)
+sprite_frames = SubResource("SpriteFrames_5o4r0")
+frame_progress = 0.228519
+
+[node name="forward_idle" type="AnimatedSprite2D" parent="HidingMask"]
+visible = false
+position = Vector2(-1.58077, 2.59207)
+rotation = -3.14159
+scale = Vector2(0.0853606, 0.0643344)
+sprite_frames = SubResource("SpriteFrames_6860p")
+frame = 3
+frame_progress = 0.72515
+
+[node name="backward_idle" type="AnimatedSprite2D" parent="HidingMask"]
+visible = false
+position = Vector2(-1.26461, 2.16006)
+rotation = -3.14159
+scale = Vector2(0.0886065, 0.0704066)
+sprite_frames = SubResource("SpriteFrames_8ud3r")
+frame_progress = 0.343307
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
