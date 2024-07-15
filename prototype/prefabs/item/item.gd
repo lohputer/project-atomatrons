@@ -3,6 +3,7 @@ extends TextureButton
 # Called when the node enters the scene tree for the first time.
 @export var itemType = "BERRIES"
 var in_radius = false
+var id = "item" 
 
 func _ready():
 	pass 

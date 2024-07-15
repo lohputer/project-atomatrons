@@ -17,6 +17,8 @@ var SPAWN_RANGE = 50
 var DETECTION_RANGE = 150
 # Called when the node enters the scene tree for the first time.
 
+const id = "spawnSpace" 
+
 func calculate_spawn_position():
 	var spawn_angle = randf_range(0, 2 * PI)
 	var spawn_distance = randf_range(0, SPAWN_RANGE)
@@ -64,3 +66,6 @@ func _on_detect_range_body_entered(body):
 func _on_detect_range_body_exited(body):
 	if body.id == "player":
 		PlayerInDetectionRange = false
+
+
+

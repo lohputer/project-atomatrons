@@ -320,5 +320,11 @@ position = Vector2(48, -1052)
 scale = Vector2(3, 3)
 posterContent = "DIFFUSION"
 
+[node name="Item" parent="." instance=ExtResource("5_1jgiq")]
+offset_left = 802.0
+offset_top = -436.0
+offset_right = 1352.0
+offset_bottom = -70.0
+
 [connection signal="timeout" from="Timer" to="player" method="_on_timer_timeout"]
 [connection signal="body_exited" from="mapAreas/welcomeArea" to="mapAreas/welcomeArea" method="_on_body_exited"]
