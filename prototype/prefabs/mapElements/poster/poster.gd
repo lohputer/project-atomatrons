@@ -22,8 +22,7 @@ func _process(delta):
 		isOpenned = not isOpenned
 		print(isOpenned)
 		
-	if isOpenned:
-	
+	if isOpenned:	
 		if posterContent:
 			instantiatedPosterNode.get_child(0).texture = contentDict[posterContent]
 		instantiatedPosterNode.position = Vector2(0, 0)
