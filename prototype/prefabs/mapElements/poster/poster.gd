@@ -4,7 +4,7 @@ extends Node2D
 var posterNode = preload("res://prefabs/mapElements/poster/poster_content.tscn")
 const contentDict = {
 	"DIFFUSION" : preload("res://assets/posters/diffusion.PNG"),
-	"RESPIRATORY": preload("res://assets/posters/respiration.PNG"),
+	"RESPIRATION": preload("res://assets/posters/respiration.PNG"),
 	"ROOT": preload("res://assets/posters/rootPoster.PNG"),
 }
 var in_radius = false

@@ -2,7 +2,8 @@ extends Node2D
 
 @export_file var dialogueFileName = "res://dialouge/baseDialogue.dialogue"
 @export_file var imageFileName = "res://icon.svg"
-@export var topic = 0 
+@export var topic = 0
+@export var qNum = 1
 var dialogueFile
 var questions = {}
 
@@ -30,6 +31,7 @@ func _ready():
 			if options.find(correct,0) != -1:
 				correct = options.find(correct,0)
 			questions[lines[0]].append([question, options, correct])
+	print(questions["1"])
 	if topic:
 		questions = questions[topic]
 	var texture = load(imageFileName)
@@ -39,6 +41,17 @@ func _ready():
 func _process(delta):
 	pass
 
+func pick_random(dict, num):
+	if len(dict) > 1:
+		var splitLst = dict[dict.keys()[randi() % len(dict)]]
+		pick_random(splitLst, num)
+	else:
+		var qs = []
+		for i in range(num):
+			qs.append(dict[randi() % len(dict)])
+		return qs
+
 func _on_area_2d_body_entered(body):
+	GameState.question = pick_random(questions, qNum)
 	DialogueManager.show_example_dialogue_balloon(dialogueFile, "starting_node")
 

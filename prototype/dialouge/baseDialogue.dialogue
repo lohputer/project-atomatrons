@@ -1,6 +1,6 @@
 ~ starting_node
 
-???: [[Hi|Hello|Howdy]], this is some dialogue.
+???: [[Hi|Hello|Howdy]], this is some dialogue. {{GameState.question}}
 ???: Here are some choices.
 - First one
 	???: You picked the first one.

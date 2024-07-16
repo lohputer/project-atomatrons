@@ -327,4 +327,9 @@ offset_top = -436.0
 offset_right = 1352.0
 offset_bottom = -70.0
 
+[node name="poster2" parent="." instance=ExtResource("13_vekqd")]
+position = Vector2(1487, -2911)
+scale = Vector2(3, 3)
+posterContent = "RESPIRATION"
+
 [connection signal="timeout" from="Timer" to="player" method="_on_timer_timeout"]
