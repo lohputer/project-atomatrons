@@ -20,7 +20,6 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("use_item") and in_radius:
 		isOpenned = not isOpenned
-		print(isOpenned)
 		
 	if isOpenned:	
 		if posterContent:
@@ -28,7 +27,8 @@ func _process(delta):
 		instantiatedPosterNode.position = Vector2(0, 0)
 		instantiatedPosterNode.visible = true
 		instantiatedPosterNode.z_index = 3
-		$"../player".add_child(instantiatedPosterNode)
+		if instantiatedPosterNode.get_parent() != $"../player":
+			$"../player".add_child(instantiatedPosterNode)
 	else:
 		instantiatedPosterNode.visible = false 
 		
@@ -44,6 +44,5 @@ func _on_area_2d_body_exited(body):
 	if body.name == "player":
 		isOpenned = false
 		in_radius = false
-		#instantiatedPosterNode.queue_free()
-		#instantiatedPosterNode = posterNode.instantiate()
-		instantiatedPosterNode.visible = false
+		instantiatedPosterNode.queue_free()
+		instantiatedPosterNode = posterNode.instantiate()
