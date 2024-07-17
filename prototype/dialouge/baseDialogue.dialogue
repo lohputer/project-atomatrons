@@ -1,13 +1,35 @@
 ~ starting_node
 
-???: [[Hi|Hello|Howdy]], this is some dialogue. {{GameState.question}}
-???: Here are some choices.
-- First one
-	???: You picked the first one.
-- Second one
-	???: You picked the second one.
-- Start again => starting_node
-- End the conversation => END
-???: For more information see the online documentation.
+???: [[Hi|Hello|Howdy]] {{PlayerInfo.name}}, I will challenge you!
+You: Oh come on, I already have to deal with Atomatrons, now I have to fight you?
+???: Yes! In a game of trivia!
+You: Oh. That's rather..chill. Wait, what do I get out of this?
+???: I got some food, petri dishes, speed boosts, ya name it, I got it.
+You: Do you have [[nuclear power|Pokemon|Roblox]]?
+???: Wh- 
+You: Nevermind, let's see what you got.
+???: Right, okay.
+???: {{GameState.question}}
+- {{GameState.option1}}
+	if GameState.correct == 1:
+		???: yessir
+	else:
+		???: nuh uh :( it was {{GameState.correct}}
+- {{GameState.option2}}
+	if GameState.correct == 2:
+		???: yessir
+	else:
+		???: nuh uh :( it was {{GameState.correct}}
+- {{GameState.option3}}
+	if GameState.correct == 3:
+		???: yessir
+	else:
+		???: nuh uh :( it was {{GameState.correct}}
+- {{GameState.option4}}
+	if GameState.correct == 4:
+		???: yessir
+	else:
+		???: nuh uh :( it was {{GameState.correct}}
+- Forget it, just run away => END
 
 => END
