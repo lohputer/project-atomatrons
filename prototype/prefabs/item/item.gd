@@ -45,7 +45,6 @@ func _on_area_2d_body_entered(body):
 		in_radius = true
 		$"../player/Warning".text = "Press E to eat, or click to place in inventory."
 
-
 func _on_area_2d_body_exited(body):
 	if body.id == "player":
 		in_radius = false
