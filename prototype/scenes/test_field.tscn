@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://drsi47e5tlrtf"]
+[gd_scene load_steps=22 format=3 uid="uid://drsi47e5tlrtf"]
 
 [ext_resource type="PackedScene" uid="uid://b4e4sgg517n2q" path="res://prefabs/player/player.tscn" id="1_2drqm"]
 [ext_resource type="Script" path="res://scenes/test_field.gd" id="1_y5uf0"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://i5rnwcneqe4p" path="res://prefabs/mapElements/welcomeArea/welcome_area.tscn" id="12_3dx7p"]
 [ext_resource type="PackedScene" uid="uid://cv2ew3yr331x1" path="res://prefabs/mapElements/entrances/entrance.tscn" id="13_eh7hx"]
 [ext_resource type="PackedScene" uid="uid://c6slj872dfil7" path="res://prefabs/mapElements/poster/poster.tscn" id="13_vekqd"]
+[ext_resource type="PackedScene" uid="uid://3ecrvntvdwbu" path="res://prefabs/mapElements/lab/lab.tscn" id="14_egh2p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o427x"]
 texture = ExtResource("3_bysrm")
@@ -348,10 +349,6 @@ scale = Vector2(-0.165372, -4.26586)
 position = Vector2(-9240, -2194)
 scale = Vector2(-0.165372, -4.26586)
 
-[node name="entrance" parent="mapAreas" instance=ExtResource("13_eh7hx")]
-position = Vector2(-8559, -2756)
-scale = Vector2(1.72, 0.879995)
-
 [node name="labBorder" type="Node2D" parent="mapAreas"]
 position = Vector2(-8559, -2756)
 scale = Vector2(1.72, 0.879995)
@@ -391,6 +388,15 @@ position = Vector2(219.768, -6.8186)
 rotation = -1.57111
 scale = Vector2(1.59323, 0.1594)
 skew = -0.000875473
+
+[node name="entrance" parent="mapAreas" node_paths=PackedStringArray("exit") instance=ExtResource("13_eh7hx")]
+position = Vector2(-8559, -2756)
+scale = Vector2(1.72, 0.879995)
+location = "Lab"
+exit = NodePath("../lab")
+
+[node name="lab" parent="mapAreas" instance=ExtResource("14_egh2p")]
+position = Vector2(1737, 503)
 
 [node name="NPC" parent="." instance=ExtResource("11_yovdo")]
 position = Vector2(119, 208)

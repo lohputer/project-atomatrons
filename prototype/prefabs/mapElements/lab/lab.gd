@@ -1,7 +1,5 @@
 extends Node2D
 
-@export var location = ""
-@export var exit: Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -11,7 +9,7 @@ func _ready():
 func _process(delta):
 	pass
 
+
 func _on_area_2d_body_entered(body):
-	if body.id == "player":
-		body.position = exit.position
-		$"../../player/Warning".text = location
+	if body.name == "player":
+		body.position = $"../labBorder/entrance".position
