@@ -17,7 +17,7 @@ scale = Vector2(8.97266, 8.53472)
 texture = ExtResource("1_gisrh")
 
 [node name="Pixil-frame-0(1)" type="Sprite2D" parent="."]
-position = Vector2(1151, 604.5)
+position = Vector2(1102, 553)
 scale = Vector2(8.98438, 8.40972)
 texture = ExtResource("2_qynya")
 
@@ -48,32 +48,40 @@ speed = 6
 target = NodePath("../player")
 
 [node name="player choices" type="Node2D" parent="."]
+visible = false
 position = Vector2(1427, 774)
 
 [node name="attack" type="Button" parent="player choices"]
-offset_left = 722.0
-offset_top = 207.0
-offset_right = 807.0
-offset_bottom = 249.0
+offset_left = -391.0
+offset_top = -289.0
+offset_right = -306.0
+offset_bottom = -247.0
 text = "attack"
 
 [node name="speed up" type="Button" parent="player choices"]
-offset_left = 723.0
-offset_top = 266.0
-offset_right = 808.0
-offset_bottom = 308.0
+offset_left = -379.0
+offset_top = -226.0
+offset_right = -294.0
+offset_bottom = -184.0
 text = "speed up"
 
 [node name="defence up" type="Button" parent="player choices"]
-offset_left = 723.0
-offset_top = 320.0
-offset_right = 808.0
-offset_bottom = 362.0
+offset_left = -384.0
+offset_top = -172.0
+offset_right = -290.0
+offset_bottom = -130.0
 text = "defence up"
 
 [node name="enemy health" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 403.0
+offset_top = 15.0
+offset_right = 531.0
+offset_bottom = 38.0
+text = "enemy turn now"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="player choices/attack" to="entities/player" method="_on_attack_pressed"]

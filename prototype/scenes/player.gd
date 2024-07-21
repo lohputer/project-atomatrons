@@ -2,8 +2,12 @@ extends atomatron_battle
 
 func turn():
 	$"../../player choices".visible = true
+func _start_turn():
+	$"../../player choices".visible = true
 
-
+func _end_turn():
+	$"../../player choices".visible = false
+	turn_ended.emit()
 func _on_attack_pressed():
 	pass # attack
 	var newdamage = move_info.new()
@@ -11,7 +15,8 @@ func _on_attack_pressed():
 	newdamage.move_name = "strike"
 	newdamage.move_effect = "non"
 	target.get_hit(newdamage)
-	get_parent().get_parent().turn_finished = true
+	_end_turn()
+	
 
 
 func _on_speed_up_pressed():
