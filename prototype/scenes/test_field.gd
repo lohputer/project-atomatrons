@@ -125,3 +125,4 @@ func calculate_spawn_position():
 	var spawn_distance = randf_range(min_spawn_distance, max_spawn_distance)
 	var spawn_offset = Vector2(cos(spawn_angle), sin(spawn_angle)) * spawn_distance
 	return player.global_position + spawn_offset
+

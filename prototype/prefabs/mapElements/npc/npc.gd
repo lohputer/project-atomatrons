@@ -59,6 +59,8 @@ func pick_random(dict, num, topic):
 			lst = dict[dict.keys()[randi() % len(dict)]]
 		else:
 			lst = dict[topic]
+		while len(lst) == 0:
+			lst = dict[dict.keys()[randi() % len(dict)]]
 		var rand = randi() % len(lst)
 		while lst[rand] in qs:
 			rand = randi() % len(lst)

@@ -14,5 +14,6 @@ func _process(delta):
 func _on_area_2d_area_entered(area):
 	var body = area.get_parent()
 	print(area, body)
-	if body.id == "item":
-		body.queue_free()
+	if id in body:
+		if body.id == "item":
+			body.queue_free()
