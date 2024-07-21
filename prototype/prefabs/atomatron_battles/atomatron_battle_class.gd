@@ -4,7 +4,7 @@ class_name atomatron_battle
 var health: int
 @export var speed: int
 @export var target: atomatron_battle
-
+signal turn_ended
 func _start_turn() -> void:
 	pass
 
