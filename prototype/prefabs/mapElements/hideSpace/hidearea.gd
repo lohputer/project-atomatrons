@@ -34,23 +34,24 @@ func _process(delta):
 
 func _on_area_2d_area_entered(area):
 	var body = area.get_parent()
-	if id in body:
-		if body.id == "player":
-			playerScene.inTallGrass = true
-			inHideArea = true	
-		else:	
-			EntitiesInArea.append(body)
-			
+	
+	#if id in body:
+	if body.id == "player":
+		playerScene.inTallGrass = true
+		inHideArea = true	
+	else:	
+		EntitiesInArea.append(body)
+		
 
 
 func _on_area_2d_area_exited(area):
 	var body = area.get_parent()
-	if id in body:
-		if body.id == "player":
-			playerScene.inTallGrass = false
-			inHideArea = false
-		else:
-			EntitiesInArea.erase(body)
-			body.modulate = "ffffff"
-			body.visible = true
+	#if id in body:
+	if body.id == "player":
+		playerScene.inTallGrass = false
+		inHideArea = false
+	else:
+		EntitiesInArea.erase(body)
+		body.modulate = "ffffff"
+		body.visible = true
 		

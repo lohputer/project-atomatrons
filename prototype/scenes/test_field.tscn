@@ -14,8 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://be552xwfaxpf5" path="res://prefabs/mapElements/npc/npc.tscn" id="11_yovdo"]
 [ext_resource type="PackedScene" uid="uid://i5rnwcneqe4p" path="res://prefabs/mapElements/welcomeArea/welcome_area.tscn" id="12_3dx7p"]
 [ext_resource type="PackedScene" uid="uid://c6slj872dfil7" path="res://prefabs/mapElements/poster/poster.tscn" id="13_vekqd"]
-[ext_resource type="Script" path="res://prefabs/mapElements/entranceMechanic/entraceMechanic.gd" id="14_e4k8q"]
+[ext_resource type="PackedScene" uid="uid://b2bk7ri3bds6d" path="res://prefabs/mapElements/entranceMechanic/entrance_mechanic.tscn" id="14_le81v"]
 [ext_resource type="Texture2D" uid="uid://c22mxp402vecr" path="res://assets/buildings/lab.png" id="14_w2q4q"]
+[ext_resource type="PackedScene" uid="uid://c8ft0a25swi4k" path="res://prefabs/mapElements/entranceMechanic/doorway/doorway.tscn" id="15_3i6m4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_02d0q"]
 texture = ExtResource("3_bysrm")
@@ -221,8 +222,6 @@ font_color = Color(0.321569, 1, 0, 1)
 shadow_size = 6
 shadow_color = Color(0.196078, 0.596078, 0.156863, 1)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_51sjg"]
-
 [node name="TestField" type="Node2D"]
 script = ExtResource("1_y5uf0")
 
@@ -385,34 +384,20 @@ position = Vector2(-66420, -527.912)
 scale = Vector2(-60, -2.9808)
 texture = ExtResource("14_w2q4q")
 
-[node name="entranceMechanic" type="Node2D" parent="mapAreas/lab"]
+[node name="EntranceMechanic" parent="mapAreas/lab" instance=ExtResource("14_le81v")]
+position = Vector2(-57270.8, -628.015)
 rotation = -3.14159
-scale = Vector2(60, 2.9808)
-script = ExtResource("14_e4k8q")
+scale = Vector2(6.04697, 0.234419)
+skew = 6.52075e-05
 
-[node name="entrance" type="Node2D" parent="mapAreas/lab/entranceMechanic"]
-position = Vector2(68.734, -46.5601)
-rotation = 3.14159
-scale = Vector2(0.5, 0.5)
+[node name="doorway" parent="mapAreas/lab/EntranceMechanic" instance=ExtResource("15_3i6m4")]
+position = Vector2(1525, 112.997)
 
-[node name="Area2D" type="Area2D" parent="mapAreas/lab/entranceMechanic/entrance"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="mapAreas/lab/entranceMechanic/entrance/Area2D"]
-shape = SubResource("CircleShape2D_51sjg")
-
-[node name="exit" type="Node2D" parent="mapAreas/lab/entranceMechanic"]
-position = Vector2(1106.39, 214.563)
-rotation = 3.14159
-scale = Vector2(0.5, 0.5)
-
-[node name="Area2D" type="Area2D" parent="mapAreas/lab/entranceMechanic/exit"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="mapAreas/lab/entranceMechanic/exit/Area2D"]
-position = Vector2(0.303137, -0.395003)
-shape = SubResource("CircleShape2D_51sjg")
+[node name="doorway2" parent="mapAreas/lab/EntranceMechanic" instance=ExtResource("15_3i6m4")]
+position = Vector2(-8831, -3059.99)
 
 [node name="NPC" parent="." instance=ExtResource("11_yovdo")]
-position = Vector2(119, 208)
+position = Vector2(-11, 163)
 
 [node name="poster" parent="." instance=ExtResource("13_vekqd")]
 position = Vector2(48, -1052)
@@ -435,5 +420,3 @@ position = Vector2(1577, -1631)
 topic = "2"
 
 [connection signal="timeout" from="Timer" to="player" method="_on_timer_timeout"]
-[connection signal="body_entered" from="mapAreas/lab/entranceMechanic/entrance/Area2D" to="mapAreas/lab/entranceMechanic" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="mapAreas/lab/entranceMechanic/exit/Area2D" to="mapAreas/lab/entranceMechanic" method="_on_exit_area_2d_body_entered"]

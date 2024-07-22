@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2bk7ri3bds6d"]
+
+[ext_resource type="Script" path="res://prefabs/mapElements/entranceMechanic/entraceMechanic.gd" id="1_irca4"]
+
+[node name="EntranceMechanic" type="Node2D"]
+script = ExtResource("1_irca4")
