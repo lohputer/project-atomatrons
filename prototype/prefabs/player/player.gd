@@ -15,6 +15,17 @@ var currentAnimationNode = animationNodeArray[animationType]
 
 var playerPrevOrientation = Vector2(0,0);
 
+
+"""
+var carbs = 100, deficiency <50, overconsumption >=150
+var proteins = 80, deficiency <40, overconsumption >=120
+var fats = 60, deficiency <30, overconsumption >= 90
+var vitC = 30, deficiency <15, overconsumption >= 45
+var vitD = 15, deficiency <8, overconsumption >= 22
+var calcium = 20, deficiency <10, overconsumption >=30
+var iron = 20, deficiency <10, overconsumption >= 30
+"""
+
 func _ready():
 	PlayerInfo.player_node = self
 	$Warning.text = ""
@@ -108,4 +119,3 @@ func _on_timer_timeout():
 	PlayerInfo.vitD -= 1
 	PlayerInfo.calcium -= 1
 	PlayerInfo.iron -= 1
-

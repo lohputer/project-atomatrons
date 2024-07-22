@@ -393,6 +393,7 @@ script = ExtResource("14_e4k8q")
 [node name="entrance" type="Node2D" parent="mapAreas/lab/entranceMechanic"]
 position = Vector2(68.734, -46.5601)
 rotation = 3.14159
+scale = Vector2(0.5, 0.5)
 
 [node name="Area2D" type="Area2D" parent="mapAreas/lab/entranceMechanic/entrance"]
 
@@ -402,6 +403,7 @@ shape = SubResource("CircleShape2D_51sjg")
 [node name="exit" type="Node2D" parent="mapAreas/lab/entranceMechanic"]
 position = Vector2(1106.39, 214.563)
 rotation = 3.14159
+scale = Vector2(0.5, 0.5)
 
 [node name="Area2D" type="Area2D" parent="mapAreas/lab/entranceMechanic/exit"]
 
