@@ -11,10 +11,13 @@ func _ready():
 func _process(delta):
 	pass
 
-
 func _on_area_2d_body_entered(body):
-	$"../../../player".position = $entrance.position + Vector2(20, 20)
-	$"../../../player/Warning".text = location
+	if body.id == "player":
+		print("wh")
+		$"../../../player".position = $entrance.position
+		$"../../../player/Warning".text = location
 
 func _on_exit_area_2d_body_entered(body):
-	$"../../../player".position = $exit.position + Vector2(20, 20)
+	if body.id == "player":
+		print('wh wh')
+		$"../../../player".position = $exit.position
