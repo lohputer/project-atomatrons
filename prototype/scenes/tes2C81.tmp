@@ -245,16 +245,10 @@ top_level = true
 position = Vector2(30, -320)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
+visible = false
 position = Vector2(0, 2)
 scale = Vector2(2, 2)
 script = ExtResource("6_excyj")
-
-[node name="ColorRect" type="ColorRect" parent="player/Camera2D"]
-z_index = 2
-offset_left = -585.0
-offset_top = -328.0
-offset_right = 577.0
-offset_bottom = 324.0
 
 [node name="Stats" type="Label" parent="player"]
 offset_left = -1126.0

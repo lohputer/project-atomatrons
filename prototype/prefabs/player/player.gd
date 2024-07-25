@@ -15,17 +15,6 @@ var currentAnimationNode = animationNodeArray[animationType]
 
 var playerPrevOrientation = Vector2(0,0);
 
-
-"""
-var carbs = 100, deficiency <50, overconsumption >=150
-var proteins = 80, deficiency <40, overconsumption >=120
-var fats = 60, deficiency <30, overconsumption >= 90
-var vitC = 30, deficiency <15, overconsumption >= 45
-var vitD = 15, deficiency <8, overconsumption >= 22
-var calcium = 20, deficiency <10, overconsumption >=30
-var iron = 20, deficiency <10, overconsumption >= 30
-"""
-
 func _ready():
 	PlayerInfo.player_node = self
 	$Warning.text = ""
@@ -97,8 +86,16 @@ func _physics_process(delta):
 	
 	PlayerInfo.player_pos = global_position
 	
-	#Time to add some code for checking deficiency/overconsumption
-	
+	if PlayerInfo.carbs < 50:
+		$Camera2D.nausea = true
+		PlayerInfo.player_speed_modifier = 0.5
+	elif PlayerInfo.carbs > 90:
+		$Camera2D.blood -= 5
+		#add some form of health bar to then show a heart problem
+	else:
+		$Camera2D.nausea = false
+		$Camera2D.blood = 100
+		
 	if inTallGrass:
 		$HidingMask.clip_children = true
 		$HidingMask.self_modulate = "ffffff"
@@ -109,7 +106,6 @@ func _physics_process(delta):
 func _on_area_2d_body_entered(body):
 	if body is atomatron_field:
 		GlobalFunctions.load_to("res://scenes/test_combat.tscn")
-
 
 func _on_timer_timeout():
 	PlayerInfo.carbs -= 3

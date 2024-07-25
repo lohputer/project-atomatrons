@@ -38,14 +38,14 @@ func _on_pressed():
 	if in_radius:
 		$"../player/Inventory".addItem(itemType)
 		visible = false
-		$"../player/Warning".text = ""
+		$"../player/Warning".text = " "
 
 func _on_area_2d_body_entered(body):
-	if body.id == "player":
+	if body.name == "player" and self.get_parent().get_parent().name != "Inventory":
 		in_radius = true
 		$"../player/Warning".text = "Press E to eat, or click to place in inventory."
 
 func _on_area_2d_body_exited(body):
-	if body.id == "player":
+	if body.name == "player" and self.get_parent().get_parent().name != "Inventory":
 		in_radius = false
-		$"../player/Warning".text = ""
+		$"../player/Warning".text = " "
