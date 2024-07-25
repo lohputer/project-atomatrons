@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bbojxxr0vs8w"]
+[gd_scene load_steps=9 format=3 uid="uid://bbojxxr0vs8w"]
 
 [ext_resource type="Texture2D" uid="uid://077q3f4wx8sb" path="res://scenes/UI_backgroundFloor.png" id="1_gisrh"]
 [ext_resource type="Script" path="res://scenes/combat_scene.gd" id="1_kq76q"]
@@ -6,7 +6,8 @@
 [ext_resource type="Script" path="res://scenes/enemy.gd" id="4_1sobf"]
 [ext_resource type="Script" path="res://scenes/turn_manager.gd" id="4_cxw4c"]
 [ext_resource type="Script" path="res://scenes/player.gd" id="5_fhki0"]
-[ext_resource type="Texture2D" uid="uid://d1uw2xcarw71" path="res://icon.svg" id="6_f5gr1"]
+[ext_resource type="Texture2D" uid="uid://cieoejit40oyi" path="res://assets/atomatrons/hydrochloric acid.png" id="6_rlub2"]
+[ext_resource type="Texture2D" uid="uid://tr5ib1kmnt8b" path="res://assets/atomatrons/magnesium/magnesium.png" id="8_t8y2r"]
 
 [node name="TestCombat" type="Node2D"]
 script = ExtResource("1_kq76q")
@@ -17,29 +18,31 @@ scale = Vector2(8.97266, 8.53472)
 texture = ExtResource("1_gisrh")
 
 [node name="Pixil-frame-0(1)" type="Sprite2D" parent="."]
-position = Vector2(1102, 553)
-scale = Vector2(8.98438, 8.40972)
+position = Vector2(577.5, 322)
+scale = Vector2(4.48047, 4.47222)
 texture = ExtResource("2_qynya")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 90.0
-offset_top = 102.0
-offset_right = 189.0
-offset_bottom = 133.0
+offset_left = 927.0
+offset_top = 23.0
+offset_right = 1026.0
+offset_bottom = 54.0
 text = "back to test"
 
 [node name="entities" type="Node2D" parent="."]
 script = ExtResource("4_cxw4c")
 
 [node name="player" type="CharacterBody2D" parent="entities" node_paths=PackedStringArray("target")]
+position = Vector2(-55, -46)
 script = ExtResource("5_fhki0")
-max_health = 10
+max_health = 65
 speed = 5
 target = NodePath("../enemy")
 
-[node name="Icon" type="Sprite2D" parent="entities/player"]
-position = Vector2(310, 449)
-texture = ExtResource("6_f5gr1")
+[node name="HydrochloricAcid" type="Sprite2D" parent="entities/player"]
+position = Vector2(335, 449)
+scale = Vector2(6, 6)
+texture = ExtResource("6_rlub2")
 
 [node name="enemy" type="CharacterBody2D" parent="entities" node_paths=PackedStringArray("target")]
 script = ExtResource("4_1sobf")
@@ -47,41 +50,55 @@ max_health = 10
 speed = 6
 target = NodePath("../player")
 
+[node name="Magnesium" type="Sprite2D" parent="entities/enemy"]
+position = Vector2(877, 161)
+scale = Vector2(3.2, 3.2)
+texture = ExtResource("8_t8y2r")
+flip_h = true
+
 [node name="player choices" type="Node2D" parent="."]
 visible = false
 position = Vector2(1427, 774)
 
 [node name="attack" type="Button" parent="player choices"]
-offset_left = -391.0
-offset_top = -289.0
-offset_right = -306.0
-offset_bottom = -247.0
-text = "attack"
+offset_left = -449.0
+offset_top = -336.0
+offset_right = -364.0
+offset_bottom = -294.0
+text = "corrosive"
 
 [node name="speed up" type="Button" parent="player choices"]
-offset_left = -379.0
-offset_top = -226.0
-offset_right = -294.0
-offset_bottom = -184.0
-text = "speed up"
+offset_left = -449.0
+offset_top = -285.0
+offset_right = -364.0
+offset_bottom = -243.0
+text = "dissociative dash"
 
 [node name="defence up" type="Button" parent="player choices"]
-offset_left = -384.0
-offset_top = -172.0
-offset_right = -290.0
-offset_bottom = -130.0
-text = "defence up"
+offset_left = -449.0
+offset_top = -230.0
+offset_right = -355.0
+offset_bottom = -186.0
+text = "effervescence"
 
 [node name="enemy health" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="Label" type="Label" parent="."]
-offset_left = 403.0
-offset_top = 15.0
-offset_right = 531.0
-offset_bottom = 38.0
+offset_left = 749.0
+offset_top = 23.0
+offset_right = 877.0
+offset_bottom = 46.0
 text = "enemy turn now"
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 592.0
+offset_top = 521.0
+offset_right = 891.0
+offset_bottom = 558.0
+max_value = 65.0
+show_percentage = false
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="player choices/attack" to="entities/player" method="_on_attack_pressed"]

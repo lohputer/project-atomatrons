@@ -1,5 +1,8 @@
 extends atomatron_battle
-
+func _ready():
+	max_health = 65
+	health = max_health
+	
 func turn():
 	$"../../player choices".visible = true
 func _start_turn():
@@ -25,3 +28,6 @@ func _on_speed_up_pressed():
 
 func _on_defence_up_pressed():
 	pass # defence up
+
+func _process(delta):
+	$"../../ProgressBar".value = health

@@ -6,8 +6,8 @@ func _ready():
 	
 	
 	#clear all atomatrons under entities
-	for i in $entities.get_children():
-		i.queue_free()
+	#for i in $entities.get_children():
+		#i.queue_free()
 	
 	#add new atomatrons
 	
