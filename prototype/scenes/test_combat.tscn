@@ -46,7 +46,7 @@ texture = ExtResource("6_rlub2")
 
 [node name="enemy" type="CharacterBody2D" parent="entities" node_paths=PackedStringArray("target")]
 script = ExtResource("4_1sobf")
-max_health = 10
+max_health = 70
 speed = 6
 target = NodePath("../player")
 
