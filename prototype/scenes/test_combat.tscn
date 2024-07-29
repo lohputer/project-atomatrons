@@ -82,8 +82,10 @@ offset_bottom = -186.0
 text = "effervescence"
 
 [node name="enemy health" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 55.0
+offset_top = 81.0
+offset_right = 95.0
+offset_bottom = 104.0
 
 [node name="Label" type="Label" parent="."]
 offset_left = 749.0
@@ -92,11 +94,33 @@ offset_right = 877.0
 offset_bottom = 46.0
 text = "enemy turn now"
 
+[node name="player" type="Label" parent="."]
+offset_left = 592.0
+offset_top = 480.0
+offset_right = 641.0
+offset_bottom = 503.0
+text = "player"
+
+[node name="enemy" type="Label" parent="."]
+offset_left = 100.0
+offset_top = 23.0
+offset_right = 153.0
+offset_bottom = 46.0
+text = "enemy"
+
 [node name="ProgressBar" type="ProgressBar" parent="."]
 offset_left = 592.0
 offset_top = 521.0
 offset_right = 891.0
 offset_bottom = 558.0
+max_value = 65.0
+show_percentage = false
+
+[node name="ProgressBar2" type="ProgressBar" parent="."]
+offset_left = 100.0
+offset_top = 81.0
+offset_right = 399.0
+offset_bottom = 118.0
 max_value = 65.0
 show_percentage = false
 
