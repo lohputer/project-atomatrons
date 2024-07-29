@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://e3b4age0d4nr"]
+
+[ext_resource type="Texture2D" uid="uid://cf2d2n6u4ckgi" path="res://assets/props/drsutan.png" id="1_va65y"]
+
+[node name="Dr Sutan" type="Node2D"]
+position = Vector2(-4202.64, -34.6944)
+rotation = -3.14159
+scale = Vector2(60.4697, 2.34419)
+skew = 6.52075e-05
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(6.3, 4.00002)
+scale = Vector2(0.399529, 0.474099)
+texture = ExtResource("1_va65y")

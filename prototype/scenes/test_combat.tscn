@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://scenes/turn_manager.gd" id="4_cxw4c"]
 [ext_resource type="Script" path="res://scenes/player.gd" id="5_fhki0"]
 [ext_resource type="Texture2D" uid="uid://cieoejit40oyi" path="res://assets/atomatrons/hydrochloric acid.png" id="6_rlub2"]
-[ext_resource type="Texture2D" uid="uid://tr5ib1kmnt8b" path="res://assets/atomatrons/magnesium/magnesium.png" id="8_t8y2r"]
+[ext_resource type="Texture2D" uid="uid://d0k4i7ovxlddj" path="res://assets/atomatrons/magnesium/magnesium.png" id="8_t8y2r"]
 
 [node name="TestCombat" type="Node2D"]
 script = ExtResource("1_kq76q")

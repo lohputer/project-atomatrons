@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0k4i7ovxlddj"
-path="res://.godot/imported/magnesium.png-4bfa9b9fba9548ff4fcf773bf8c08210.ctex"
+uid="uid://dnohf75n5e3co"
+path="res://.godot/imported/bed.png-210038d4251d075fa31457ba64adb426.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/atomatrons/magnesium/magnesium.png"
-dest_files=["res://.godot/imported/magnesium.png-4bfa9b9fba9548ff4fcf773bf8c08210.ctex"]
+source_file="res://assets/props/bed.png"
+dest_files=["res://.godot/imported/bed.png-210038d4251d075fa31457ba64adb426.ctex"]
 
 [params]
 

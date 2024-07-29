@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhjow4jsxy62s"]
+
+[ext_resource type="Texture2D" uid="uid://dnohf75n5e3co" path="res://assets/props/bed.png" id="1_q4hm7"]
+
+[node name="Bed" type="Node2D"]
+position = Vector2(-1154.97, 30.9432)
+skew = 6.52075e-05
+
+[node name="Bed" type="Sprite2D" parent="."]
+position = Vector2(1.99902, 3)
+texture = ExtResource("1_q4hm7")
