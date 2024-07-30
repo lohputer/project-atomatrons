@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://bx1xyywyvpxje"]
+
+[ext_resource type="Texture2D" uid="uid://cvovjc2obs6vb" path="res://assets/props/screen.png" id="1_i50hr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bfphc"]
+font_size = 9
+
+[node name="Screen" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_i50hr")
+
+[node name="Label" type="Label" parent="Sprite2D"]
+offset_left = -89.0
+offset_top = -9.0
+offset_right = 154.0
+offset_bottom = 22.0
+scale = Vector2(0.748879, 1.02114)
+text = "Convert 2100nm to cm
+Answer: 0.00021cm"
+label_settings = SubResource("LabelSettings_bfphc")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1

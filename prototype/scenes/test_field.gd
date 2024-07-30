@@ -6,7 +6,7 @@ var spawn_timer = Timer.new()
 var despawn_timer = Timer.new()
 var food_spawn_timer = Timer.new()
 var food_despawn_timer = Timer.new()
-var food_names = ["berries", "spinach", "tomato"]
+var food_names = ["berries", "spinach", "tomato", "cheese", "egg"]
 
 var player
 var spawn_radius = 500
