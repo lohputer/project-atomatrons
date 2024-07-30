@@ -112,7 +112,7 @@ func _on_timer_timeout():
 
 
 func _on_blood_timer_timeout():
-	if PlayerInfo.carbs >= 0:
+	if PlayerInfo.carbs >= 150:
 		$Camera2D.blood -= 10
 	else:
 		$Camera2D.nausea = false

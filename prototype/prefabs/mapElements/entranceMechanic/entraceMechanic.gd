@@ -17,13 +17,13 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if doorway1.bodyEntered == true:		
-		playerInstance.global_position = doorway2.global_position + Vector2(20, 200)
+		playerInstance.global_position = doorway2.global_position + Vector2(20, 100)
 		var playerWarning = playerInstance.get_node("Warning")
 		playerWarning.text = location
 		doorway1.bodyEntered = false
 		
 	elif doorway2.bodyEntered == true:
-		playerInstance.global_position = doorway1.global_position + Vector2(20, 200)
+		playerInstance.global_position = doorway1.global_position + Vector2(20, 100)
 		doorway2.bodyEntered = false
 		
 	
