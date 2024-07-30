@@ -85,16 +85,6 @@ func _physics_process(delta):
 	""" % [PlayerInfo.player_name, PlayerInfo.carbs, PlayerInfo.proteins, PlayerInfo.fats, PlayerInfo.vitC, PlayerInfo.vitD, PlayerInfo.calcium, PlayerInfo.iron]
 	
 	PlayerInfo.player_pos = global_position
-	
-	if PlayerInfo.carbs < 50:
-		$Camera2D.nausea = true
-		PlayerInfo.player_speed_modifier = 0.5
-	elif PlayerInfo.carbs > 90:
-		$Camera2D.blood -= 5
-		#add some form of health bar to then show a heart problem
-	else:
-		$Camera2D.nausea = false
-		$Camera2D.blood = 100
 		
 	if inTallGrass:
 		$HidingMask.clip_children = true
@@ -102,6 +92,10 @@ func _physics_process(delta):
 	else:
 		$HidingMask.clip_children = false
 		$HidingMask.self_modulate = "ffffff00"
+	
+	if PlayerInfo.carbs < 50:
+		$Camera2D.nausea = true
+		PlayerInfo.player_speed_modifier = 0.5
 
 func _on_area_2d_body_entered(body):
 	if body is atomatron_field:
@@ -115,3 +109,23 @@ func _on_timer_timeout():
 	PlayerInfo.vitD -= 1
 	PlayerInfo.calcium -= 1
 	PlayerInfo.iron -= 1
+
+
+func _on_blood_timer_timeout():
+	if PlayerInfo.carbs >= 150:
+		$Camera2D.blood -= 10
+	else:
+		$Camera2D.nausea = false
+		$Camera2D.blood = 100
+	if $Camera2D.blood == 0:
+		global_position = $"../mapAreas/lab/Wakeup Point".global_position
+	if $Camera2D.blood <= -10:
+		$Camera2D.blood = 100
+		PlayerInfo.carbs = 100
+		PlayerInfo.proteins = 80
+		PlayerInfo.fats = 60
+		PlayerInfo.vitC = 30
+		PlayerInfo.vitD = 15
+		PlayerInfo.calcium = 20
+		PlayerInfo.iron = 20
+		PlayerInfo.inventory = {}

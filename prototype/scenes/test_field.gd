@@ -55,7 +55,7 @@ func start_spawn_timer():
 		spawn_timer.set_wait_time(spawn_interval)
 		spawn_timer.start()
 	if food_instances.size() < max_food_instances:
-		var spawn_interval = randf_range(2, 5)
+		var spawn_interval = randf_range(7, 20)
 		food_spawn_timer.set_wait_time(spawn_interval)
 		food_spawn_timer.start()
 
