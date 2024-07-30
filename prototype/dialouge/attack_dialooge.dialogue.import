@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://caf6ha5iqv4ap"
+path="res://.godot/imported/attack_dialooge.dialogue-83c4dbc9576eda755cf5c2b6a24218cd.tres"
+
+[deps]
+
+source_file="res://dialouge/attack_dialooge.dialogue"
+dest_files=["res://.godot/imported/attack_dialooge.dialogue-83c4dbc9576eda755cf5c2b6a24218cd.tres"]
+
+[params]
+
+defaults=true
