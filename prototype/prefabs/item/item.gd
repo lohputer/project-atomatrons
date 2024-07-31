@@ -21,6 +21,13 @@ func _physics_process(delta):
 		elif itemType == "TOMATO":
 			PlayerInfo.carbs += 2
 			PlayerInfo.vitC += 15
+		elif itemType == "CHEESE":
+			PlayerInfo.calcium += 10
+			PlayerInfo.fats += 15
+			PlayerInfo.proteins += 10
+		elif itemType == "EGG":
+			PlayerInfo.proteins += 15
+			PlayerInfo.vitD += 10
 		visible = false
 		PlayerInfo.player_speed_modifier = 1
 		queue_free()
