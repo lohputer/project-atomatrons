@@ -16,7 +16,7 @@ func _process(delta):
 		isOpenned = not isOpenned
 		
 	if isOpenned:
-		instantiatedKeypad.position = Vector2(0, 0)
+		instantiatedKeypad.position = Vector2.ZERO
 		instantiatedKeypad.scale = Vector2(15,15)
 		instantiatedKeypad.visible = true
 		instantiatedKeypad.z_index = 3

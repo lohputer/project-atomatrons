@@ -13,8 +13,8 @@
 script = ExtResource("1_kq76q")
 
 [node name="UiBackgroundFloor" type="Sprite2D" parent="."]
-position = Vector2(1152.5, 615.5)
-scale = Vector2(8.97266, 8.53472)
+position = Vector2(577.5, 322.5)
+scale = Vector2(4.48047, 4.46528)
 texture = ExtResource("1_gisrh")
 
 [node name="Pixil-frame-0(1)" type="Sprite2D" parent="."]
@@ -124,7 +124,17 @@ offset_bottom = 118.0
 max_value = 65.0
 show_percentage = false
 
+[node name="losing label" type="Label" parent="."]
+visible = false
+offset_left = 95.0
+offset_top = 118.0
+offset_right = 1057.0
+offset_bottom = 391.0
+theme_override_font_sizes/font_size = 200
+text = "YOU LOSE"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="player_lost" from="entities/player" to="." method="_on_player_player_lost"]
 [connection signal="pressed" from="player choices/attack" to="entities/player" method="_on_attack_pressed"]
 [connection signal="pressed" from="player choices/speed up" to="entities/player" method="_on_speed_up_pressed"]
 [connection signal="pressed" from="player choices/defence up" to="entities/player" method="_on_defence_up_pressed"]

@@ -44,8 +44,10 @@ func _on_timer_timeout():
 
 
 func _on_area_2d_body_entered(body):
-	if body.id == "player":
-		print("I chasing... *kneels down*   Oh its you Ding Hong!")
-		foundPlayer = true
-		await get_tree().create_timer(10).timeout
-		foundPlayer = false
+	if body is CharacterBody2D:
+		if body.id == "player":
+			
+			print("I chasing... *kneels down*   Oh its you Ding Hong!")
+			foundPlayer = true
+			await get_tree().create_timer(10).timeout
+			foundPlayer = false

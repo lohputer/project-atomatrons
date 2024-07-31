@@ -20,6 +20,10 @@ func _on_button_pressed():
 	GlobalFunctions.load_to("res://scenes/test_field.tscn")
 
 
-		
-		
-	
+
+
+
+func _on_player_player_lost():
+	$"losing label".visible = true
+	await get_tree().create_timer(3).timeout
+	GlobalFunctions.load_to("res://scenes/test_field.tscn")
