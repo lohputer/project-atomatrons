@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://drsi47e5tlrtf"]
+[gd_scene load_steps=33 format=3 uid="uid://drsi47e5tlrtf"]
 
 [ext_resource type="PackedScene" uid="uid://b4e4sgg517n2q" path="res://prefabs/player/player.tscn" id="1_2drqm"]
 [ext_resource type="Script" path="res://scenes/test_field.gd" id="1_y5uf0"]
@@ -24,6 +24,8 @@
 [ext_resource type="Texture2D" uid="uid://c2p0k68vym7ua" path="res://assets/buildings/cave.png" id="22_xvdcp"]
 [ext_resource type="PackedScene" uid="uid://c82ovuhoqn2ww" path="res://prefabs/mapElements/chest.tscn" id="23_qx54x"]
 [ext_resource type="PackedScene" uid="uid://bx1xyywyvpxje" path="res://prefabs/mapElements/props/screen.tscn" id="24_prs08"]
+[ext_resource type="PackedScene" uid="uid://bnuodkyf5jw4t" path="res://prefabs/mapElements/props/note.tscn" id="25_ypn3w"]
+[ext_resource type="Texture2D" uid="uid://difjcrwhkw1px" path="res://assets/props/plant.png" id="26_x2ikl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_02d0q"]
 texture = ExtResource("3_bysrm")
@@ -602,6 +604,7 @@ offset_right = 92.0942
 offset_bottom = 27.7817
 
 [node name="CheckBox2" type="CheckBox" parent="player/Options"]
+layout_mode = 0
 offset_left = 67.5784
 offset_top = 23.6357
 offset_right = 91.5784
@@ -794,6 +797,21 @@ topic = "6"
 
 [node name="Screen" parent="." instance=ExtResource("24_prs08")]
 position = Vector2(10567, -4660)
+
+[node name="Note" parent="." instance=ExtResource("25_ypn3w")]
+position = Vector2(-2898, 1006)
+rotation = 0.39876
+text = "to find the first digit, look for a order of maGnitude"
+
+[node name="Note2" parent="." instance=ExtResource("25_ypn3w")]
+position = Vector2(-8308, -2341)
+rotation = -0.339356
+text = "the 2nd digit is the mass of water over the space it occupies"
+
+[node name="Plant" type="Sprite2D" parent="."]
+position = Vector2(-8905, -1834)
+scale = Vector2(4.82, 4.86)
+texture = ExtResource("26_x2ikl")
 
 [connection signal="timeout" from="Timer" to="player" method="_on_timer_timeout"]
 [connection signal="timeout" from="BloodTimer" to="player" method="_on_blood_timer_timeout"]
