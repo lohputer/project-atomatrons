@@ -55,6 +55,7 @@ func pick_random(dict, num, topic):
 	var qs = []
 	for i in range(num):
 		var lst = []
+		print(dict.keys())
 		if not topic:
 			lst = dict[dict.keys()[randi() % len(dict)]]
 		else:

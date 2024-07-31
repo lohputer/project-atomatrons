@@ -17,6 +17,7 @@ func _process(delta):
 		
 	if isOpenned:
 		instantiatedKeypad.position = Vector2(0, 0)
+		instantiatedKeypad.scale = Vector2(15,15)
 		instantiatedKeypad.visible = true
 		instantiatedKeypad.z_index = 3
 		if instantiatedKeypad.get_parent() != $"../player":
