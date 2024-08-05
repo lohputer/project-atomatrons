@@ -11,22 +11,22 @@ You: Nevermind, let's see what you got.
 ???: Right, okay.
 ???: {{GameState.question}}
 - {{GameState.option1}}
-	if GameState.correct == 1:
+	if GameState.correct == GameState.option1:
 		???: yessir
 	else:
 		???: nuh uh :( it was {{GameState.correct}}
 - {{GameState.option2}}
-	if GameState.correct == 2:
+	if GameState.correct == GameState.option2:
 		???: yessir
 	else:
 		???: nuh uh :( it was {{GameState.correct}}
 - {{GameState.option3}}
-	if GameState.correct == 3:
+	if GameState.correct == GameState.option3:
 		???: yessir
 	else:
 		???: nuh uh :( it was {{GameState.correct}}
 - {{GameState.option4}}
-	if GameState.correct == 4:
+	if GameState.correct == GameState.option4:
 		???: yessir
 	else:
 		???: nuh uh :( it was {{GameState.correct}}

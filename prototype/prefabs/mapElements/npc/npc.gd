@@ -76,6 +76,6 @@ func _on_area_2d_body_entered(body):
 		GameState.option2 = q[0][1][1]
 		GameState.option3 = q[0][1][2]
 		GameState.option4 = q[0][1][3]
-		GameState.correct = int(q[0][2])
+		GameState.correct =  q[0][1][int(q[0][2])-1]
 		DialogueManager.show_example_dialogue_balloon(dialogueFile, "starting_node")
 
