@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bx1xyywyvpxje"]
+[gd_scene load_steps=5 format=3 uid="uid://bx1xyywyvpxje"]
 
 [ext_resource type="Texture2D" uid="uid://cvovjc2obs6vb" path="res://assets/props/screen.png" id="1_i50hr"]
 [ext_resource type="Script" path="res://prefabs/mapElements/props/screen.gd" id="1_y1r6e"]
@@ -8,12 +8,6 @@ font_size = 9
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6qb0v"]
 size = Vector2(273, 150)
-
-[sub_resource type="LabelSettings" id="LabelSettings_64v0f"]
-font_size = 10
-outline_color = Color(0, 0, 0.945098, 1)
-shadow_size = 3
-shadow_color = Color(0.647059, 0, 0, 1)
 
 [node name="Screen" type="Node2D"]
 script = ExtResource("1_y1r6e")
@@ -40,44 +34,5 @@ autowrap_mode = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 29)
 shape = SubResource("RectangleShape2D_6qb0v")
-
-[node name="Answer" type="Node2D" parent="."]
-
-[node name="LineEdit" type="LineEdit" parent="Answer"]
-anchors_preset = -1
-anchor_left = 0.513
-anchor_top = 0.559
-anchor_right = 0.513
-anchor_bottom = 0.559
-offset_left = -27.0
-offset_top = -2.0
-offset_right = 40.0625
-offset_bottom = 29.0
-scale = Vector2(0.824147, 0.729841)
-placeholder_text = "0000"
-alignment = 1
-max_length = 4
-expand_to_text_length = true
-
-[node name="Stats" type="Label" parent="Answer"]
-offset_left = -34.0
-offset_top = -23.0
-offset_right = 97.0
-offset_bottom = 31.0
-scale = Vector2(0.538219, 0.394122)
-text = "Search around the C A V E, find the 4 digits and enter."
-label_settings = SubResource("LabelSettings_64v0f")
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="Button" type="Button" parent="Answer"]
-offset_left = -11.0
-offset_top = 27.0
-offset_right = 80.0
-offset_bottom = 58.0
-scale = Vector2(0.249045, 0.281589)
-text = "Enter"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
