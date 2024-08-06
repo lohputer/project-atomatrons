@@ -62,14 +62,14 @@ wait_time = 120.0
 position = Vector2(-2, -25)
 scale = Vector2(0.335, 0.335)
 sprite_frames = SubResource("SpriteFrames_yjfrc")
-frame_progress = 0.982378
+frame_progress = 0.048717
 
 [node name="talkingAnimation" type="AnimatedSprite2D" parent="."]
 visible = false
 position = Vector2(-2, -24)
 scale = Vector2(0.335, 0.335)
 sprite_frames = SubResource("SpriteFrames_keltb")
-frame_progress = 0.914927
+frame_progress = 0.246283
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
