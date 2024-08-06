@@ -20,6 +20,7 @@ var textures = []
 
 func _ready():
 	player = get_node("/root/TestField/player")
+	
 	for i in food_names:
 		textures.append(load("res://assets/food/%s.png" % i))
 	min_spawn_distance = spawn_radius / 2

@@ -18,6 +18,7 @@ var playerPrevOrientation = Vector2(0,0);
 func _ready():
 	PlayerInfo.player_node = self
 	$Warning.text = ""
+	global_position = GlobalFunctions.player_vector
 	
 	for animName in animationNodeArray:
 		var anim = get_node("HidingMask/"+animName)
@@ -26,7 +27,7 @@ func _ready():
 
 	
 func _physics_process(delta):
-	
+	GlobalFunctions.player_vector = global_position
 	if not openInventory:
 		player_direction = Input.get_vector("left", "right", "up", "down")
 		velocity = player_direction * PlayerInfo.player_speed

@@ -4,6 +4,7 @@ var player_atomatron_deployable: String
 var enemy_atomatron_deployable: String
 var current_mover: String
 var move_announced: String
+var player_vector = Vector2.ZERO
 signal anounced
 func load_to(target: String):
 	var loading_Screen = preload("res://prefabs/loading_screen.tscn").instantiate()

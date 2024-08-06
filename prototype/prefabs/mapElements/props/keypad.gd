@@ -17,7 +17,9 @@ func _on_button_pressed():
 	else:
 		$"../Warning".text = "Incorrect :("
 	if physics:
-		$Screen.
+		pass
+		#hold lyndon i passed this cus it was causing error
+		
 
 func _on_line_edit_text_changed(new_text):
 	code = new_text
