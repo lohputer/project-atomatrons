@@ -5,6 +5,8 @@ extends CharacterBody2D
 var id = "player"
 var player_direction: Vector2
 var openInventory = false
+var canMove = true
+
 
 var inTallGrass = false
 
@@ -28,7 +30,7 @@ func _ready():
 	
 func _physics_process(delta):
 	GlobalFunctions.player_vector = global_position
-	if not openInventory:
+	if not openInventory and canMove:
 		player_direction = Input.get_vector("left", "right", "up", "down")
 		velocity = player_direction * PlayerInfo.player_speed
 		if (player_direction.y) > 0:
@@ -48,6 +50,9 @@ func _physics_process(delta):
 					animationType = 6
 			else:
 				animationType = 4
+				
+	else:
+		velocity = Vector2(0,0)
 			
 	
 	for animName in animationNodeArray:

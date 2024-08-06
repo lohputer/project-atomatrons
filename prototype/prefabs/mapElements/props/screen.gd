@@ -25,11 +25,14 @@ func _ready():
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if Input.is_action_just_pressed("escape"):
+		exit_question($"../player")
 
 
 func _on_area_2d_body_entered(body):
 	start_question()
+	if body.id == "player":
+		body.canMove = false
 	
 func start_question():
 	var randomUnit = units.pick_random()
@@ -45,7 +48,7 @@ func start_question():
 	$Sprite2D/Label.text = "Convert %s%s%s to %s%s" % [option1, randomPrefix, randomUnit, secondPrefix, randomUnit]
 	instantiatedKeypad.position = Vector2.ZERO
 	instantiatedKeypad.scale = Vector2(15,15)
-	instantiatedKeypad.answer = str(float(option1) * 10**(prefixes[randomPrefix] - prefixes[secondPrefix])) + secondPrefix
+	instantiatedKeypad.answer = str(float(option1) * 10**(prefixes[randomPrefix] - prefixes[secondPrefix])) + secondPrefix + randomUnit
 	print(instantiatedKeypad.answer)
 	instantiatedKeypad.visible = true
 	instantiatedKeypad.z_index = 3
@@ -58,3 +61,10 @@ func next_question():
 		correctAnswers += 1
 	await get_tree().create_timer(5.0).timeout
 	$Sprite2D/Label.text = "Next question.."
+
+
+func exit_question(playerBody):
+	playerBody.canMove = true
+	instantiatedKeypad.visible = false
+	
+	
