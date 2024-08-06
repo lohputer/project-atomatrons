@@ -620,10 +620,10 @@ wait_time = 10.0
 autostart = true
 
 [node name="item" parent="." instance=ExtResource("5_1jgiq")]
-offset_left = 240.0
-offset_top = -229.0
-offset_right = 790.0
-offset_bottom = 137.0
+offset_left = 239.0
+offset_top = -225.0
+offset_right = 789.0
+offset_bottom = 141.0
 
 [node name="carbon" parent="." instance=ExtResource("6_vgjeq")]
 position = Vector2(995, 195)
@@ -731,7 +731,7 @@ scale = Vector2(6.04697, 0.234419)
 skew = 6.52075e-05
 
 [node name="doorway" parent="mapAreas/lab/EntranceMechanic" instance=ExtResource("15_3i6m4")]
-position = Vector2(1525, 112.997)
+position = Vector2(1504.01, 107.905)
 
 [node name="doorway2" parent="mapAreas/lab/EntranceMechanic" instance=ExtResource("15_3i6m4")]
 position = Vector2(-8831, -3059.99)

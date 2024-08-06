@@ -1,15 +1,53 @@
-[gd_scene load_steps=4 format=3 uid="uid://be552xwfaxpf5"]
+[gd_scene load_steps=10 format=3 uid="uid://be552xwfaxpf5"]
 
 [ext_resource type="Texture2D" uid="uid://d1uw2xcarw71" path="res://icon.svg" id="1_7nuos"]
 [ext_resource type="Script" path="res://prefabs/mapElements/npc/npc.gd" id="1_gpvc8"]
+[ext_resource type="Texture2D" uid="uid://blgkc54qc6gc2" path="res://assets/npc/npc_idle/frame1.png" id="3_8qaew"]
+[ext_resource type="Texture2D" uid="uid://mjg0h3cc0imt" path="res://assets/npc/npc_idle/frame2.png" id="4_aa1r2"]
+[ext_resource type="Texture2D" uid="uid://r2xt5x6wnbi2" path="res://assets/npc/npc_talk/frame1.png" id="5_vi8r4"]
+[ext_resource type="Texture2D" uid="uid://cs51llxumfvm" path="res://assets/npc/npc_talk/frame2.png" id="6_owh6t"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b3bqn"]
 radius = 140.289
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yjfrc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8qaew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_aa1r2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_keltb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_vi8r4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_owh6t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="NPC" type="Node2D"]
 script = ExtResource("1_gpvc8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("1_7nuos")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -20,4 +58,18 @@ shape = SubResource("CircleShape2D_b3bqn")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 120.0
 
+[node name="idleAnimation" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, -25)
+scale = Vector2(0.335, 0.335)
+sprite_frames = SubResource("SpriteFrames_yjfrc")
+frame_progress = 0.982378
+
+[node name="talkingAnimation" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(-2, -24)
+scale = Vector2(0.335, 0.335)
+sprite_frames = SubResource("SpriteFrames_keltb")
+frame_progress = 0.914927
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

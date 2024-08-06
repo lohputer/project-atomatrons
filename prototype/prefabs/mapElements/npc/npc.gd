@@ -6,8 +6,12 @@ extends Node2D
 @export var qNum = 1
 var dialogueFile
 var questions = {}
+var isTalking = false
+var isFlipped = false
 
 const id = "NPC"
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,6 +19,10 @@ func _ready():
 	var file = FileAccess.open("res://dialouge/quiz.txt", FileAccess.READ)
 	var content = file.get_as_text()
 	content = content.split("TOPIC ")
+	
+	$talkingAnimation.play("default")
+	$idleAnimation.play("default")
+	
 	for topic in content:
 		var lines = []
 		if "question: " in topic:
@@ -49,7 +57,14 @@ func _ready():
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	$talkingAnimation.flip_h = isFlipped
+	$idleAnimation.flip_h = isFlipped
+	if isTalking:
+		$talkingAnimation.visible = true
+		$idleAnimation.visible = false
+	else:
+		$talkingAnimation.visible = false
+		$idleAnimation.visible = true
 
 func pick_random(dict, num, topic):
 	var qs = []
@@ -78,4 +93,18 @@ func _on_area_2d_body_entered(body):
 		GameState.option4 = q[0][1][3]
 		GameState.correct =  q[0][1][int(q[0][2])-1]
 		DialogueManager.show_example_dialogue_balloon(dialogueFile, "starting_node")
+		isTalking = true
+		if body.global_position > global_position:
+			isFlipped = false
+		else:
+			isFlipped = true
+			
+		
+		
 
+
+
+
+func _on_area_2d_body_exited(body):
+	isTalking = false
+	isFlipped = false
