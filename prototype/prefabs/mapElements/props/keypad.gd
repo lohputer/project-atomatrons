@@ -1,6 +1,7 @@
 extends Node2D
 
-var answer = "9120"
+@export var answer = "9120"
+@export var physics = false
 var code = ""
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,7 +15,9 @@ func _on_button_pressed():
 	if code == answer:
 		$"../Warning".text = "Correct!"
 	else:
-		$"../Warning".text = "Oof, that's not the correct code"
+		$"../Warning".text = "Incorrect :("
+	if physics:
+		$Screen.
 
 func _on_line_edit_text_changed(new_text):
 	code = new_text

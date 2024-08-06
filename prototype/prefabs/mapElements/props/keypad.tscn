@@ -30,6 +30,7 @@ scale = Vector2(0.824147, 0.729841)
 placeholder_text = "0000"
 alignment = 1
 max_length = 4
+expand_to_text_length = true
 
 [node name="Stats" type="Label" parent="."]
 offset_left = -34.0
@@ -41,7 +42,7 @@ text = "Search around the C A V E, find the 4 digits and enter."
 label_settings = SubResource("LabelSettings_mvsuf")
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 1
+autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="."]
@@ -50,7 +51,7 @@ offset_top = 14.0
 offset_right = 80.0
 offset_bottom = 45.0
 scale = Vector2(0.249045, 0.281589)
-text = "Enter code"
+text = "Enter"
 
 [connection signal="text_changed" from="Sprite2D/LineEdit" to="." method="_on_line_edit_text_changed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

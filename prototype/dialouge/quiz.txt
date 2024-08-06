@@ -250,6 +250,23 @@ question: How is carbon dioxide transported from the body cells to the lungs?
 options: It is dissolved in the blood plasma, It combines with hemoglobin in red blood cells, It is carried by white blood cells, It is transported as a bicarbonate ion
 correct: 3
 
+TOPIC 6
+question: Which of the following is a base quantity?
+options: force, speed, mass, volume
+correct: 3
+
+question: The SI unit of time is:
+options: second, minute, hour, day
+correct: 1
+
+question: The prefix 'kilo' represents:
+options: 1000 times, 0.001 times, 100 times, 0.01 times
+correct: 1
+
+question: Which unit is appropriate for measuring the distance between two cities?
+options: millimeter, meter, kilometer, centimeter
+correct: 3
+
 TOPIC 8
 question: The three states of matter are:
 options: solid, liquid, gas, solid, liquid, plasma, solid, gas, plasma, liquid, gas, plasma
