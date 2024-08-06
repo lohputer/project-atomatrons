@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://drsi47e5tlrtf"]
+[gd_scene load_steps=35 format=3 uid="uid://drsi47e5tlrtf"]
 
 [ext_resource type="PackedScene" uid="uid://b4e4sgg517n2q" path="res://prefabs/player/player.tscn" id="1_2drqm"]
 [ext_resource type="Script" path="res://scenes/test_field.gd" id="1_y5uf0"]
@@ -26,7 +26,6 @@
 [ext_resource type="PackedScene" uid="uid://bx1xyywyvpxje" path="res://prefabs/mapElements/props/screen.tscn" id="24_prs08"]
 [ext_resource type="PackedScene" uid="uid://bnuodkyf5jw4t" path="res://prefabs/mapElements/props/note.tscn" id="25_ypn3w"]
 [ext_resource type="Texture2D" uid="uid://difjcrwhkw1px" path="res://assets/props/plant.png" id="26_x2ikl"]
-[ext_resource type="PackedScene" uid="uid://b8odqep2etk8r" path="res://prefabs/mapElements/event_trigger.tscn" id="27_h1axl"]
 [ext_resource type="Texture2D" uid="uid://b62yhvjqem8ak" path="res://assets/itemImages/wood.png" id="28_d6rts"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_02d0q"]
@@ -884,36 +883,31 @@ position = Vector2(11392, -4529)
 rotation = -0.339356
 text = "to find one oscillation, how many should you time first? the number of times will be your last two digits"
 
-[node name="EventTrigger" parent="." instance=ExtResource("27_h1axl")]
-position = Vector2(10743, -4478)
-scale = Vector2(5.18471, 1.96)
-text = "We need to put something on the water that can float for us to get through.."
-
 [node name="Wood" type="Sprite2D" parent="."]
-position = Vector2(10908, -4464)
-rotation = -1.5694
+position = Vector2(10864, -4472)
+rotation = -0.0155509
 scale = Vector2(-7.86354, 4.97146)
 texture = ExtResource("28_d6rts")
 
 [node name="carbon2" parent="." instance=ExtResource("6_vgjeq")]
 position = Vector2(11650, -3533)
-scale = Vector2(0.2, 0.2)
+scale = Vector2(1, 1)
 
 [node name="carbon3" parent="." instance=ExtResource("6_vgjeq")]
 position = Vector2(11517, -3742)
-scale = Vector2(0.2, 0.2)
+scale = Vector2(1, 1)
 
 [node name="carbon4" parent="." instance=ExtResource("6_vgjeq")]
 position = Vector2(11599, -3270)
-scale = Vector2(0.2, 0.2)
+scale = Vector2(1, 1)
 
 [node name="carbon5" parent="." instance=ExtResource("6_vgjeq")]
 position = Vector2(11947, -3411)
-scale = Vector2(0.2, 0.2)
+scale = Vector2(1, 1)
 
 [node name="carbon6" parent="." instance=ExtResource("6_vgjeq")]
 position = Vector2(11780, -3827)
-scale = Vector2(0.2, 0.2)
+scale = Vector2(1, 1)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2(11780, -3827)

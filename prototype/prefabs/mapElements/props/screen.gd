@@ -49,10 +49,28 @@ func start_question():
 			num = len(prefixes.keys())-1
 		secondPrefix = prefixes.keys()[num]
 	var option1 = 1 + randi() % 50
-	$Sprite2D/Label.text = "Convert %s%s%s to %s%s" % [option1, randomPrefix, randomUnit, secondPrefix, randomUnit]
+	var questionType = randi() % 5
+	if questionType == 0:
+		$Sprite2D/Label.text = "Convert %s%s%s to %s%s" % [option1, randomPrefix, randomUnit, secondPrefix, randomUnit]
+		instantiatedKeypad.answer = str(float(option1) * 10**(prefixes[randomPrefix] - prefixes[secondPrefix])) + secondPrefix + randomUnit
+	elif questionType == 1:
+		var randIndex = randi() % 2
+		var firstUnit = "kg/m3"
+		var secndUnit = "g/cm3"
+		instantiatedKeypad.answer = float(option1) / 1000
+		if randIndex == 0:
+			firstUnit = "g/cm3"
+			secndUnit = "kg/m3"
+			instantiatedKeypad.answer = 1000 * option1
+		$Sprite2D/Label.text = "Convert %s%s to %s" % [option1, firstUnit, secndUnit]
+	elif questionType == 2:
+		var randMass1 = 100 + randi() % 1000
+		var randVolume1 = 100 + randi() % 1000
+		var randMass2 = 100 + randi() % 1000
+		var randVolume2 = 100 + randi() % 1000
+		$Sprite2D/Label.text = "There are 2 new blocks. Block 1 has a mass of $%s" % [option1, randomPrefix, randomUnit, secondPrefix, randomUnit]
 	instantiatedKeypad.position = Vector2.ZERO
 	instantiatedKeypad.scale = Vector2(15,15)
-	instantiatedKeypad.answer = str(float(option1) * 10**(prefixes[randomPrefix] - prefixes[secondPrefix])) + secondPrefix + randomUnit
 	print(instantiatedKeypad.answer)
 	instantiatedKeypad.visible = true
 	instantiatedKeypad.z_index = 3

@@ -23,7 +23,6 @@ shape = SubResource("CircleShape2D_vksqe")
 
 [node name="Magnesium" type="Sprite2D" parent="."]
 position = Vector2(-4.74576, 0)
-scale = Vector2(7, 7)
 texture = ExtResource("2_toxct")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
