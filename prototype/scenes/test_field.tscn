@@ -22,9 +22,9 @@
 [ext_resource type="PackedScene" uid="uid://dhjow4jsxy62s" path="res://prefabs/mapElements/props/bed.tscn" id="17_p8aug"]
 [ext_resource type="PackedScene" uid="uid://e3b4age0d4nr" path="res://prefabs/mapElements/props/dr_sutan.tscn" id="18_tv2uu"]
 [ext_resource type="Texture2D" uid="uid://c2p0k68vym7ua" path="res://assets/buildings/cave.png" id="22_xvdcp"]
-[ext_resource type="PackedScene" path="res://prefabs/mapElements/chest.tscn" id="23_qx54x"]
+[ext_resource type="PackedScene" uid="uid://c82ovuhoqn2ww" path="res://prefabs/mapElements/chest.tscn" id="23_qx54x"]
 [ext_resource type="PackedScene" uid="uid://bx1xyywyvpxje" path="res://prefabs/mapElements/props/screen.tscn" id="24_prs08"]
-[ext_resource type="PackedScene" path="res://prefabs/mapElements/props/note.tscn" id="25_ypn3w"]
+[ext_resource type="PackedScene" uid="uid://bnuodkyf5jw4t" path="res://prefabs/mapElements/props/note.tscn" id="25_ypn3w"]
 [ext_resource type="Texture2D" uid="uid://difjcrwhkw1px" path="res://assets/props/plant.png" id="26_x2ikl"]
 [ext_resource type="Texture2D" uid="uid://b62yhvjqem8ak" path="res://assets/itemImages/wood.png" id="28_d6rts"]
 
@@ -610,6 +610,7 @@ offset_left = 68.0942
 offset_top = 3.78172
 offset_right = 92.0942
 offset_bottom = 27.7817
+button_pressed = true
 
 [node name="CheckBox2" type="CheckBox" parent="player/Options"]
 layout_mode = 0
@@ -617,6 +618,7 @@ offset_left = 67.5784
 offset_top = 23.6357
 offset_right = 91.5784
 offset_bottom = 47.6357
+button_pressed = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0

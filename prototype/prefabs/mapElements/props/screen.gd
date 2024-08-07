@@ -38,6 +38,8 @@ func _on_area_2d_body_entered(body):
 func start_question():
 	if questions == 0:
 		questions = 10
+		$"../player/Warning".text = "You have an accuracy rating of %s%" % correctAnswers/10
+		exit_question($"../player")
 		return 0
 	var randomUnit = units.pick_random()
 	var random = randi() % len(prefixes.keys())
@@ -49,7 +51,7 @@ func start_question():
 			num = len(prefixes.keys())-1
 		secondPrefix = prefixes.keys()[num]
 	var option1 = 1 + randi() % 50
-	var questionType = randi() % 5
+	var questionType = randi() % 3
 	if questionType == 0:
 		$Sprite2D/Label.text = "Convert %s%s%s to %s%s" % [option1, randomPrefix, randomUnit, secondPrefix, randomUnit]
 		instantiatedKeypad.answer = str(float(option1) * 10**(prefixes[randomPrefix] - prefixes[secondPrefix])) + secondPrefix + randomUnit
@@ -64,11 +66,37 @@ func start_question():
 			instantiatedKeypad.answer = 1000 * option1
 		$Sprite2D/Label.text = "Convert %s%s to %s" % [option1, firstUnit, secndUnit]
 	elif questionType == 2:
-		var randMass1 = 100 + randi() % 1000
-		var randVolume1 = 100 + randi() % 1000
-		var randMass2 = 100 + randi() % 1000
-		var randVolume2 = 100 + randi() % 1000
-		$Sprite2D/Label.text = "There are 2 new blocks. Block 1 has a mass of $%s" % [option1, randomPrefix, randomUnit, secondPrefix, randomUnit]
+		var randMass1 = str(100 + randi() % 1000) + ["g", "kg"].pick_random()
+		var randVolume1 = str(100 + randi() % 1000) + ["cm3", "m3"].pick_random()
+		var randMass2 = str(100 + randi() % 1000) + ["g", "kg"].pick_random()
+		var randVolume2 = 100 + randi() % 1000 + ["cm3", "m3"].pick_random()
+		$Sprite2D/Label.text = "There are 2 new liquids. Liquid 1 has a mass of %s and volume of %s, while liquid 2 has a mass of %s and volume of %s. Which liquid floats on the other?" % [randMass1, randVolume1, randMass2, randVolume2]
+		
+		if "kg" in randMass1:
+			randMass1 = int(randMass1.replace("kg", "")) * 1000
+		else:
+			randMass1 = int(randMass1.replace("g", ""))
+			
+		if "cm3" in randVolume1:
+			randVolume1 = int(randVolume1.replace("cm3", ""))
+		else:
+			randVolume1 = int(randVolume1.replace("m3", "")) * 1000000
+			
+		if "kg" in randMass2:
+			randMass2 = int(randMass2.replace("kg", "")) * 1000
+		else:
+			randMass2 = int(randMass2.replace("g", ""))
+		
+		if "cm3" in randVolume2:
+			randVolume2 = int(randVolume2.replace("cm3", ""))
+		else:
+			randVolume2 = int(randVolume2.replace("m3", "")) * 1000000
+			
+		if randMass1/randVolume1 > randMass2/randVolume2:
+			instantiatedKeypad.answer = "2"
+		else:
+			instantiatedKeypad.answer = "1"
+			
 	instantiatedKeypad.position = Vector2.ZERO
 	instantiatedKeypad.scale = Vector2(15,15)
 	print(instantiatedKeypad.answer)
