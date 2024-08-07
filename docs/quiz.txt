@@ -1,0 +1,528 @@
+TOPIC 1
+question: What is the primary function of a retort stand?
+options: heating substances, supporting other apparatus, measuring volume, filtering liquids
+correct: 2
+
+question: For precise measurement of a fixed volume of liquid, which instrument is employed?
+options: pipette, burette, graduated cylinder, beaker
+correct: 1
+
+question: When would you use a volumetric flask instead of a graduated cylinder?
+options: for rough estimations, for precise dilutions, for heating liquids, for filtering mixtures
+correct: 2
+
+question: Describe the ideal glassware for heating a liquid to its boiling point without excessive bumping.
+options: beaker, conical flask, test tube, Erlenmeyer flask
+correct: 2
+
+question: You need to collect a gas that is denser than air. Which apparatus would you use and why?
+options: beaker, conical flask, gas jar, test tube
+correct: 3
+
+question: What is the difference between a pipette and a burette? When would you use each?
+options: A pipette is for fixed volumes, a burette is for variable volumes; pipettes are for precise measurements, burettes are for titrations
+correct: 2
+
+question: Why is a wire gauze used with a tripod stand?
+options: to prevent the glassware from cracking, to distribute heat evenly, to increase the flame's temperature, to hold the glassware upright
+correct: 2
+
+question: A student needs to prepare 500 mL of a 0.1 M solution of sodium hydroxide. Which glassware would be most suitable for this task and why?
+options: beaker, graduated cylinder, volumetric flask, Erlenmeyer flask
+correct: 3
+
+question: What is the purpose of a thistle funnel? In which type of experiment would you use it?
+options: filtering liquids, adding liquids to a flask without spillage, supporting glassware, measuring volumes
+correct: 1
+
+question: You've got a super tiny amount of liquid to measure. What's your best bet?
+options: pipette, burette, thistle, beaker
+correct: 1
+
+TOPIC 2
+question: The basic structural and functional unit of life is:
+options: tissue, organ, cell, organ system
+correct: 3
+
+question: Which of the following is NOT a part of the cell theory?
+options: All living organisms are composed of one or more cells., Cells are the basic units of structure and function in living organisms., All cells come from pre-existing cells., Cells have a nucleus,cytoplasm,and cell membrane.
+correct: 4
+
+question: Plant cells differ from animal cells in having:
+options: cell membrane, mitochondria, cell wall, nucleus
+correct: 3
+
+question: The process by which water moves across a semi-permeable membrane from a region of higher water concentration to a region of lower water concentration is called:
+options: diffusion, osmosis, active transport, facilitated diffusion
+correct: 2
+
+question: The green pigment in plants that captures sunlight for photosynthesis is:
+options: chlorophyll, carotenoid, xanthophyll, phycocyanin
+correct: 1
+
+question: The jelly-like substance within a cell is called:
+options: cytoplasm, nucleus, cell membrane, cell wall
+correct: 1
+
+question: What is the function of the cell membrane?
+options: controls the passage of substances into and out of the cell, provides support, produces energy, stores genetic material
+correct: 1
+
+question: Describe the process of diffusion.
+options: movement of particles from high to low concentration, movement of water across a semi-permeable membrane, the engulfing of large particles by a cell, the release of substances from a cell
+correct: 1
+
+question: How do plant cells differ from animal cells in terms of their vacuoles?
+options: plant cells have multiple small vacuoles, animal cells have one large central vacuole, plant cells have no vacuoles, animal cells have no vacuoles
+correct: 1
+
+question: What is the function of the cell wall in plant cells?
+options: provides support and protection, controls the passage of substances, produces energy, stores genetic material
+correct: 1
+
+TOPIC 3
+question: The first step in the scientific method is typically:
+options: forming a hypothesis, conducting an experiment, making observations, drawing a conclusion
+correct: 3
+
+question: A hypothesis is:
+options: a proven fact, a question, a possible explanation, a conclusion
+correct: 3
+
+question: The variable that is changed in an experiment is called:
+options: independent variable, dependent variable, controlled variable, constant variable
+correct: 1
+
+question: A controlled experiment is one in which:
+options: all variables are changed, only one variable is changed, no variables are changed, all variables are kept constant
+correct: 2
+
+question: Collecting and organizing data is part of which step in the scientific method?
+options: forming a hypothesis, conducting an experiment, analyzing results, drawing a conclusion
+correct: 3
+
+question: A well-tested explanation for a wide range of observations or experimental results is called a:
+options: hypothesis, theory, law, variable
+correct: 2
+
+question: Repeating an experiment multiple times is important for:
+options: saving time, increasing accuracy, making the experiment more complex, ensuring the results are correct
+correct: 2
+
+question: A scientist wants to investigate the effect of different types of fertilizer on plant growth. What is the independent variable in this experiment?
+options: type of fertilizer, plant growth, amount of water, amount of sunlight
+correct: 1
+
+TOPIC 4
+question: The organ responsible for absorbing most of the nutrients from food is:
+options: stomach, small intestine, large intestine, liver
+correct: 2
+
+question: Bile, which helps in the digestion of fats, is produced by the:
+options: liver, gallbladder, pancreas, stomach
+correct: 1
+question: The process of breaking down food into simpler substances is called:
+options: ingestion, digestion, absorption, assimilation
+correct: 2
+
+question: The organ responsible for absorbing most of the nutrients from food is:
+options: stomach, small intestine, large intestine, liver
+correct: 2
+
+question: Bile, which helps in the digestion of fats, is produced by the:
+options: liver, gallbladder, pancreas, stomach
+correct: 1
+
+question: The enzyme that breaks down starch into sugar is:
+options: pepsin, amylase, lipase, protease
+correct: 2
+
+question: The muscular contractions that move food through the digestive system are called:
+options: peristalsis, digestion, absorption, assimilation
+correct: 1
+
+question: The large intestine is primarily responsible for:
+options: absorbing nutrients, producing digestive enzymes, absorbing water, breaking down proteins
+correct: 3
+
+question: The correct order of the digestive system organs is:
+options: mouth, esophagus, stomach, small intestine, large intestine
+correct: 1
+
+question: The organ that stores bile is:
+options: liver, gallbladder, pancreas, stomach
+correct: 2
+
+question: Which of the following is NOT a function of the liver?
+options: producing bile, filtering blood, storing glucose, producing digestive enzymes
+correct: 4
+
+question: The final stage of digestion, where nutrients enter the bloodstream, is called:
+options: ingestion, digestion, absorption, assimilation
+correct: 3
+
+question: Where does most of the chemical digestion of food occur?
+options: mouth, stomach, small intestine, large intestine
+correct: 2
+
+question: What is the role of villi in the small intestine?
+options: increase surface area for absorption, produce digestive enzymes, store food, move food through the intestine
+correct: 1
+
+question: Which enzyme breaks down proteins into smaller peptides?
+options: amylase, pepsin, lipase, maltase
+correct: 2
+
+question: What is the function of the gallbladder?
+options: produces bile, stores bile, produces insulin, digests fats
+correct: 2
+
+question: The pancreas produces enzymes that help digest carbohydrates, proteins, and fats. What are these enzymes called?
+options: amylase, protease, lipase, all of the above
+correct: 4
+
+question: What is the main function of the large intestine?
+options: absorption of nutrients, absorption of water, production of digestive enzymes, storage of food
+correct: 2
+
+question: A lack of which enzyme can lead to lactose intolerance?
+options: lactase, pepsin, amylase, lipase
+correct: 1
+
+TOPIC 5
+question: The process by which oxygen is taken in and carbon dioxide is released is called:
+options: digestion, respiration, circulation, excretion
+correct: 2
+
+question: The main organs of the respiratory system are:
+options: heart and lungs, lungs and liver, brain and lungs, lungs and kidneys
+correct: 1
+
+question: The tiny air sacs in the lungs where gas exchange takes place are called:
+options: bronchi, bronchioles, alveoli, trachea
+correct: 3
+
+question: The muscle that helps in breathing by moving up and down is called:
+options: diaphragm, heart, stomach, liver
+correct: 1
+
+question: The windpipe is also known as:
+options: trachea, bronchus, esophagus, pharynx
+correct: 1
+
+question: The gas exchanged in the lungs is:
+options: oxygen and nitrogen, oxygen and carbon dioxide, carbon dioxide and hydrogen, nitrogen and hydrogen
+correct: 2
+
+question: The process of inhaling air into the lungs is called:
+options: inspiration, expiration, respiration, ventilation
+correct: 1
+
+question: The small tubes that branch off from the bronchi are called:
+options: bronchioles, alveoli, trachea, pharynx
+correct: 1
+
+question: The gas carried by the blood to the body cells is:
+options: carbon dioxide, oxygen, nitrogen, hydrogen
+correct: 2
+
+question: The process by which cells break down glucose to release energy is called:
+options: photosynthesis, respiration, digestion, excretion
+correct: 2
+
+question: What is the role of the diaphragm in breathing?
+options: It is a muscle that contracts and flattens to increase lung volume, It is a valve that controls airflow, It produces mucus to trap dust particles, It helps in digestion
+correct: 1
+
+question: How does smoking affect the respiratory system?
+options: It damages the alveoli, reducing oxygen exchange, It increases the risk of lung cancer, It paralyzes the cilia in the respiratory tract, All of the above
+correct: 4
+
+question: Why is it important for the alveoli to have a large surface area?
+options: To increase the efficiency of gas exchange, To strengthen the lungs, To produce more mucus, To store more air
+correct: 1
+
+question: What is the correct pathway of air from the nose to the alveoli?
+options: nose, trachea, bronchi, bronchioles, alveoli
+correct: 1
+
+question: How is carbon dioxide transported from the body cells to the lungs?
+options: It is dissolved in the blood plasma, It combines with hemoglobin in red blood cells, It is carried by white blood cells, It is transported as a bicarbonate ion
+correct: 3
+
+TOPIC 6
+question: Which of the following is a base quantity?
+options: force, speed, mass, volume
+correct: 3
+
+question: The SI unit of time is:
+options: second, minute, hour, day
+correct: 1
+
+question: The prefix 'kilo' represents:
+options: 1000 times, 0.001 times, 100 times, 0.01 times
+correct: 1
+
+question: Which unit is appropriate for measuring the distance between two cities?
+options: millimeter, meter, kilometer, centimeter
+correct: 3
+
+TOPIC 8
+question: The three states of matter are:
+options: solid, liquid, gas, solid, liquid, plasma, solid, gas, plasma, liquid, gas, plasma
+correct: 1
+
+question: Which state of matter has a definite shape and volume?
+options: solid, liquid, gas, plasma
+correct: 1
+
+question: The process by which a liquid changes into a gas is called:
+options: melting, freezing, vaporization, condensation
+correct: 3
+
+question: The theory that explains the behavior of matter based on the idea of tiny particles in constant motion is called:
+options: kinetic particle theory, atomic theory, quantum theory, relativity theory
+correct: 1
+
+question: Brownian motion provides evidence for:
+options: the existence of atoms, the movement of particles, the force of gravity, the nature of light
+correct: 2
+
+question: Which state of matter has the highest density?
+options: solid, liquid, gas, plasma
+correct: 1
+
+question: The process by which a gas changes into a liquid is called:
+options: melting, freezing, vaporization, condensation
+correct: 4
+
+question: The energy possessed by particles due to their motion is called:
+options: potential energy, kinetic energy, chemical energy, nuclear energy
+correct: 2
+
+question: The arrangement of particles in a solid is:
+options: random and far apart, randomly arranged and close together, regular and far apart, regular and close together
+correct: 4
+
+question: The process by which a solid changes directly into a gas without passing through the liquid state is called:
+options: melting, sublimation, vaporization, condensation
+correct: 2
+
+question: Explain why perfume can be smelled from a distance.
+options: perfume molecules are very light, perfume molecules are in constant motion, perfume molecules are attracted to our noses, perfume molecules are soluble in water
+correct: 2
+
+question: Why does ice float on water?
+options: ice is less dense than water, ice is more dense than water, ice is heavier than water, ice is softer than water
+correct: 1
+
+question: How does increasing the temperature of a gas affect its volume?
+options: the volume increases, the volume decreases, the volume remains constant, the volume becomes zero
+correct: 1
+
+TOPIC 9
+question: A substance made up of only one type of atom is called:
+options: compound, mixture, element, solution
+correct: 3
+
+question: Which of the following is an example of a compound?
+options: oxygen, nitrogen, water, gold
+correct: 3
+
+question: Which of the following is a non-metal that is a good conductor of electricity?
+options: carbon (graphite), sulfur, oxygen, nitrogen
+correct: 1
+
+question: A chemical combination of two or more elements is called a:
+options: mixture, compound, solution, suspension
+correct: 2
+
+question: Which of the following is a physical property of a compound?
+options: flammability, reactivity with acid, melting point, ability to rust
+correct: 3
+
+question: Can you help me find the compound out of the following: oxygen, water, nitrogen, iron?
+options: oxygen, water, nitrogen, iron
+correct: 2
+
+question: Which of the following is a pure substance: salt water, air, iron, sugar solution?
+options: salt water, air, iron, sugar solution
+correct: 3
+
+question: Can you separate the components of a compound using physical methods?
+options: yes, no, sometimes, depends on the compound
+correct: 2
+
+question: What is the difference between an element and a compound?
+options: elements are pure substances, compounds are mixtures, elements are made of one type of atom, compounds are made of different types of atoms, elements are larger than compounds, there is no difference
+correct: 2
+
+question: Which of the following is a mixture: water, carbon dioxide, air, iron?
+options: water, carbon dioxide, air, iron
+correct: 3
+
+TOPIC 10
+question: A substance that dissolves in a solvent to form a solution is called a:
+options: solute, solvent, solution, mixture
+correct: 1
+
+question: A homogeneous mixture where one substance is dissolved in another is called a:
+options: compound, mixture, solution, suspension
+correct: 3
+
+question: The substance present in the largest amount in a solution is called the:
+options: solute, solvent, solution, mixture
+correct: 2
+
+question: Which of the following is an example of a solution?
+options: muddy water, salt water, oil and water, sand and water
+correct: 2
+
+question: Which of the following is an example of a suspension?
+options: salt water, air, muddy water, sugar solution
+correct: 3
+
+question: How can you separate the components of a suspension?
+options: filtration, distillation, evaporation, chromatography
+correct: 1
+
+question: A solution is a ________ mixture.
+options: heterogeneous, homogeneous, colloid, suspension
+correct: 2
+
+question: Generally, the solubility of a solid solute in a liquid solvent increases with:
+options: increasing temperature, decreasing temperature, increasing pressure, decreasing pressure
+correct: 1
+
+question: Stirring a solution generally:
+options: increases the solubility of the solute, decreases the solubility of the solute, increases the rate of dissolving, decreases the rate of dissolving
+correct: 3
+
+question: Why is it easier to dissolve sugar in hot water than in cold water?
+options: hot water molecules move faster, hot water molecules are larger, hot water molecules are more dense, hot water molecules are less dense
+correct: 1
+
+question: What happens when you add too much salt to water?
+options: a solution is formed, a suspension is formed, the salt will float on the water, the salt will disappear
+correct: 2
+
+TOPIC 11
+question: The process of separating a solid from a liquid by passing the mixture through a filter paper is called:
+options: filtration, distillation, evaporation, chromatography
+correct: 1
+
+question: Which technique is used to separate a mixture of two or more miscible liquids with different boiling points?
+options: filtration, distillation, evaporation, chromatography
+correct: 2
+
+question: The process of obtaining pure solid from a solution by evaporating the solvent is called:
+options: filtration, distillation, evaporation to dryness, chromatography
+correct: 3
+
+question: Which apparatus is used to separate immiscible liquids?
+options: separating funnel, filter paper, distillation flask, condenser
+correct: 1
+
+question: In distillation, the process of converting vapor back into liquid is called:
+options: evaporation, condensation, filtration, crystallization
+correct: 2
+
+question: Chromatography is used to separate components of a mixture based on their:
+options: boiling points, solubility, density, particle size
+correct: 2
+
+question: Which technique would you use to separate salt from seawater?
+options: filtration, distillation, evaporation, chromatography
+correct: 2
+
+question: How can you purify water that contains dissolved impurities?
+options: filtration, distillation, evaporation, chromatography
+correct: 2
+
+question: Which technique is used to separate different colored components of ink?
+options: filtration, distillation, chromatography, evaporation
+correct: 3
+
+TOPIC 12
+Question: What is the relative charge of a proton?
+Options: +1, -1, 0, +2
+Correct: 1
+
+Question: Where are electrons typically found in an atom?
+Options: Nucleus, Shells (energy levels), Protons, Neutrons
+Correct: 2
+
+Question: Which term describes the total number of protons and neutrons in an atom?
+Options: Atomic mass, Atomic number, Nucleon number, Electron number
+Correct: 3
+
+Question: What is the atomic number of an element based on?
+Options: Number of protons, Number of neutrons, Number of electrons, Total mass
+Correct: 1
+
+Question: If an atom gains an electron, what type of ion does it become?
+Options: Anion, Cation, Molecule, Isotope
+Correct: 2
+
+Question: Which of the following correctly defines an isotope?
+Options: Atoms with the same number of protons but different number of neutrons, Atoms with same number of electrons but different number of nucleons, Atoms with the same number of neutrons but different number of protons, Atoms with the same number of electrons but different number of protons
+Correct: 1
+
+Question: How do isotopes of an element differ from each other?
+Options: They have different numbers of neutrons, They have different numbers of protons, They have different numbers of electrons, They have different chemical properties
+Correct: 1
+
+Question: In an ion with 10 protons and 12 electrons, what is its net charge?
+Options: +2, -2, +10, -10
+Correct: 1
+
+Question: If an element has an atomic number of 20 and a mass number of 40, how many neutrons does it have?
+Options: 20, 40, 60, 80
+Correct: 1
+
+Question: Which subatomic particle is responsible for most of the mass of an atom?
+Options: Proton, Neutron, Electron, Nucleus
+Correct: 2
+
+TOPIC 13
+Question: If an element has 6 valence electrons, what is its likely group number in the Periodic Table?
+Options: Group 6, Group 7, Group 8, Group 9
+Correct: Group 6
+
+Question: Which element would likely have chemical properties most similar to fluorine (F)?
+Options: Chlorine (Cl), Neon (Ne), Sodium (Na), Potassium (K)
+Correct: Chlorine (Cl)
+
+Question: In which period of the Periodic Table would you find elements with the highest electronegativity?
+Options: Period 1, Period 2, Period 6, Period 7
+Correct: Period 2
+
+Question: If an element in Group 1 loses an electron, what type of ion does it form?
+Options: Positive ion, Negative ion, Neutral atom, Isotope
+Correct: Positive ion
+
+Question: Which characteristic tends to increase as you move from left to right across a period in the Periodic Table?
+Options: Atomic radius, Metallic character, Number of valence electrons, Ionic charge
+Correct: Ionic charge
+
+Question: Elements in which group of the Periodic Table are known for their inert (stable) electron configuration?
+Options: Group 18 (Noble Gases), Group 1 (Alkali Metals), Group 17 (Halogens), Group 2 (Alkaline Earth Metals)
+Correct: Group 18 (Noble Gases)
+
+Question: If an element has 4 electron shells, which period of the Periodic Table is it likely found in?
+Options: Period 4, Period 5, Period 6, Period 7
+Correct: Period 4
+
+Question: Which element would have the highest atomic radius?
+Options: Helium (He), Fluorine (F), Sodium (Na), Chlorine (Cl)
+Correct: Sodium (Na)
+
+Question: Elements in which group of the Periodic Table typically form +2 ions?
+Options: Group 2 (Alkaline Earth Metals), Group 17 (Halogens), Group 16 (Chalcogens), Group 18 (Noble Gases)
+Correct: Group 2 (Alkaline Earth Metals)
+
+Question: What is the likely group number of an element that has 5 valence electrons?
+Options: Group 3, Group 5, Group 7, Group 8
+Correct: Group 5
+
+TOPIC 14
