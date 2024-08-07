@@ -1,5 +1,6 @@
 extends Node2D
 
+var questions = 10
 var correctAnswers = 0
 var keypadNode = preload("res://prefabs/mapElements/props/keypad.tscn")
 var instantiatedKeypad = keypadNode.instantiate()
@@ -30,11 +31,14 @@ func _process(delta):
 
 
 func _on_area_2d_body_entered(body):
-	start_question()
 	if body.id == "player":
+		start_question()
 		body.canMove = false
 	
 func start_question():
+	if questions == 0:
+		questions = 10
+		return 0
 	var randomUnit = units.pick_random()
 	var random = randi() % len(prefixes.keys())
 	var randomPrefix = prefixes.keys()[random]
@@ -59,9 +63,10 @@ func start_question():
 func next_question():
 	if $"../player/Warning".text == "Correct!":
 		correctAnswers += 1
-	await get_tree().create_timer(5.0).timeout
+	await get_tree().create_timer(1.0).timeout
 	$Sprite2D/Label.text = "Next question.."
-
+	questions -= 1
+	start_question()
 
 func exit_question(playerBody):
 	playerBody.canMove = true
